@@ -1,42 +1,537 @@
 <!DOCTYPE html>
-<html lang="en-us">
-  <head>
-    <meta charset="UTF-8">
-    <title>Runtimeverification by tuwiendsg</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
-  </head>
-  <body>
-    <section class="page-header">
-      <h1 class="project-name">Runtimeverification</h1>
-      <h2 class="project-tagline">Repository holding information about platform for run-time verification of elastic systems developed by DSG (http://www.infosys.tuwien.ac.at/) at TU Wien</h2>
-      <a href="https://github.com/tuwiendsg/RuntimeVerification" class="btn">View on GitHub</a>
-      <a href="https://github.com/tuwiendsg/RuntimeVerification/zipball/master" class="btn">Download .zip</a>
-      <a href="https://github.com/tuwiendsg/RuntimeVerification/tarball/master" class="btn">Download .tar.gz</a>
-    </section>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title></title>
+		<meta name="description" content="A free HTML5/CSS3 template made exclusively for Codrops by Peter Finlan" />
+		<meta name="keywords" content="html5 template, css3, one page, animations, agency, portfolio, web design" />
+		<meta name="author" content="Peter Finlan" />
+		<!-- Bootstrap -->
+		<script src="js/modernizr.custom.js"></script>
+        <script src="js/jquery-1.10.2.min.js"></script>
+		<script src="js/lightbox-2.6.min.js"></script>
+        <link rel="stylesheet" href="css/lightbox.css" media="screen"/>
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="css/jquery.fancybox.css" rel="stylesheet">
+		<link href="css/flickity.css" rel="stylesheet" >
+		<link href="css/animate.css" rel="stylesheet">
+		<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+		<link href='http://fonts.googleapis.com/css?family=Nunito:400,300,700' rel='stylesheet' type='text/css'>
+		<link href="css/styles.css" rel="stylesheet">
+		<link href="css/queries.css" rel="stylesheet">
+		<!-- Facebook and Twitter integration -->
+		<meta property="og:title" content=""/>
+		<meta property="og:image" content=""/>
+		<meta property="og:url" content=""/>
+		<meta property="og:site_name" content=""/>
+		<meta property="og:description" content=""/>
+		<meta name="twitter:title" content="" />
+		<meta name="twitter:image" content="" />
+		<meta name="twitter:url" content="" />
+		<meta name="twitter:card" content="" />
+		<!-- Extended and addapted from Boxify: Free HTML5/CSS3 Template by Peter Finlan http://tympanus.net/Freebies/Boxify/ -->
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+		<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+		<!--[if lt IE 7]>
+		<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+		<![endif]-->
+		<!-- open/close -->
+		<header>
+			<section class="hero">
+				<div class="texture-overlay"></div>
+				<div class="container">
+					<div class="row nav-wrapper">
+						 
+						<!--<div class="col-md-2 col-sm-2 col-xs-0 text-right navicon">
+							<p>MENU</p><a id="trigger-overlay" class="nav_slide_button nav-toggle" href="#"><span></span></a>
+						</div>-->
+					</div>
+</br>
+					<div class="row hero-content">
+						<div class="col-md-12">
+							<h1 class="animated fadeInDown">A Platform for Run-time Health Verification of Elastic Cyber-physical Systems</h1>
+        					        <h2 class="animated fadeInDown">Work was partially supported by the European Commission in terms of <a href="http://www.u-test.eu/">U-Test</a> H2020 project</h2> 
+<!--                                                        <h2 class="animated fadeInDown">Oct 29 - Nov 01, 2015 @ Santa Clara, CA, USA</h2> -->
+							<a href="#example" class="learn-btn animated fadeInUp">eCPS example <i class="fa fa-arrow-down"></i></a>
+                            <a href="#approach" class="learn-btn animated fadeInUp">Approach for verifying eCPSs <i class="fa fa-arrow-down"></i></a>  
+                            <a href="#structure" class="learn-btn animated fadeInUp">eCPS Structure Specification <i class="fa fa-arrow-down"></i></a>  
+                            <a href="#strategies" class="learn-btn animated fadeInUp">Verification Strategies Specification<i class="fa fa-arrow-down"></i></a>  
+                            <a href="#evaluation" class="learn-btn animated fadeInUp">Evaluation<i class="fa fa-arrow-down"></i></a>  
+						</div>
+					</div>
+				</div>
+			</section>
+		</header>
+		<section id="example">
+          <div class="container-fluid overview wrap">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-18" style="margin-left: 15px;">
+						<h1>Example of Elastic Cyber-Physical System (eCPS) for analysis of streaming data</h1>
+                        <center><a href="img/details/elasticDataCenter.png?[modal]=true" data-lightbox="mypic"><img src="img/details/elasticDataCenter.png" alt="ElasticCPS" style="width:800px"  ></a></center>
+                        
+                        <p>A Cyber-physical System (CPS) is a system which has components deployed both in the physical world (e.g., industrial machines, smart buildings), and in computing environments (e.g., data centers, cloud infrastructures). For example, a smart factory could be considered as a CPS having components: (i) inside assembly robots, (ii) inside sensor gateways deployed in the factory to collect environmental conditions, and (iii) deployed in a private data-center to analyze data collected from robots and sensor gateways. An Elastic Cyber-physical Systems (eCPS) can further add/remove components at run-time, from computing resources to physical devices. Elasticity enables eCPSs to align their costs, quality, and resource usage to load and owner requirements. </p>
+                        
+                        <p>The owner of a smart factory builds an elastic cyber-physical system (eCPS) for analysis of streaming data coming from the factory's industrial robots and environmental sensors. The system can scale to adapt to changes in load or factory requirements by adding and removing both physical and cyber components. Factory sensors robots send data to physical devices called <i>Sensor Gateways</i>. The gateways perform local data processing and sends the data through a HAProxy HTTP <i>Load Balancer</i> to <i>Streaming Analytics</i> services hosted in virtual machines in a <i>Private Cloud</i>. The Streaming Analytics service is deployed as a software artifact in a Tomcat web server. Selected analytics results are published to interested parties through a third-party <i>Messaging Service</i> offered as it is by a <i>Public Cloud</i> provider.</p>
+                        
+                        <p>The smart factory owner wants to ensure that the system is healthy and operates within specified parameters, especially after scaling actions which add/remove components. I.e., the system is correctly configured, its components are deployed and running, and provides expected performance.  </p>
+					</div>
+				</div>
+			</div></div>
+		</section>
+		 
+    <section id="approach">
+          <div class="container-fluid overview wrap">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-18" style="margin-left: 15px;">
+						<h1>Approach for run-time verification of elastic cyber-physical systems</h1>
+                        <center><a href="img/details/approach.png?[modal]=true" data-lightbox="mypic"><img src="img/details/approach.png" alt="ElasticCPS" style="width:800px"  ></a></center>
+                        
+                        <p>We introduce a platform for run-time health verification of elastic cyber-physical systems (eCPSs), providing functionality for:
+                        <ul>
+                            <li><b>Specifying the logical structure of elastic cyber-physical systems</b>, introducing a model capturing their deployment stack and communication dependencies. 
+                            </li>
+                            <li><b>Managing the run-time structure of elastic cyber-physical systems</b>, introducing a decentralized notification-based system for managing addition/removal of system components. 
+                            </li>
+                            <li><b>Specifying verification strategies</b>, introducing a domain-specific language for defining periodic and event-driven execution of direct and indirect verification tests on different system components. 
+                            </li>
+                            <li><b>Executing verification strategies</b>, introducing a distributed mechanism based on remote code execution for execution of verification tests and collection of verification results. 
+                            </li>
+                            <li><b>Notifying interested parties about the verification result</b>, introducing mechanisms for notifying users about changes in the result of verification tests. 
+                            </li>
+                        </ul>
+                        </p>
+					</div>
+				</div>
+			</div>
+          </div>
+     </section>
+		 
+    
+    
+		<section id="structure" >
+			<div class="wrap">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-5">
+                   <a href="img/details/systemStructure.png?[modal]=true" data-lightbox="mypic"><img src="img/details/systemStructure.png" alt="ElasticCPS" style="width:450px"  ></a>
+						</div>
+						<div class="col-md-7">
+							<h2>Specifying the logical structure of elastic cyber-physical systems</h2>
+							<p>We need a model for capturing the deployment stack and dependencies of system components. As our goal is run-time verification of real eCPSs, the model must capture the state of the run-time infrastructure. The model must also be applicable to heterogeneous eCPSs, and easy to extend with additional types of components depending on particular systems. To this end we introduce an abstract model  for representing eCPS components and their run-time instances. Our model targets only the infrastructure of eCPSs and is designed with simplicity and generality in mind. These properties allow the model to be applied to a wide range of systems without requiring a large amount of domain-specific knowledge.</p> 
+                            <p>We first capture <i>Physical Machine</i>, <i>Physical Device</i>, and <i>Virtual Machine</i> (VM) components, crucial in describing systems which run both in the cloud and in the physical world. We capture <i>Virtual Container</i> components to describe and verify virtualization containers such as Docker. Increasing the verification detail, we capture <i>OS Process</i>, and <i>Service</i> components. Capturing components from different stack levels enables hierarchical testing, in which we can verify the lower level (e.g., VM), and if that succeeds, verify the higher levels (e.g., OS Process running inside a VM). Additional component types can be defined by extending the <i>Type</i> enumeration.
+                            <p> system <i>Component</i> can have one or more <i>Component Instances</i> according to the system's run-time structure. E.g., multiple instances of the Streaming Analytics component </i>. A component instance can be <i>hostedOn</i> another component, e.g., an OS Process running inside a Virtual Machine. The reverse relationship of <i>hostedOn</i> is <i>hosts</i>, enabling model navigation in the opposite direction. Instances can also communicate with other instances, captured with a <i>connectsTo</i> relationships. Further, components can be combined to achieve functionality. We use the term <i>Composite Component</i> to describe combinations of multiple system components working towards the same functionality goal. For example, the Streaming Analytics component using a VM hosting a Web Server hosting in turn a software Service. </p>
+							 
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 
-    <section class="main-content">
-      <h3>
-<a id="under-construction" class="anchor" href="#under-construction" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Under construction</h3>
+     <section class="showcase" id="structureJSON" >
+			<div class="wrap">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-5">
+                   <h2>eCPS structure specification in JSON</h2>
+                   <p>To verify a system, its static structure description is submitted to our platform as JSON. The system is described as a recursive composition of components according to the model introduced. Each component has a <i>name</i>, <i>type</i>, and potential <i>containedComponents</i>. A component can also be hosted on another component, indicated by <i>hostedOn</i> property.
+                            </p>
+						</div>
+						<div class="col-md-7">
+							
+							<p><pre>{
+  "type": "Composite",
+  "name": "SportsAnalytics",
+  "containedUnits": [
+    {
+      "type": "Composite",
+      "name": "DataCapture",
+      "containedUnits": [
+        {
+          "type": "Gateway",
+          "name": "Gateway.DataCapture"
+        },
+        {
+          "hostedOn": "Gateway.DataCapture",
+          "type": "Process",
+          "name": "Process.DataCapture"
+        }
+      ]
+    },
+    {
+      "type": "Composite",
+      "name": "LoadBalancer",
+      "containedUnits": [
+        {
+          "type": "VirtualMachine",
+          "name": "VM.LoadBalancer"
+        },
+        {
+          "hostedOn": "VM.LoadBalancer",
+          "type": "Process",
+          "name": "Process.HAProxy"
+        }
+      ]
+    },
+    {
+      "type": "Composite",
+      "name": "StreamingAnalytics",
+      "containedUnits": [
+        {
+          "type": "VirtualMachine",
+          "name": "VM.StreamingAnalytics"
+        },
+        {
+          "hostedOn": "VM.StreamingAnalytics",
+          "type": "Process",
+          "name": "Process.Tomcat"
+        },
+        {
+          "hostedOn": "Process.Tomcat",
+          "type": "Service",
+          "name": "Service.StreamingAnalytics"
+        }
+      ]
+    },
+    {
+      "type": "Composite",
+      "name": "MessagingService",
+      "containedUnits": [
+        {
+          "type": "Service",
+          "name": "Service.MessagingService"
+        }
+      ]
+    }
+  ]
+}</pre></p>
+							 
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 
-<p>Content coming soon...</p>
 
-<h3>
-<a id="authors-and-contributors" class="anchor" href="#authors-and-contributors" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Authors and Contributors</h3>
+<section id="strategies" >
+			<div class="wrap">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-7">
+                  <h2>Test strategies description language</h2>
+                    <p><pre>
+#Description
+#name: "TestName"
+#description: "human readable description"
+#timeout: 10
 
-<p>Daniel Moldovan (<a href="https://github.com/moldovanus" class="user-mention">@moldovanus</a>)</p>
+#Triggers
+#every:  30 s
+#event:  "E1" , "E2" on UnitType.VirtualMachine
+#event:  "E1FFF" , "E2" on UnitType.Process
 
-      <footer class="site-footer">
-        <span class="site-footer-owner"><a href="https://github.com/tuwiendsg/RuntimeVerification">Runtimeverification</a> is maintained by <a href="https://github.com/tuwiendsg">tuwiendsg</a>.</span>
 
-        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
-      </footer>
+#Execution
+#executor: UnitType.VirtualMachine for UnitType.VirtualMachine, UnitType.VirtualContainer, UnitType.Process
+#executor: UnitType.VirtualContainer for UnitType.Process
+#executor: UnitType.SoftwareContainer for UnitType.SoftwareContainer
+#executor: UnitType.SoftwareContainer for UnitID."A-Za-z0-9_", UnitID."Process.ProcessNAME", UnitUUID."A-Za-z0-9_."
+#executor: UnitID."A-Za-z0-9_" for UnitID."Process.ProcessNAME", UnitUUID."A-Za-z0-9_."
+#supported types are Service | Process | SoftwarePlatform | PhysicalDevice | SoftwareContainer   | VirtualContainer | Gateway |  VirtualMachine | PhysicalMachine
+</pre></p>        
+						</div>
+						<div class="col-md-5">
+							<h2>Domain-specific language for verification strategies</h2>
+							<p>After the user determines <i>When</i> to verify each health indicator, and defines one or more <i>verification descriptions</i> for each indicator using our domain specific language. The strategy for verifying if the <i>VM</i> component is healthy is depicted in left. As the Streaming Analytics is elastic, network accessibility should be verified when a new VM is created. A test <i>Trigger</i> entry is added (Line 5) for the <i>event: "Added"</i> for <i>ID."VM.StreamingAnalytics"</i> representing the Streaming Analytics VMs, detected by our verification platform. VMs can also fail at run-time due to various factors. Network accessibility should be also verified periodically during the system's run-time. To this end a <i>every: 30 s</i> periodic test trigger is defined in the strategy (Line 6). The executor of the test must also be specified. VM network accessibility should be verified from outside the VM. Thus, a <i>distinct</i> executor is requested (Line 9), having the type <i>VirtualMachine</i>. Finally, a <i>timeout</i> specifies how long to wait for the test result before considering that it has failed (Line 2). This is useful if something happened to the test executor component, e.g., it has also failed. </p>
+							 
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 
-    </section>
+<section id="evaluation">
+          <div class="container-fluid overview wrap">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-18" style="margin-left: 15px;">
+						<h1>Evaluation</h1>
+                       </div>
+				</div>
+			</div></div>
+		</section>
+		 
+<section id="prototype" >
+			<div class="wrap">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-5">
+                   <a href="img/details/prototype.png?[modal]=true" data-lightbox="mypic"><img src="img/details/prototype.png" alt="Prototype" style="width:450px"  ></a>
+						</div>
+						<div class="col-md-7">
+							<h2>Verification platform prototype</h2>
+                            <p></p>We implement our run-time verification platform prototype in Python due to its low resource consumption and reduced complexity in deploying and operating the platform. Our platform has a centralized <i>Verification Orchestrator</i> providing most of the platform's functionality, and a <i>Test Executor</i> component deployed along system components to enforce verification tests. We expect custom test executors to be implemented for particular target systems, and provide a <i>Messaging Queue</i>. The queue acts as a communication broker between the Verification Orchestrator and Test Executors, hiding their particular implementation details from each other. We use <a href="https://www.rabbitmq.com">RabbitMQ</a> for the queuing middleware, as it supports both AMQP and MQTT protocols, providing a queuing solution applicable to a wide range of systems and components. The platform's functionality is divided between: (i) a <i>System Structure Manager</i> handling any structure-related operation; (ii) an <i>Events Manager</i> handling the processing of events received from the test executors due to verification results or addition/removal of system component instances; (iii) a <i>Tests Execution Manager</i> dispatching verification tests; (iv) a <i>Persistence Manager</i> using <a href="https://www.sqlite.org/">SQLite</a> to persist system and verification information; and (v) a <i>UI Manager</i> handling interactions with the platform's web user interface. For ease of use and integration with third party software components, we implement the interactions with our run-time verification platform as RESTful services using <a href="http://flask.pocoo.org/">Flask</a> and <a href="http://www.json.org/">JSON</a>. We also implement a web-based interface relying on HTML, Javascript and and <a href="https://d3js.org/">D3.js</a> enabling human users to interact with our platform. A verification test is a self-contained sequence of Python code and we provide a library to report the results of particular test executions. We also provide a contextualization mechanisms that injects in each python test variables denoting the ids and uuids of the test target and executor to be used in the test. </p>
+							 
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 
-  
-  </body>
+<section id="evalStrategy1" >
+			<div class="wrap">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-7">
+                  <h2>Verification strategy to test if VM is network accessible</h2>
+                    <p><pre>
+  Description
+  timeout: 30
+
+  Triggers
+  every:  30 s
+  event: "Added" on ID."VM.StreamingAnalytics"
+
+  Execution
+  executor: distinct Type.VirtualMachine for Type.VirtualMachine
+</pre></p>        
+						</div>
+						<div class="col-md-5">
+							<h2>Describing verification strategy</h2>
+							<p>We write one verification strategy for each verification test, structured in three parts: (i) test properties Description, (ii) specification of test execution Triggers , and (iii) test Execution information. The test properties can be defined specifying for each test a name, a human-readable description, and optional timeout. The name is used to identify the test. The timeout is used to mark as failed tests which do not return results in the specified interval of time. </p>
+				            <p>We use triggers to specify when a particular test should be executed. A trigger can be an event, or a periodic timer. </p>			 
+                            <p>e support both direct and indirect tests, as detailed in the next section. Thus, in the last strategy section we specify which component will execute the test. One or more executor specifications can be defined, describing which specific executor to execute the test for which specific component identifier. A <i>distinct</i> keyword states that the test executor must be other than the test target, useful in executing indirect tests from components with the same identifier (e.g., pinging a VM from another VM).</p>
+						</div>
+					</div>
+ 
+					<div class="row">
+						<div class="col-md-7">
+                  <h2>Verification test to test if VM is network accessible</h2>
+                    <p><pre>
+  #test implemented as standalone python code
+  # all imports must be local
+  os = __import__('os')
+  #contextualized "targetID" variable
+  #executing custom OS command
+  response = os.system("ping -c 1" + targetID)
+  #construct result
+  if response == 0: #if ping fails response is 256
+    success = 100
+  else:
+    success = 0
+  #TestResult type provided by our verification platform
+  return TestResult(success, response)
+</pre></p>        
+						</div>
+						<div class="col-md-5">
+							<h2>Writing verification test</h2>
+                            <p>The user must further decide <i>How</i> each health indicator can be verified depending system capabilities. The VM network accessibility indicator can be verified using the <i>ping</i> command available in each VM operating system. Using our platform, the test is defined as a standalone Python script depicted left. The script can use <i>contextualized variables</i> injected at test execution by our platform, such as <i>targetID</i>, which for VMs is their IP (Line 6). It is the responsibility of the test designer to use domain-specific knowledge in implementing the test logic and deciding when a test is successful or not (Lines 8-11). Each test result is be returned using the type defined by our platform (Line 13).</p>
+						</div>
+					</div>
+				</div>
+			</div>
+ 
+		</section>
+
+
+<section  class="showcase" >
+          <div class="container-fluid overview wrap">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-18" style="margin-left: 15px;">
+						<h2>Results</h2>
+                         <a href="img/details/testping.png?[modal]=true" data-lightbox="mypic"><img src="img/details/testping.png" alt="Prototype" style="width:1000px"  /></a>
+                       </div>
+				</div>
+			</div></div>
+		</section>
+
+
+
+
+
+
+<section id="evalStrategy2" >
+			<div class="wrap">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-7">
+                  <h2>Verification strategy to test black box components</h2>
+                    <p><pre>
+Description
+name: "CloudAMQPAlive"
+description: "Check if CloudAMQP is accessible"
+timeout: 30
+
+Triggers
+every: 30 s
+
+Execution
+executor: UnitType.VirtualMachine for UnitID."Service.MessagingService"
+</pre></p>   
+                        
+ <h2>Verification test to check if bCLoudAMQP alive</h2>
+                    <p><pre>
+ os = __import__('os')
+ base64 = __import__('base64')
+ httplib = __import__('httplib')
+
+ url = "/api/overview"
+ instanceIP = targetID
+ auth = base64.encodestring('%s:%s' % (username, password)).replace('\n', '')
+ webservice = httplib.HTTPS(instanceIP)
+ webservice.putrequest("GET", url)
+ webservice.putheader("User-Agent", "Python http auth")
+ webservice.putheader("Content-type", "text/html; charset=\"UTF-8\"")
+ webservice.putheader("Authorization", "Basic %s" % auth)
+ webservice.endheaders()
+ res = webservice.getfile().read()
+ successful = "OK" in statusmessage
+ details = "/api/overview returned " + str(statusmessage)
+ meta = {}
+ meta["type"]="Checks if RabitMQ API responds to get"
+ return TestResult(successful=successful, details=details, meta=meta)
+</pre></p>    
+						</div>
+						<div class="col-md-5">
+							<h2>Describing verification strategy</h2>
+                            <p>In the following we discuss how our approach can be used to verify black-box components which do not allow installation of test executors. We focus on the <i>Messaging Service</i> component using CloudAMQP, which provides a standalone RabbitMQ  accessible through an API over Internet. </p>
+                            <p>The system owner answers the What? and When? to verify that the component is alive, i.e., its provider has not encountered failures. How? to verify is answered by checking if the RabbitMQ API "/api/overview" is online and accessible. Then, a developer implements the verification test as a Python sequence of code issuing a HTTP GET with his CloudAMQP credentials to the service's API. The system owner or developer further defines a verification strategy to execute the test every 30 seconds from any running VM, describing the test executor as <i>executor: Type.VirtualMachine for ID."MessagingService"</i>. Finally, the developer can send an alive message to our platform  notifying that the component is running and should be tested. </p>
+						</div>
+					</div>
+ 
+					
+				</div>
+			</div>
+		</section>
+
+<section  class="showcase" >
+          <div class="container-fluid overview wrap">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-18" style="margin-left: 15px;">
+						<h2>Results</h2>
+                         <a href="img/details/blackBoxTest.png?[modal]=true" data-lightbox="mypic"><img src="img/details/blackBoxTest.png" alt="Prototype" style="width:1000px"  /></a>
+                       </div>
+				</div>
+			</div></div>
+		</section>
+
+<section class="showcase" id="topics">
+			<div class="wrap">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-5">
+							 <h1>Workshop topics</h1>
+                                                         <p>This workshop will solicit original research work on fundamental aspects of elastic computing and the notion of big data analytics as well as the design, implementation and evaluation of novel tools, methods and applications for optimizing a big data computing system (in parts or as a whole).</p>
+						</div>
+						<div class="col-md-7">
+							<h2 style="color:#fff">Topics of interest include, but not limited to:</h2>
+							<ul>
+								<li>
+									<p>Elasticity modelling frameworks for big data</p>
+									 
+								</li>
+								<li>
+									<p>Intelligent data quality measurement and control for big data analytics</p>
+								</li>
+                                                                <li>
+									<p>Elasticity algorithms for distributed, large-scale data stores (e.g., NoSQL databases) and data processing engines (Hadoop, Spark, etc)</p>
+								</li>
+                                                                <li>
+									<p>Monitoring and analysis of multi-dimensional elasticity in big data systems</p>
+								</li>
+                                                                <li>
+									<p>Benchmarking and testing of elasticity of big data systems</p>
+								</li>
+                                                                <li>
+									<p>Techniques and methods for engineering elastic decision making in large scale distributed systems (Cloud, Fog, HPC, IoT, Grid, P2P)</p>
+								</li>
+                                                                <li>
+									<p>Applications and use cases that perform or require data elasticity </p>
+								</li>
+										</ul>
+							 
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+ 
+
+<section  id="topics">
+			<div class="wrap">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-7">
+							<h1>Page still under construction</h1>
+                            <p>More results and instructions on how to download, install, and use the platform to follow soon.</p>
+							 
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+ 
+ 
+
+
+<section id="contact">
+			<div class="wrap">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-7">
+							<h1>Contact:</h1>
+ 
+							<ul>
+								<li>
+									<p>Daniel Moldovan d.moldovan@dsg.tuwien.ac.at </p>
+									 
+								</li>
+                                                                 
+						         </ul>
+							 
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+ 
+
+ 
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src="js/min/toucheffects-min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+		<script src="js/flickity.pkgd.min.js"></script>
+		<script src="js/jquery.fancybox.pack.js"></script>
+		<!-- Include all compiled plugins (below), or include individual files as needed -->
+		<script src="js/retina.js"></script>
+		<script src="js/waypoints.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/min/scripts-min.js"></script>
+		<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+		<script>
+		(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+		function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+		e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+		e.src='//www.google-analytics.com/analytics.js';
+		r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+		ga('create','UA-XXXXX-X');ga('send','pageview');
+		</script>
+	</body>
 </html>
