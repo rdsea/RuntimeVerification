@@ -1,0 +1,12 @@
+ #this test can be used to determine if a RESTful service is accessible or not
+ try:
+    urllib2 = __import__('urllib2')
+    response = urllib2.urlopen("http://"+targetID+":5001/alive", timeout = 1)
+    content = response.read()
+    successful = True
+ except urllib2.URLError as e:
+    successful=False
+
+ meta = {}
+ meta["type"]="Service alive test" + "http://"+targetID+":5001/alive"
+ #return TestResult(successful=successful, details=response, meta=meta)

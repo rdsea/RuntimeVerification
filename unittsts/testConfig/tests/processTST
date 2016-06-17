@@ -1,0 +1,12 @@
+ os = __import__('os')
+ usage = float(os.popen("free | grep Mem | awk '{print $3/$2 * 100.0}'").read())
+ result=TestResult()
+ result.meta["type"]="OS Usage"
+ if usage > 20:
+    result.successfull=True
+ else:
+    result.successfull=False
+ result.details=usage
+ return result
+
+

@@ -1,0 +1,275 @@
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+<script src="static/spin.js" type="text/javascript"></script>
+<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+
+
+{% block body %}
+
+
+{% if error %}
+<div style="color: #D8000C;background-color: #FFBABA;">
+  <div >Error:</div>
+  <div>{{ error }}</div>
+</div>
+{% endif %}
+
+<div>
+  <div > <a href="{{ url_for('manageSystem') }}">Back:</a>:</div>
+</div>
+
+<div>
+  <div > <h2>Tests management</h2></div>
+</div>
+
+<!--Must implement load process.-->
+<!--<a href="systems/{{ system.name }}/tests/config">Download test config</a>-->
+
+<!--<table>-->
+    <!--<tr>-->
+        <!--<dd>Upload Test Config</dd>-->
+        <!--<td>-->
+            <!--<form action="{{ url_for('uploadTestsConfig') }}" method="post" enctype="multipart/form-data">-->
+                <!--<input type="file" name="tests_config_file"><br/><br/>-->
+                <!--<input type="submit" value="Upload">-->
+            <!--</form>-->
+        <!--</td>-->
+    <!--</tr>-->
+<!--</table>-->
+
+Available tests to use:
+<table>
+    {% if system.genericTests %}
+    <tr>
+       <th>Generic Tests</th>
+        {%- for test in system.genericTests %}
+           <dd><textarea  id="content{{ test.name }}" name="content{{ test.name }}" rows="1" cols="1" hidden="hidden">{{test.content}}</textarea>
+           <td><a href="#" onclick=showTestContent("{{ test.name }}",true);>{{ test.name }}</a></td>
+        {%- endfor %}
+     </tr>
+    {% endif %}
+
+    {% if system.customTests %}
+    <tr>
+       <th>Custom Tests</th>
+        {%- for test in system.customTests %}
+           <dd><textarea  id="content{{ test.name }}" name="content{{ test.name }}" rows="1" cols="1" hidden="hidden">{{test.content}}</textarea>
+           <td><a onclick=showTestContent("{{ test.name }}",false);>{{ test.name }}</a></td>
+        {%- endfor %}
+     </tr>
+    {% endif %}
+
+
+</table>
+
+ <form id="editTestForm" action="{{ url_for('updateTest') }}" method=post>
+    <dl>
+      <dd><input type=submit id="testEditButton" name="action" value='Add/Update'><input type=submit id="testDeleteButton" name="action" value='Delete'><input type=button id="clearButton" name="action" value=Clone onclick=clearTestEditing();>
+      <dd><input type=text name=testName id="testName" class="editingDivName">
+      <dd><input type=text name="system_id" id="system_id" value="{{ system.name }}" hidden="hidden">
+      <dd><div id="testContentDiv" class="editingDiv"><pre id="testContentEditingPre"></pre></div>
+      <!--kept for historical purposes and puting all content in it after each edit. later will just use editor for getting data-->
+      <dd><textarea id="testContent" name="testContent"  hidden="hidden">""</textarea>
+    </dl>
+  </form>
+
+ <form id="editTestDescriptionForm" action="{{ url_for('updateTestDescription') }}" method=post>
+    <dl>
+      <dd><input type=submit id="editTestDescriptionButton" name="action" value='Add/Update'>
+          <!--<input type=button id="clearTestDescriptionButton" name="action" value=Clear onclick=clearEditTestDescriptionForm();>-->
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type=submit id="clearTestDescriptionButton" name="action" value=Reset>
+      <dd><input type=text name=testName id="testNameTestDescriptionField" class="editingDivName">
+      <dd><input type=text name="system_id" id="editTestDescriptionFormSystemID" value="{{ system.name }}" hidden="hidden">
+      <dd><div id="descriptionDiv" class="editingDiv"><pre id="descriptionEditingPre"></pre></div>
+      <!--kept for historical purposes and puting all content in it after each edit. later will just use editor for getting data-->
+      <dd><textarea id="testDescriptionContent" name="testDescriptionContent"  hidden="hidden">""</textarea>
+     </dl>
+  </form>
+
+
+<script src="static/ace-src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
+
+<script type="text/javascript">
+        var opts = {
+                lines: 20, // The number of lines to draw
+                length: 7, // The length of each line
+                width: 10, // The line thickness
+                radius: 100, // The radius of the inner circle
+                corners: 1, // Corner roundness (0..1)
+                rotate: 0, // The rotation offset
+                color: '#000', // #rgb or #rrggbb
+                speed: 1, // Rounds per second
+                trail: 60, // Afterglow percentage
+                shadow: false, // Whether to render a shadow
+                hwaccel: false, // Whether to use hardware acceleration
+                className: 'spinner', // The CSS class to assign to the spinner
+                zIndex: 2e9, // The z-index (defaults to 2000000000)
+                top: 'auto', // Top position relative to parent in px
+                left: 'auto', // Left position relative to parent in px
+                visibility: true
+            };
+       var loadingSpinner = new Spinner(opts);
+
+
+       function drawSpinner(spinnerContainer) {
+            var target = document.getElementById(spinnerContainer);
+            loadingSpinner.spin(target);
+        }
+
+
+    function clearTestContent() {
+        content = ''
+        textArea = document.getElementById("testContent")
+        document.getElementById("testName").value=''
+        document.getElementById("testEditButton").hidden=''
+        document.getElementById("testDeleteButton").hidden=''
+        textArea.readOnly=''
+        textArea.value=content
+        document.getElementById("testNameTestDescriptionField").value=''
+        document.getElementById("testContent").value = content
+
+        systemname= document.getElementById("system_id").value
+
+        var editor2 = ace.edit('testContentEditingPre');
+        editor2.session.setMode("ace/mode/python");
+        editor2.session.setValue(content)
+
+        editor2.setOption("minLines", 5);
+        editor2.setOption("fontSize", 15);
+        editor2.setAutoScrollEditorIntoView(true);
+        editor2.setOption("maxLines", 100);
+
+        editor2.getSession().on('change', function(e, editor2) {
+            document.getElementById("testContent").value = editor2.getValue();
+        });
+
+
+    }
+
+
+    function showTestContent(testname, readonly) {
+        content = document.getElementById("content" +testname ).value
+        textArea = document.getElementById("testContent")
+        document.getElementById("testName").value=testname
+        if (readonly){
+            document.getElementById("testEditButton").hidden='hidden'
+            document.getElementById("testDeleteButton").hidden='hidden'
+        }else{
+            document.getElementById("testEditButton").hidden=''
+            document.getElementById("testDeleteButton").hidden=''
+            }
+        textArea.readOnly=readonly
+        textArea.value=content
+        document.getElementById("testNameTestDescriptionField").value=testname
+        document.getElementById("testContent").value = content
+
+        systemname= document.getElementById("system_id").value
+        getTestDescription(systemname,testname)
+        testDescriptionTextArea = document.getElementById("testDescriptionContent")
+        testDescriptionTextArea.value= ''
+        var editor2 = ace.edit('testContentEditingPre');
+        editor2.session.setMode("ace/mode/python");
+        editor2.session.setValue(content)
+
+        editor2.setOption("minLines", 5);
+        editor2.setOption("fontSize", 15);
+        editor2.setAutoScrollEditorIntoView(true);
+        editor2.setOption("maxLines", 100);
+
+        editor2.getSession().on('change', function(e, editor2) {
+            document.getElementById("testContent").value = editor2.getValue();
+        });
+
+
+    }
+    function clearTestEditing() {
+        textArea = document.getElementById("testContent")
+        document.getElementById("testName").value=''
+        document.getElementById("testEditButton").hidden=''
+        document.getElementById("testDeleteButton").hidden=''
+
+        textArea.readOnly=false
+    }
+
+   function clearEditTestDescriptionForm() {
+        document.getElementById("testDescriptionContent").value=''
+        document.getElementById("testNameTestDescriptionField").value=''
+    }
+
+    function getTestDescription(systemname, testname) {
+            drawSpinner('descriptionDiv')
+            if (window.XMLHttpRequest) {
+                getTestDescriptionRequest = new XMLHttpRequest();
+            } else {
+                getTestDescriptionRequest = new ActiveXObject("Microsoft.XMLHTTP");
+            }
+
+            getTestDescriptionRequest.onreadystatechange = processTestDescriptionResponse;
+            getTestDescriptionRequest.open("GET", "/status/" + systemname + "/" + testname + "/description", true);
+            getTestDescriptionRequest.setRequestHeader('Content-type', 'application/xml');
+            getTestDescriptionRequest.send(null);
+        }
+
+     function processTestDescriptionResponse() {
+            if (getTestDescriptionRequest.readyState == 4) {
+                loadingSpinner.stop();
+                data = getTestDescriptionRequest.responseText
+                testDescriptionTextArea = document.getElementById("testDescriptionContent")
+                testDescriptionTextArea.value= data
+
+                var editor = ace.edit('descriptionEditingPre');
+
+                editor.session.setMode("ace/mode/test_execution_description");
+                editor.session.setValue(testDescriptionTextArea.value)
+                editor.setOption("minLines", 5);
+                editor.setOption("fontSize", 15);
+                editor.setAutoScrollEditorIntoView(true);
+                editor.setOption("maxLines", 100);
+
+                editor.getSession().on('change', function(e, editor) {
+                    document.getElementById("testDescriptionContent").value = editor.getValue();
+                });
+
+
+            }
+        }
+
+     clearTestContent();
+
+</script>
+
+<script src="static/ace-src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    var editor = ace.edit("editor");
+    editor.session.setMode("ace/mode/test_execution_description");
+</script>
+
+
+<!--<script>-->
+    <!--// Hook up ACE editor to all textareas with data-editor attribute-->
+    <!--$(function () {-->
+        <!--$('textarea[data-editor]').each(function () {-->
+            <!--var textarea = $(this);-->
+            <!--var mode = textarea.data('editor');-->
+            <!--var editDiv = $('<div>', {-->
+                <!--position: 'absolute',-->
+                <!--width: textarea.width(),-->
+                <!--height: textarea.height(),-->
+                <!--'class': textarea.attr('class'),-->
+            <!--}).insertBefore(textarea);-->
+            <!--textarea.css('visibility', 'hidden');-->
+            <!--var editor = ace.edit(editDiv[0]);-->
+            <!--editor.renderer.setShowGutter(false);-->
+            <!--editor.getSession().setValue(textarea.val());-->
+            <!--editor.getSession().setMode("ace/mode/" + mode);-->
+            <!--// editor.setTheme("ace/theme/idle_fingers");-->
+
+            <!--// copy back to textarea on form submit...-->
+            <!--textarea.closest('form').submit(function () {-->
+                <!--textarea.val(editor.getSession().getValue());-->
+            <!--})-->
+        <!--});-->
+    <!--});-->
+<!--</script>-->
+
+{% endblock %}

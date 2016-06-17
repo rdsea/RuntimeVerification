@@ -1,0 +1,6 @@
+#contextualized variables
+targetID=last UUID field in --
+#So for example in 10.9.9.1-Tomcat-Service, targetID=Service
+hostID=Tomcat
+#and can go on
+hosthostID = 10.9.9.1

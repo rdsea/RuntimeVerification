@@ -1,0 +1,151 @@
+(*
+   https://pypi.python.org/pypi/grako#the-generated-parsers
+   @: means discard other things, and return @:a as involing a directly
+   for example, VerifyExpression ';' will return VerifyExpression ,listElement ';', while with @ we do not also return the ;
+   @+ means force to be list
+*)
+
+grammar
+    = 
+      PropertiesDescriptionExpression TriggeredByExpression ExecutionInfoExpression
+    ;    
+ 
+
+ExecutionInfoExpression
+     =
+        'Execution' {@:executorExpression}+
+     ;
+
+TriggeredByExpression
+     =
+       'Triggers' {@:PeriodExpression|@:EventExpression}+
+     ;
+
+EventExpression
+    = 
+     'event' ':' {@:eventOnExpression}+
+    ;
+
+PeriodExpression
+    = 
+     'every' ':' @:int @:timeUnit
+    ;
+
+executorExpression
+    = 
+     'executor' ':' @+:['distinct'] @+:unit_identifier 'for' @:unit_identifier_expr
+    ;
+
+timeUnit
+    =
+     's' | 'm' | 'h' | 'd' 
+    ;
+
+eventOnExpression
+    =
+      @+:literalExpr 'on' @+:unit_identifier_expr 
+    ;
+
+VerifyExpression
+    = 
+     'verifies' ':' @:unit_identifier_expr 
+    ;
+
+PropertiesDescriptionExpression
+     =
+       'Description' name description timeout
+     ;
+
+path 
+    =
+      @:'path' ':' '"'@:?/[A-Za-z0-9_\-\/:.]*/?'"'
+    ;  
+
+name 
+    =
+      @:'name' ':' @:string
+    ;  
+
+description
+    =
+      'description' ':' '"'@:?/[A-Za-z0-9_\-\/:. ]*/?'"'
+    ;
+
+literalExpr
+    = 
+    @+:literal {',' @+:literal}*
+    ;
+
+timeout
+    = 
+    @:'timeout' ':' @:int
+    ;
+
+literal
+    =
+    string | int
+    ;
+
+(* used to express a list of unit identifiers *)
+unit_identifier_expr 
+    = 
+     @+:unit_identifier {',' @+:unit_identifier}*
+    ;
+
+(* used to identify system units by Level, their ID, or instance ID *)
+unit_identifier
+    =
+       (@:'UnitType' '.' @:level) | (( @:'UnitID' |@:'UnitUUID') '.' (@:string | @:int))
+    ;
+
+level
+    =
+      'Service' | 'Process' | 'SoftwarePlatform' | 'PhysicalDevice' |
+      'SoftwareContainer'   | 'VirtualContainer' | 'Gateway' |
+      'VirtualMachine'      | 'PhysicalMachine'
+    ;
+
+
+lower_name
+    =
+    ?/[a-z][A-Za-z0-9_]*/?
+    ;
+
+upper_name
+    =
+    ?/[A-Z][A-Za-z0-9_]*/?
+    ;
+
+char
+    =
+    string
+    ;
+
+ 
+
+string
+    =
+    STRING
+    ;
+
+STRING
+    =
+    '"' @:?/[A-Za-z0-9_.-]*/? '"'
+    |
+    "'" @:?/\w+/? "'"
+    ;
+
+LITERAL = ?/(?:\\.|[^|*\\()])+/?
+       ;
+
+int
+    =
+    ?/[0-9]+/?
+    ;
+
+ESC
+    =
+    ?/\\['"\\nrtbfv]/?
+    |
+    ?/\\u[a-fA-F0-9]{4}/?
+    ;

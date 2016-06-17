@@ -1,0 +1,43 @@
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+<script src="static/spin.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+</script>
+
+
+{% block body %}
+
+
+{% if error %}
+<div style="color: #D8000C;background-color: #FFBABA;">
+  <div >Error:</div>
+  <div>{{ error }}</div>
+</div>
+{% endif %}
+
+<div>
+  <div > <a href="{{ url_for('manageSystem') }}">Back:</a>:</div>
+</div>
+
+<div>
+  <div > <h2>Installers</h2></div>
+</div>
+
+{% if system.installers %}
+Get Ubuntu 14 bash command for downloading script to prepare each unit:
+<table>
+        <tr>
+            <th>Unit ID</th>
+            <th>Installer command</th>
+        </tr>
+
+        {%- for key in system.installers%}
+        <tr>
+            <td>{{ key}}</td>
+            <td>{{ system.installers[key] }}</td>
+        </tr>
+        {%- endfor %}
+
+</table>
+{% endif %}
+{% endblock %}

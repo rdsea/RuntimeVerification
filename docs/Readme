@@ -1,0 +1,58 @@
+############################
+1. Install Python libraries
+###########################
+- On one VM/Machine, execute with sudo rights "runtimeverificationplatform/bin/installPythonSupport.sh" to install required Python libraries
+- From "runtimeverificationplatform" folder execute:
+     sudo -S bash ./bin/installPythonSupport.sh
+
+############################
+2. Install Queue
+###########################
+- One the same or another machine, execute with sudo rights "runtimeverificationplatform/bin/installRabiddMQ.sh" to install and configure the message queue needed by the platform. 
+- From "runtimeverificationplatform" folder execute:
+     sudo -S bash ./bin/installRabiddMQ.sh
+
+########################
+3. Setup IP properties
+########################
+Setup Properties in "./config/config.properties"  
+   health.central.ip= "eth0/wlan0 IP of VM/Machine hosting runtimeverificationplatform"
+   rabbitMQ.ip=  "Accessible IP of machine on which RabiddMQ is installed
+
+########################
+4. Run platform
+########################
+   python ./run.py
+
+#Output will be something like
+#   [__init__.py:117 -             <module>() ] Health management platform started on http://YOUR_IP:5001
+#   [_internal.py:87 -                 _log() ]  * Running on http://YOUR_IP:5001/ (Press CTRL+C to quit)
+
+
+########################
+5. Open platform Web Interface
+########################
+- Navigate from a browser to:
+  http://YOUR_IP:5001
+
+########################
+5. Create account
+########################
+- Input alphanumeric username/password, and click "Register"
+- Input username/password again and click "Login"
+- Click "Documentation" for VIDEO tutorial also available here https://www.youtube.com/watch?v=qTxBiK2QJZ0
+
+########################
+6. Manage systems and tests
+########################
+- Click "Systems management" to start managing system
+- From here onwards I recommend following VIDEO tutorial from at https://www.youtube.com/watch?v=qTxBiK2QJZ0 (login starts at 0:56 s) 
+- Note: After you add your first system, near the Manage Tests button is a Download Installer button giving you the "shell command to use to install remote test executor on the system components according to their level"
+
+
+########################
+7. Stop platform
+########################
+To make sure python process for runtimeverificationplatform has stopped, after Ctrl+C in terminal, from "runtimeverificationplatform" folder execute:
+    sudo bash ./stop.sh
+

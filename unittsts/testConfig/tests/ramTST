@@ -1,0 +1,9 @@
+ usage = 3333
+ if usage > 20:
+    result.successfull=True
+ else:
+    result.successfull=False
+ result.details=usage
+ return result
+
+

@@ -1,0 +1,13 @@
+ os = __import__('os')
+ LOG_FILE_PATH = ""
+ SEARCH_PATTERNS='exception\|error'
+ errorCount = int(os.popen("cat " + LOG_FILE_PATH + " | grep -i -c " + SEARCH_PATTERNS).read())
+ result=TestResult()
+ result.meta["type"]="Log Error Count"
+ if errorCount == 0:
+    result.successfull=True
+ else:
+    result.successfull=False
+ result.details=os.popen("cat ./log.log | grep -i 'exception\|error'").read()
+ return result
+

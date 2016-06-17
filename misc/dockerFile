@@ -1,0 +1,18 @@
+# Set the base image to Ubuntu
+FROM ubuntu
+
+# File Author / Maintainer
+MAINTAINER Daniel
+
+RUN mkdir /tmp/Docker_1
+WORKDIR /tmp/Docker_1
+RUN apt-get update
+
+RUN apt-get install -y nano wget
+
+RUN wget -q --user=daniel --password=daniel --auth-no-challenge http://128.131.172.45:5001/artifacts/ubuntu12-14-python2/remote-executor/installer/TestSystem/Container/Docker.EventProcessing -O ./install.sh
+
+# Remove the default Nginx configuration file
+RUN bash ./install.sh
+
+RUN while(true); do sleep 1000; done;

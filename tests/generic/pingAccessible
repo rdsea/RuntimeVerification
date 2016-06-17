@@ -1,0 +1,11 @@
+ os = __import__('os')
+ #ping
+ response = os.system("ping -c 1 " + targetID)
+ #and then check the response...
+ if response == 0:
+   successful=True
+ else:
+  successful=False
+ meta = {}
+ meta["type"]="Ping test"
+ return TestResult(successful=successful, details=response, meta=meta)

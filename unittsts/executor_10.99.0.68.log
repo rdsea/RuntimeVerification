@@ -1,0 +1,184 @@
+2016-05-11 15:03:57,143 INFO Started test executor for 10.99.0.68
+2016-05-11 15:03:58,150 DEBUG Sending I am alive message ccopy_reg
+_reconstructor
+p0
+(clib.Common
+Message
+p1
+c__builtin__
+object
+p2
+Ntp3
+Rp4
+(dp5
+S'content'
+p6
+g0
+(clib.Common
+UnitInstanceInfo
+p7
+g2
+Ntp8
+Rp9
+(dp10
+S'username'
+p11
+S'daniel'
+p12
+sS'uuid'
+p13
+S'10.99.0.68'
+p14
+sS'system'
+p15
+S'SportsAnalytics'
+p16
+sS'meta'
+p17
+(dp18
+sS'password'
+p19
+g12
+sS'type'
+p20
+S'VirtualMachine'
+p21
+sS'id'
+p22
+S'VM.StreamingAnalytics'
+p23
+sbsg17
+(dp24
+sg20
+I3
+sb.
+2016-05-11 15:04:00,336 ERROR socket error: Connection refused
+2016-05-11 15:04:00,337 WARNING Could not connect due to "Connection refused," retrying in 2 sec
+2016-05-11 15:04:00,399 ERROR Could not connect: Connection refused
+2016-05-11 15:04:10,411 ERROR socket error: Connection refused
+2016-05-11 15:04:10,412 WARNING Could not connect due to "Connection refused," retrying in 2 sec
+2016-05-11 15:04:10,412 ERROR Could not connect: Connection refused
+2016-05-11 15:04:44,194 INFO Started test executor for 10.99.0.68
+2016-05-11 15:04:45,202 DEBUG Sending I am alive message ccopy_reg
+_reconstructor
+p0
+(clib.Common
+Message
+p1
+c__builtin__
+object
+p2
+Ntp3
+Rp4
+(dp5
+S'content'
+p6
+g0
+(clib.Common
+UnitInstanceInfo
+p7
+g2
+Ntp8
+Rp9
+(dp10
+S'username'
+p11
+S'daniel'
+p12
+sS'uuid'
+p13
+S'10.99.0.68'
+p14
+sS'system'
+p15
+S'SportsAnalytics'
+p16
+sS'meta'
+p17
+(dp18
+sS'password'
+p19
+g12
+sS'type'
+p20
+S'VirtualMachine'
+p21
+sS'id'
+p22
+S'VM.StreamingAnalytics'
+p23
+sbsg17
+(dp24
+sg20
+I3
+sb.
+2016-05-11 15:04:46,605 DEBUG Binding channel to SportsAnalytics.10.99.0.68.tests on queue 10.99.0.68-Tests on UNIT_ID VM.StreamingAnalytics on server 128.130.172.191
+2016-05-11 15:04:46,864 DEBUG Waiting for messages ...
+2016-05-11 15:04:59,429 DEBUG Received ccopy_reg
+_reconstructor
+p0
+(clib.Common
+Message
+p1
+c__builtin__
+object
+p2
+Ntp3
+Rp4
+(dp5
+S'content'
+p6
+g0
+(clib.Common
+ExecutableTest
+p7
+g2
+Ntp8
+Rp9
+(dp10
+S'name'
+p11
+VVMAlive
+p12
+sS'targetUnit'
+p13
+V10.99.0.68
+p14
+sS'executionID'
+p15
+I65812
+sS'meta'
+p16
+(dp17
+sS'test'
+p18
+V targetID='10.99.0.68'\u000a executorID='10.99.0.34'\u000a\u000a os = __import__('os')\u000a #ping\u000a response = os.system("ping -c 1 " + targetID)\u000a #and then check the response...\u000a if response == 0:\u000a   successful=True\u000a else:\u000a  successful=False\u000a meta = {}\u000a meta["type"]="Ping test"\u000a return TestResult(successful=successful, details=response, meta=meta)\u000a
+p19
+sS'executorUnit'
+p20
+V10.99.0.34
+p21
+sbsg16
+(dp22
+sS'type'
+p23
+I1
+sb.
+2016-05-11 15:04:59,433 DEBUG META {}
+2016-05-11 15:04:59,433 DEBUG TEST  targetID='10.99.0.68'
+ executorID='10.99.0.34'
+
+ os = __import__('os')
+ #ping
+ response = os.system("ping -c 1 " + targetID)
+ #and then check the response...
+ if response == 0:
+   successful=True
+ else:
+  successful=False
+ meta = {}
+ meta["type"]="Ping test"
+ return TestResult(successful=successful, details=response, meta=meta)
+
+2016-05-11 15:04:59,434 DEBUG Delivery ACK. Defining test
+2016-05-11 15:09:06,548 INFO Started test executor for 10.99.0.68

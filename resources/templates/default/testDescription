@@ -1,0 +1,18 @@
+#Description
+#name: "TestName"
+#description: "human readable description"
+#timeout: 10
+
+#Triggers
+#every:  30 s
+#event:  "E1" , "E2" on UnitType.VirtualMachine
+#event:  "E1FFF" , "E2" on UnitType.Process
+
+
+#Execution
+#executor: UnitType.VirtualMachine for UnitType.VirtualMachine, UnitType.VirtualContainer, UnitType.Process
+#executor: UnitType.VirtualContainer for UnitType.Process
+#executor: UnitType.SoftwareContainer for UnitType.SoftwareContainer
+#executor: UnitType.SoftwareContainer for UnitID."A-Za-z0-9_", UnitID."Process.ProcessNAME", UnitUUID."A-Za-z0-9_."
+#executor: UnitID."A-Za-z0-9_" for UnitID."Process.ProcessNAME", UnitUUID."A-Za-z0-9_."
+#supported types are Service | Process | SoftwarePlatform | PhysicalDevice | SoftwareContainer   | VirtualContainer | Gateway |  VirtualMachine | PhysicalMachine

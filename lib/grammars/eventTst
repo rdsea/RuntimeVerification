@@ -1,0 +1,16 @@
+Triggers
+event:  "Alive" on UnitType.VirtualMachine, UnitType.VirtualContainer, UnitType.Process
+event:  "Dead" on UnitType.VirtualMachine, UnitType.VirtualContainer, UnitType.Process
+
+Description
+name: "FailTest"
+description: "ssss"
+timeout: 30
+
+Execution
+executor: UnitType.VirtualMachine for UnitType.VirtualMachine
+executor: UnitType.VirtualContainer for UnitType.VirtualContainer
+executor: UnitType.VirtualContainer for UnitType.Process
+
+#currently on event tests are executed on all that matches execution info
+#we could add to execute on specific target: e.g., if Unit dies, check load balancer or rest of units if ok

@@ -1,0 +1,7 @@
+https://pypi.python.org/pypi/grako
+
+python -m grako ./TestDescriptionGrammar.ebnf -o ./TestDescriptionParser.py
+
+python -m grako ./grammars/TestDescriptionGrammar.ebnf -o ./TestDescriptionParser.py
+
+

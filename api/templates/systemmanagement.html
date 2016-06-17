@@ -1,0 +1,242 @@
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}"/>
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='tree.css') }}"/>
+
+<script type="text/javascript" src="http://d3js.org/d3.v3.js"></script>
+<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+
+<script src="{{ url_for('static', filename='spin.js') }}" type="text/javascript"></script>
+<script src="{{ url_for('static', filename='drawTree.js') }}" type="text/javascript"></script>
+
+<script src="{{ url_for('static', filename='jquery.tipsy.js') }}" type="text/javascript"></script>
+<link href="{{ url_for('static', filename='tipsy.css') }}" type="text/css" rel=stylesheet/>
+
+
+<script type="text/javascript">
+        var opts = {
+                lines: 20, // The number of lines to draw
+                length: 7, // The length of each line
+                width: 10, // The line thickness
+                radius: 100, // The radius of the inner circle
+                corners: 1, // Corner roundness (0..1)
+                rotate: 0, // The rotation offset
+                color: '#000', // #rgb or #rrggbb
+                speed: 1, // Rounds per second
+                trail: 60, // Afterglow percentage
+                shadow: false, // Whether to render a shadow
+                hwaccel: false, // Whether to use hardware acceleration
+                className: 'spinner', // The CSS class to assign to the spinner
+                zIndex: 2e9, // The z-index (defaults to 2000000000)
+                top: 'auto', // Top position relative to parent in px
+                left: 'auto', // Left position relative to parent in px
+                visibility: true
+            };
+       var loadingSpinner = new Spinner(opts);
+
+
+       function drawSpinner(spinnerContainer) {
+            var target = document.getElementById(spinnerContainer);
+            loadingSpinner.spin(target);
+        }
+
+    var focused = true;
+
+    window.onfocus = function() {
+
+        focused = true;
+    };
+    window.onblur = function() {
+        focused = false;
+    };
+
+
+</script>
+
+
+<script type="text/javascript">
+
+      var selectedInfoPath = ""
+
+      setTimeout(callAndRedrawSystemView, 5000);
+
+      function callAndRedrawSystemView(){
+          if (selectedInfoPath && focused){
+            console.log("FOCUSED SO DRAW");
+            getSystemInfo(selectedInfoPath);
+          }
+          setTimeout(callAndRedrawSystemView, 5000);
+      }
+
+      function markViewedInfo(infopath) {
+             drawSpinner('tree-container')
+             selectedInfoPath = infopath
+             getSystemInfo(infopath)
+      }
+
+     function getSystemInfo(infopath) {
+
+            getManagedServices = null;
+            if (window.XMLHttpRequest) {
+                getSystemInfoRequest = new XMLHttpRequest();
+            } else {
+                getSystemInfoRequest = new ActiveXObject("Microsoft.XMLHTTP");
+            }
+
+            getSystemInfoRequest.onreadystatechange = processSystemInfoResponse;
+            getSystemInfoRequest.open("GET", infopath, true);
+            getSystemInfoRequest.setRequestHeader('Content-type', 'application/xml');
+            getSystemInfoRequest.send(null);
+        }
+
+
+     function processSystemInfoResponse() {
+            if (getSystemInfoRequest.readyState == 4) {
+                loadingSpinner.stop();
+                data = getSystemInfoRequest.responseText
+
+                descriptionArea = document.getElementById("descriptionArea")
+                descriptionArea .innerHTML= JSON.stringify(JSON.parse(data), null, '\t')
+
+
+                viewerWidth = descriptionArea.offsetWidth;
+                viewerHeight = descriptionArea.offsetHeight;
+
+                //process data so tree display can use it
+                data = data.replace(/containedUnits/g, "children");
+                data = data.replace(/tests/g, "children");
+                drawTree(JSON.parse(data), "tree-container", viewerWidth, viewerHeight)
+
+            }
+        }
+
+
+
+</script>
+
+
+{% block body %}
+<h2>System management</h2>
+{% if error %}<p class=error><strong>Error:</strong> {{ error }}{% endif %}
+
+    <a href="{{ url_for('index') }}">Back</a>
+    <h3>Managed systems:</h3>
+
+<div id="tree-container"></div>
+
+<table>
+    <!-- systems variable sent as parameter to this poage when rendering this page, from uiManagement.py-->
+    <!--@app.route('/system_management')-->
+    <!--def manageSystem():-->
+    {%- for item in systems %}
+    <tr>
+
+        <th>System: <b>{{ item.name }}</b></th>
+
+        <td><a href="#" onclick=markViewedInfo("/systems/{{ item.name }}/structure/static");>Static structure</a></td>
+        <td><a href="#" onclick=markViewedInfo("/systems/{{ item.name }}/structure/runtime");>Run-time structure</a></td>
+        <td><a href="#" onclick=markViewedInfo("/status/{{ item.name }}/tests/session/last");>Last test session</a></td>
+        <td><a href="#" onclick=markViewedInfo("/status/{{ item.name }}/tests/analysis/rate");>Success rate</a></td>
+        <!--<td><a href="/systems/{{ item.name }}/structure/static" target="_blank">Static structure</a></td>-->
+        <!--<td><a href="/systems/{{ item.name }}/structure/runtime" target="_blank">Run-time structure</a></td>-->
+        <!--<td><a href="/status/{{ item.name }}/tests/session/last" target="_blank">Last test session</a></td>-->
+        <!--<td><a href="/status/{{ item.name }}/tests/analysis/rate" target="_blank">Success rate</a></td>-->
+     <td>
+            <form id="manageTests{{ item.name }}" action="{{ url_for('manageSystemsConfigurations') }}" method="post">
+                <input type=text name="system_id" value="{{ item.name }}" hidden="hidden">
+                <input type=submit name="action" value=Delete>
+                <input type=submit name="action" value=ManageTests>
+                <input type=submit name="action" value=ViewEvents>
+                <input type=submit name="action" value=DownloadInstaller>
+            </form>
+        </td>
+    </tr>
+    {%- endfor %}
+</table>
+
+
+<table>
+    <tr>
+
+        <td>
+            <div id="descriptionDiv"><textarea id="descriptionArea" rows="40" cols="160" contenteditable="false"></textarea></div>
+        </td>
+
+        <td>
+            <textarea form="SubmitSystemForm" id="systemDescription" name="systemDescription" rows="40" cols="60">{% if template %} {{ template }}{% endif %}</textarea>
+
+            <h3>Add new system:</h3>
+
+            <form id="SubmitSystemForm" action="{{ url_for('addSystemFromJSONDescription') }}" method=post>
+                <input type=submit name="action" value=Add>
+                <input type=submit name="action" value="LoadTemplate">
+                <input type=submit name="action" value="Clear">
+            </form>
+        </td>
+
+    </tr>
+</table>
+{% endblock %}
+
+
+
+<!--<div class="datagrid">-->
+    <!--<table>-->
+        <!--<thead>-->
+        <!--<tr>-->
+            <!--<th>header</th>-->
+            <!--<th>header</th>-->
+            <!--<th>header</th>-->
+            <!--<th>header</th>-->
+        <!--</tr>-->
+        <!--</thead>-->
+        <!--<tfoot>-->
+        <!--<tr>-->
+            <!--<td colspan="4">-->
+                <!--<div id="paging">-->
+                    <!--<ul>-->
+                        <!--<li><a href="#"><span>Previous</span></a></li>-->
+                        <!--<li><a href="#" class="active"><span>1</span></a></li>-->
+                        <!--<li><a href="#"><span>2</span></a></li>-->
+                        <!--<li><a href="#"><span>3</span></a></li>-->
+                        <!--<li><a href="#"><span>4</span></a></li>-->
+                        <!--<li><a href="#"><span>5</span></a></li>-->
+                        <!--<li><a href="#"><span>Next</span></a></li>-->
+                    <!--</ul>-->
+                <!--</div>-->
+        <!--</tr>-->
+        <!--</tfoot>-->
+        <!--<tbody>-->
+        <!--<tr>-->
+            <!--<td>data</td>-->
+            <!--<td>data</td>-->
+            <!--<td>data</td>-->
+            <!--<td>data</td>-->
+        <!--</tr>-->
+        <!--<tr class="alt">-->
+            <!--<td>data</td>-->
+            <!--<td>data</td>-->
+            <!--<td>data</td>-->
+            <!--<td>data</td>-->
+        <!--</tr>-->
+        <!--<tr>-->
+            <!--<td>data</td>-->
+            <!--<td>data</td>-->
+            <!--<td>data</td>-->
+            <!--<td>data</td>-->
+        <!--</tr>-->
+        <!--<tr class="alt">-->
+            <!--<td>data</td>-->
+            <!--<td>data</td>-->
+            <!--<td>data</td>-->
+            <!--<td>data</td>-->
+        <!--</tr>-->
+        <!--<tr>-->
+            <!--<td>data</td>-->
+            <!--<td>data</td>-->
+            <!--<td>data</td>-->
+            <!--<td>data</td>-->
+        <!--</tr>-->
+        <!--</tbody>-->
+    <!--</table>-->
+<!--</div>-->
+
+

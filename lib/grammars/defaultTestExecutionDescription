@@ -1,0 +1,20 @@
+Description
+name: "FailTest"
+description: "human readable description"
+timeout: 20
+
+#after:
+#if fulfillment:
+Triggers
+event:  "E1" , "E2" on UnitType.VirtualMachine
+event:  "E1FFF" , "E2" on UnitType.Process
+every:  10 s
+#after: #if missing, means in parralel to others.
+#if fulfillment:
+
+Execution
+executor: UnitType.VirtualMachine for UnitType.VirtualMachine, UnitType.VirtualContainer, UnitType.Process
+executor: UnitType.VirtualContainer for UnitType.Process
+executor: UnitType.SoftwareContainer for UnitType.SoftwareContainer
+
+

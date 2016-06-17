@@ -1,0 +1,1861 @@
+INFO:root:Started test executor for 10.99.0.1-Tomcat-Service.EventProcessingService
+DEBUG:root:Sending I am alive message ccopy_reg
+_reconstructor
+p0
+(clib.Common
+Message
+p1
+c__builtin__
+object
+p2
+Ntp3
+Rp4
+(dp5
+S'content'
+p6
+g0
+(clib.Common
+UnitInstanceInfo
+p7
+g2
+Ntp8
+Rp9
+(dp10
+S'username'
+p11
+S'daniel'
+p12
+sS'uuid'
+p13
+S'10.99.0.1-Tomcat-Service.EventProcessingService'
+p14
+sS'system'
+p15
+S'WebServicesCluster'
+p16
+sS'meta'
+p17
+(dp18
+sS'password'
+p19
+g12
+sS'type'
+p20
+S'Service'
+p21
+sS'id'
+p22
+S'VM.WebService'
+p23
+sbsg17
+(dp24
+sg20
+I3
+sb.
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingConnection._on_connection_start of <pika.adapters.blocking_connection.BlockingConnection object at 0x7fee60089310>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 1}
+DEBUG:pika.connection:Attempting connection
+DEBUG:pika.adapters.base_connection:Connecting the adapter to the remote host
+DEBUG:pika.adapters.base_connection:Creating the socket
+INFO:pika.adapters.base_connection:Connecting fd 6 to 128.130.172.230:5672
+DEBUG:pika.adapters.blocking_connection:Setting socket connection timeout
+DEBUG:pika.connection:Frame: <ProtocolHeader(['frame_type=-1', 'major=0', 'minor=9', 'revision=1'])>
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 8
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=0', 'method=<Connection.Start(["server_properties={\'information\': \'Licensed under the MPL.  See http://www.rabbitmq.com/\', \'product\': \'RabbitMQ\', \'copyright\': \'Copyright (C) 2007-2015 Pivotal Software, Inc.\', \'capabilities\': {\'exchange_exchange_bindings\': True, \'connection.blocked\': True, \'authentication_failure_close\': True, \'basic.nack\': True, \'per_consumer_qos\': True, \'consumer_priorities\': True, \'consumer_cancel_notify\': True, \'publisher_confirms\': True}, \'cluster_name\': \'rabbit@queuevm.novalocal\', \'platform\': \'Erlang/OTP\', \'version\': \'3.6.0\'}", \'version_minor=9\', \'mechanisms=PLAIN AMQPLAIN\', \'locales=en_US\', \'version_major=0\'])>'])>
+DEBUG:pika.callback:Processing 0:Connection.Start
+DEBUG:pika.callback:Processing use of oneshot callback
+DEBUG:pika.callback:0 registered uses left
+DEBUG:pika.callback:Removing callback #0: {'callback': <bound method BlockingConnection._on_connection_start of <pika.adapters.blocking_connection.BlockingConnection object at 0x7fee60089310>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 0}
+DEBUG:pika.callback:Calling <bound method BlockingConnection._on_connection_start of <pika.adapters.blocking_connection.BlockingConnection object at 0x7fee60089310>> for "0:Connection.Start"
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingConnection._on_connection_tune of <pika.adapters.blocking_connection.BlockingConnection object at 0x7fee60089310>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 1}
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=0', 'method=<Connection.StartOk([\'locale=en_US\', \'mechanism=PLAIN\', "client_properties={\'platform\': \'Python 2.7.6\', \'product\': \'Pika Python Client Library\', \'version\': \'0.9.8\', \'capabilities\': {\'consumer_cancel_notify\': True, \'publisher_confirms\': True, \'basic.nack\': True}, \'information\': \'See http://pika.github.com\'}", \'response=\\x00daniel\\x00daniel\'])>'])>
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 249
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 0
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=0', "method=<Connection.Tune(['frame_max=131072', 'channel_max=0', 'heartbeat=60'])>"])>
+DEBUG:pika.callback:Processing 0:Connection.Tune
+DEBUG:pika.callback:Processing use of oneshot callback
+DEBUG:pika.callback:0 registered uses left
+DEBUG:pika.callback:Removing callback #0: {'callback': <bound method BlockingConnection._on_connection_tune of <pika.adapters.blocking_connection.BlockingConnection object at 0x7fee60089310>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 0}
+DEBUG:pika.callback:Calling <bound method BlockingConnection._on_connection_tune of <pika.adapters.blocking_connection.BlockingConnection object at 0x7fee60089310>> for "0:Connection.Tune"
+DEBUG:pika.connection:Creating a HeartbeatChecker: 60
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=0', "method=<Connection.TuneOk(['frame_max=131072', 'channel_max=0', 'heartbeat=60'])>"])>
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 20
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingConnection._on_connection_open of <pika.adapters.blocking_connection.BlockingConnection object at 0x7fee60089310>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 1}
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=0', "method=<Connection.Open(['insist=True', 'capabilities=', 'virtual_host=WebServicesCluster'])>"])>
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 33
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 0
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=0', "method=<Connection.OpenOk(['known_hosts='])>"])>
+DEBUG:pika.callback:Processing 0:Connection.OpenOk
+DEBUG:pika.callback:Processing use of oneshot callback
+DEBUG:pika.callback:0 registered uses left
+DEBUG:pika.callback:Removing callback #0: {'callback': <bound method BlockingConnection._on_connection_open of <pika.adapters.blocking_connection.BlockingConnection object at 0x7fee60089310>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 0}
+DEBUG:pika.callback:Calling <bound method BlockingConnection._on_connection_open of <pika.adapters.blocking_connection.BlockingConnection object at 0x7fee60089310>> for "0:Connection.OpenOk"
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingConnection._on_connection_closed of <pika.adapters.blocking_connection.BlockingConnection object at 0x7fee60089310>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 1}
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 0
+DEBUG:pika.adapters.blocking_connection:Setting socket timeout to 0.25
+INFO:pika.adapters.blocking_connection:Adapter connected
+DEBUG:pika.connection:Connected
+DEBUG:pika.adapters.blocking_connection:Opening channel 1
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingChannel._on_close of <pika.adapters.blocking_connection.BlockingChannel object at 0x7fee671e8590>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 1}
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingChannel._on_getempty of <pika.adapters.blocking_connection.BlockingChannel object at 0x7fee671e8590>>, 'only': None, 'one_shot': False, 'arguments': None}
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingChannel._on_cancel of <pika.adapters.blocking_connection.BlockingChannel object at 0x7fee671e8590>>, 'only': None, 'one_shot': False, 'arguments': None}
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingChannel._on_rpc_complete of <pika.adapters.blocking_connection.BlockingChannel object at 0x7fee671e8590>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 1}
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingChannel._on_rpc_complete of <pika.adapters.blocking_connection.BlockingChannel object at 0x7fee671e8590>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 1}
+DEBUG:pika.adapters.blocking_connection:Connection: <pika.adapters.blocking_connection.BlockingConnection object at 0x7fee60089310>
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=1', "method=<Channel.Open(['out_of_band='])>"])>
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 13
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=1', "method=<Channel.OpenOk(['channel_id='])>"])>
+DEBUG:pika.callback:Processing 1:Channel.OpenOk
+DEBUG:pika.callback:Processing use of oneshot callback
+DEBUG:pika.callback:0 registered uses left
+DEBUG:pika.callback:Removing callback #0: {'callback': <bound method BlockingChannel._on_rpc_complete of <pika.adapters.blocking_connection.BlockingChannel object at 0x7fee671e8590>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 0}
+DEBUG:pika.callback:Calling <bound method BlockingChannel._on_rpc_complete of <pika.adapters.blocking_connection.BlockingChannel object at 0x7fee671e8590>> for "1:Channel.OpenOk"
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 0
+DEBUG:pika.adapters.blocking_connection:Handling timeout 1 with a threshold of 0
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 0
+DEBUG:pika.adapters.blocking_connection:Connection: <pika.adapters.blocking_connection.BlockingConnection object at 0x7fee60089310>
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=1', "method=<Basic.Publish(['ticket=0', 'mandatory=False', 'routing_key=WebServicesCluster.lifecycle.alive', 'immediate=False', 'exchange=WebServicesCluster'])>"])>
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 69
+DEBUG:pika.connection:Frame: <Header(['frame_type=2', 'channel_number=1', 'properties=<BasicProperties>', 'body_size=420'])>
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 22
+DEBUG:pika.connection:Frame: <Body(['frame_type=3', 'channel_number=1', "fragment=ccopy_reg\n_reconstructor\np0\n(clib.Common\nMessage\np1\nc__builtin__\nobject\np2\nNtp3\nRp4\n(dp5\nS'content'\np6\ng0\n(clib.Common\nUnitInstanceInfo\np7\ng2\nNtp8\nRp9\n(dp10\nS'username'\np11\nS'daniel'\np12\nsS'uuid'\np13\nS'10.99.0.1-Tomcat-Service.EventProcessingService'\np14\nsS'system'\np15\nS'WebServicesCluster'\np16\nsS'meta'\np17\n(dp18\nsS'password'\np19\ng12\nsS'type'\np20\nS'Service'\np21\nsS'id'\np22\nS'VM.WebService'\np23\nsbsg17\n(dp24\nsg20\nI3\nsb."])>
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 428
+INFO:pika.connection:Closing connection (200): Normal shutdown
+DEBUG:pika.adapters.blocking_connection:Handling timeout 1 with a threshold of 3
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 0
+INFO:root:Started test executor for 10.99.0.1-Tomcat-Service.EventProcessingService
+DEBUG:root:Sending I am alive message ccopy_reg
+_reconstructor
+p0
+(clib.Common
+Message
+p1
+c__builtin__
+object
+p2
+Ntp3
+Rp4
+(dp5
+S'content'
+p6
+g0
+(clib.Common
+UnitInstanceInfo
+p7
+g2
+Ntp8
+Rp9
+(dp10
+S'username'
+p11
+S'daniel'
+p12
+sS'uuid'
+p13
+S'10.99.0.1-Tomcat-Service.EventProcessingService'
+p14
+sS'system'
+p15
+S'WebServicesCluster'
+p16
+sS'meta'
+p17
+(dp18
+sS'password'
+p19
+g12
+sS'type'
+p20
+S'Service'
+p21
+sS'id'
+p22
+S'VM.WebService'
+p23
+sbsg17
+(dp24
+sg20
+I3
+sb.
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingConnection._on_connection_start of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f7696d8a310>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 1}
+DEBUG:pika.connection:Attempting connection
+DEBUG:pika.adapters.base_connection:Connecting the adapter to the remote host
+DEBUG:pika.adapters.base_connection:Creating the socket
+INFO:pika.adapters.base_connection:Connecting fd 6 to 128.130.172.230:5672
+DEBUG:pika.adapters.blocking_connection:Setting socket connection timeout
+DEBUG:pika.connection:Frame: <ProtocolHeader(['frame_type=-1', 'major=0', 'minor=9', 'revision=1'])>
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 8
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=0', 'method=<Connection.Start(["server_properties={\'information\': \'Licensed under the MPL.  See http://www.rabbitmq.com/\', \'product\': \'RabbitMQ\', \'copyright\': \'Copyright (C) 2007-2015 Pivotal Software, Inc.\', \'capabilities\': {\'exchange_exchange_bindings\': True, \'connection.blocked\': True, \'authentication_failure_close\': True, \'basic.nack\': True, \'per_consumer_qos\': True, \'consumer_priorities\': True, \'consumer_cancel_notify\': True, \'publisher_confirms\': True}, \'cluster_name\': \'rabbit@queuevm.novalocal\', \'platform\': \'Erlang/OTP\', \'version\': \'3.6.0\'}", \'version_minor=9\', \'mechanisms=PLAIN AMQPLAIN\', \'locales=en_US\', \'version_major=0\'])>'])>
+DEBUG:pika.callback:Processing 0:Connection.Start
+DEBUG:pika.callback:Processing use of oneshot callback
+DEBUG:pika.callback:0 registered uses left
+DEBUG:pika.callback:Removing callback #0: {'callback': <bound method BlockingConnection._on_connection_start of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f7696d8a310>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 0}
+DEBUG:pika.callback:Calling <bound method BlockingConnection._on_connection_start of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f7696d8a310>> for "0:Connection.Start"
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingConnection._on_connection_tune of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f7696d8a310>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 1}
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=0', 'method=<Connection.StartOk([\'locale=en_US\', \'mechanism=PLAIN\', "client_properties={\'platform\': \'Python 2.7.6\', \'product\': \'Pika Python Client Library\', \'version\': \'0.9.8\', \'capabilities\': {\'consumer_cancel_notify\': True, \'publisher_confirms\': True, \'basic.nack\': True}, \'information\': \'See http://pika.github.com\'}", \'response=\\x00daniel\\x00daniel\'])>'])>
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 249
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 0
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=0', "method=<Connection.Tune(['frame_max=131072', 'channel_max=0', 'heartbeat=60'])>"])>
+DEBUG:pika.callback:Processing 0:Connection.Tune
+DEBUG:pika.callback:Processing use of oneshot callback
+DEBUG:pika.callback:0 registered uses left
+DEBUG:pika.callback:Removing callback #0: {'callback': <bound method BlockingConnection._on_connection_tune of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f7696d8a310>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 0}
+DEBUG:pika.callback:Calling <bound method BlockingConnection._on_connection_tune of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f7696d8a310>> for "0:Connection.Tune"
+DEBUG:pika.connection:Creating a HeartbeatChecker: 60
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=0', "method=<Connection.TuneOk(['frame_max=131072', 'channel_max=0', 'heartbeat=60'])>"])>
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 20
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingConnection._on_connection_open of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f7696d8a310>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 1}
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=0', "method=<Connection.Open(['insist=True', 'capabilities=', 'virtual_host=WebServicesCluster'])>"])>
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 33
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 0
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=0', "method=<Connection.OpenOk(['known_hosts='])>"])>
+DEBUG:pika.callback:Processing 0:Connection.OpenOk
+DEBUG:pika.callback:Processing use of oneshot callback
+DEBUG:pika.callback:0 registered uses left
+DEBUG:pika.callback:Removing callback #0: {'callback': <bound method BlockingConnection._on_connection_open of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f7696d8a310>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 0}
+DEBUG:pika.callback:Calling <bound method BlockingConnection._on_connection_open of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f7696d8a310>> for "0:Connection.OpenOk"
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingConnection._on_connection_closed of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f7696d8a310>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 1}
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 0
+DEBUG:pika.adapters.blocking_connection:Setting socket timeout to 0.25
+INFO:pika.adapters.blocking_connection:Adapter connected
+DEBUG:pika.connection:Connected
+DEBUG:pika.adapters.blocking_connection:Opening channel 1
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingChannel._on_close of <pika.adapters.blocking_connection.BlockingChannel object at 0x7f769e6eb590>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 1}
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingChannel._on_getempty of <pika.adapters.blocking_connection.BlockingChannel object at 0x7f769e6eb590>>, 'only': None, 'one_shot': False, 'arguments': None}
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingChannel._on_cancel of <pika.adapters.blocking_connection.BlockingChannel object at 0x7f769e6eb590>>, 'only': None, 'one_shot': False, 'arguments': None}
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingChannel._on_rpc_complete of <pika.adapters.blocking_connection.BlockingChannel object at 0x7f769e6eb590>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 1}
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingChannel._on_rpc_complete of <pika.adapters.blocking_connection.BlockingChannel object at 0x7f769e6eb590>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 1}
+DEBUG:pika.adapters.blocking_connection:Connection: <pika.adapters.blocking_connection.BlockingConnection object at 0x7f7696d8a310>
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=1', "method=<Channel.Open(['out_of_band='])>"])>
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 13
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=1', "method=<Channel.OpenOk(['channel_id='])>"])>
+DEBUG:pika.callback:Processing 1:Channel.OpenOk
+DEBUG:pika.callback:Processing use of oneshot callback
+DEBUG:pika.callback:0 registered uses left
+DEBUG:pika.callback:Removing callback #0: {'callback': <bound method BlockingChannel._on_rpc_complete of <pika.adapters.blocking_connection.BlockingChannel object at 0x7f769e6eb590>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 0}
+DEBUG:pika.callback:Calling <bound method BlockingChannel._on_rpc_complete of <pika.adapters.blocking_connection.BlockingChannel object at 0x7f769e6eb590>> for "1:Channel.OpenOk"
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 0
+DEBUG:pika.adapters.blocking_connection:Handling timeout 1 with a threshold of 0
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 0
+DEBUG:pika.adapters.blocking_connection:Connection: <pika.adapters.blocking_connection.BlockingConnection object at 0x7f7696d8a310>
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=1', "method=<Basic.Publish(['ticket=0', 'mandatory=False', 'routing_key=WebServicesCluster.lifecycle.alive', 'immediate=False', 'exchange=WebServicesCluster'])>"])>
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 69
+DEBUG:pika.connection:Frame: <Header(['frame_type=2', 'channel_number=1', 'properties=<BasicProperties>', 'body_size=420'])>
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 22
+DEBUG:pika.connection:Frame: <Body(['frame_type=3', 'channel_number=1', "fragment=ccopy_reg\n_reconstructor\np0\n(clib.Common\nMessage\np1\nc__builtin__\nobject\np2\nNtp3\nRp4\n(dp5\nS'content'\np6\ng0\n(clib.Common\nUnitInstanceInfo\np7\ng2\nNtp8\nRp9\n(dp10\nS'username'\np11\nS'daniel'\np12\nsS'uuid'\np13\nS'10.99.0.1-Tomcat-Service.EventProcessingService'\np14\nsS'system'\np15\nS'WebServicesCluster'\np16\nsS'meta'\np17\n(dp18\nsS'password'\np19\ng12\nsS'type'\np20\nS'Service'\np21\nsS'id'\np22\nS'VM.WebService'\np23\nsbsg17\n(dp24\nsg20\nI3\nsb."])>
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 428
+INFO:pika.connection:Closing connection (200): Normal shutdown
+DEBUG:pika.adapters.blocking_connection:Handling timeout 1 with a threshold of 3
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 0
+INFO:root:Started test executor for 10.99.0.1-Tomcat-Service.EventProcessingService
+DEBUG:root:Sending I am alive message ccopy_reg
+_reconstructor
+p0
+(clib.Common
+Message
+p1
+c__builtin__
+object
+p2
+Ntp3
+Rp4
+(dp5
+S'content'
+p6
+g0
+(clib.Common
+UnitInstanceInfo
+p7
+g2
+Ntp8
+Rp9
+(dp10
+S'username'
+p11
+S'daniel'
+p12
+sS'uuid'
+p13
+S'10.99.0.1-Tomcat-Service.EventProcessingService'
+p14
+sS'system'
+p15
+S'WebServicesCluster'
+p16
+sS'meta'
+p17
+(dp18
+sS'password'
+p19
+g12
+sS'type'
+p20
+S'Service'
+p21
+sS'id'
+p22
+S'VM.WebService'
+p23
+sbsg17
+(dp24
+sg20
+I3
+sb.
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingConnection._on_connection_start of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f02f04fc250>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 1}
+DEBUG:pika.connection:Attempting connection
+DEBUG:pika.adapters.base_connection:Connecting the adapter to the remote host
+DEBUG:pika.adapters.base_connection:Creating the socket
+INFO:pika.adapters.base_connection:Connecting fd 6 to 128.130.172.230:5672
+DEBUG:pika.adapters.blocking_connection:Setting socket connection timeout
+DEBUG:pika.connection:Frame: <ProtocolHeader(['frame_type=-1', 'major=0', 'minor=9', 'revision=1'])>
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 8
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=0', 'method=<Connection.Start(["server_properties={\'information\': \'Licensed under the MPL.  See http://www.rabbitmq.com/\', \'product\': \'RabbitMQ\', \'copyright\': \'Copyright (C) 2007-2015 Pivotal Software, Inc.\', \'capabilities\': {\'exchange_exchange_bindings\': True, \'connection.blocked\': True, \'authentication_failure_close\': True, \'basic.nack\': True, \'per_consumer_qos\': True, \'consumer_priorities\': True, \'consumer_cancel_notify\': True, \'publisher_confirms\': True}, \'cluster_name\': \'rabbit@queuevm.novalocal\', \'platform\': \'Erlang/OTP\', \'version\': \'3.6.0\'}", \'version_minor=9\', \'mechanisms=PLAIN AMQPLAIN\', \'locales=en_US\', \'version_major=0\'])>'])>
+DEBUG:pika.callback:Processing 0:Connection.Start
+DEBUG:pika.callback:Processing use of oneshot callback
+DEBUG:pika.callback:0 registered uses left
+DEBUG:pika.callback:Removing callback #0: {'callback': <bound method BlockingConnection._on_connection_start of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f02f04fc250>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 0}
+DEBUG:pika.callback:Calling <bound method BlockingConnection._on_connection_start of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f02f04fc250>> for "0:Connection.Start"
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingConnection._on_connection_tune of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f02f04fc250>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 1}
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=0', 'method=<Connection.StartOk([\'locale=en_US\', \'mechanism=PLAIN\', "client_properties={\'platform\': \'Python 2.7.6\', \'product\': \'Pika Python Client Library\', \'version\': \'0.9.8\', \'capabilities\': {\'consumer_cancel_notify\': True, \'publisher_confirms\': True, \'basic.nack\': True}, \'information\': \'See http://pika.github.com\'}", \'response=\\x00daniel\\x00daniel\'])>'])>
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 249
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 0
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=0', "method=<Connection.Tune(['frame_max=131072', 'channel_max=0', 'heartbeat=60'])>"])>
+DEBUG:pika.callback:Processing 0:Connection.Tune
+DEBUG:pika.callback:Processing use of oneshot callback
+DEBUG:pika.callback:0 registered uses left
+DEBUG:pika.callback:Removing callback #0: {'callback': <bound method BlockingConnection._on_connection_tune of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f02f04fc250>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 0}
+DEBUG:pika.callback:Calling <bound method BlockingConnection._on_connection_tune of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f02f04fc250>> for "0:Connection.Tune"
+DEBUG:pika.connection:Creating a HeartbeatChecker: 60
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=0', "method=<Connection.TuneOk(['frame_max=131072', 'channel_max=0', 'heartbeat=60'])>"])>
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 20
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingConnection._on_connection_open of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f02f04fc250>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 1}
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=0', "method=<Connection.Open(['insist=True', 'capabilities=', 'virtual_host=WebServicesCluster'])>"])>
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 33
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 0
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=0', "method=<Connection.OpenOk(['known_hosts='])>"])>
+DEBUG:pika.callback:Processing 0:Connection.OpenOk
+DEBUG:pika.callback:Processing use of oneshot callback
+DEBUG:pika.callback:0 registered uses left
+DEBUG:pika.callback:Removing callback #0: {'callback': <bound method BlockingConnection._on_connection_open of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f02f04fc250>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 0}
+DEBUG:pika.callback:Calling <bound method BlockingConnection._on_connection_open of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f02f04fc250>> for "0:Connection.OpenOk"
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingConnection._on_connection_closed of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f02f04fc250>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 1}
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 0
+DEBUG:pika.adapters.blocking_connection:Setting socket timeout to 0.25
+INFO:pika.adapters.blocking_connection:Adapter connected
+DEBUG:pika.connection:Connected
+DEBUG:pika.adapters.blocking_connection:Opening channel 1
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingChannel._on_close of <pika.adapters.blocking_connection.BlockingChannel object at 0x7f02f6e68590>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 1}
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingChannel._on_getempty of <pika.adapters.blocking_connection.BlockingChannel object at 0x7f02f6e68590>>, 'only': None, 'one_shot': False, 'arguments': None}
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingChannel._on_cancel of <pika.adapters.blocking_connection.BlockingChannel object at 0x7f02f6e68590>>, 'only': None, 'one_shot': False, 'arguments': None}
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingChannel._on_rpc_complete of <pika.adapters.blocking_connection.BlockingChannel object at 0x7f02f6e68590>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 1}
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingChannel._on_rpc_complete of <pika.adapters.blocking_connection.BlockingChannel object at 0x7f02f6e68590>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 1}
+DEBUG:pika.adapters.blocking_connection:Connection: <pika.adapters.blocking_connection.BlockingConnection object at 0x7f02f04fc250>
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=1', "method=<Channel.Open(['out_of_band='])>"])>
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 13
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=1', "method=<Channel.OpenOk(['channel_id='])>"])>
+DEBUG:pika.callback:Processing 1:Channel.OpenOk
+DEBUG:pika.callback:Processing use of oneshot callback
+DEBUG:pika.callback:0 registered uses left
+DEBUG:pika.callback:Removing callback #0: {'callback': <bound method BlockingChannel._on_rpc_complete of <pika.adapters.blocking_connection.BlockingChannel object at 0x7f02f6e68590>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 0}
+DEBUG:pika.callback:Calling <bound method BlockingChannel._on_rpc_complete of <pika.adapters.blocking_connection.BlockingChannel object at 0x7f02f6e68590>> for "1:Channel.OpenOk"
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 0
+DEBUG:pika.adapters.blocking_connection:Handling timeout 1 with a threshold of 0
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 0
+DEBUG:pika.adapters.blocking_connection:Connection: <pika.adapters.blocking_connection.BlockingConnection object at 0x7f02f04fc250>
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=1', "method=<Basic.Publish(['ticket=0', 'mandatory=False', 'routing_key=WebServicesCluster.lifecycle.alive', 'immediate=False', 'exchange=WebServicesCluster'])>"])>
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 69
+DEBUG:pika.connection:Frame: <Header(['frame_type=2', 'channel_number=1', 'properties=<BasicProperties>', 'body_size=420'])>
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 22
+DEBUG:pika.connection:Frame: <Body(['frame_type=3', 'channel_number=1', "fragment=ccopy_reg\n_reconstructor\np0\n(clib.Common\nMessage\np1\nc__builtin__\nobject\np2\nNtp3\nRp4\n(dp5\nS'content'\np6\ng0\n(clib.Common\nUnitInstanceInfo\np7\ng2\nNtp8\nRp9\n(dp10\nS'username'\np11\nS'daniel'\np12\nsS'uuid'\np13\nS'10.99.0.1-Tomcat-Service.EventProcessingService'\np14\nsS'system'\np15\nS'WebServicesCluster'\np16\nsS'meta'\np17\n(dp18\nsS'password'\np19\ng12\nsS'type'\np20\nS'Service'\np21\nsS'id'\np22\nS'VM.WebService'\np23\nsbsg17\n(dp24\nsg20\nI3\nsb."])>
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 428
+INFO:pika.connection:Closing connection (200): Normal shutdown
+DEBUG:pika.adapters.blocking_connection:Handling timeout 1 with a threshold of 3
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 0
+INFO:root:Started test executor for 10.99.0.1-Tomcat-Service.EventProcessingService
+DEBUG:root:Sending I am alive message ccopy_reg
+_reconstructor
+p0
+(clib.Common
+Message
+p1
+c__builtin__
+object
+p2
+Ntp3
+Rp4
+(dp5
+S'content'
+p6
+g0
+(clib.Common
+UnitInstanceInfo
+p7
+g2
+Ntp8
+Rp9
+(dp10
+S'username'
+p11
+S'daniel'
+p12
+sS'uuid'
+p13
+S'10.99.0.1-Tomcat-Service.EventProcessingService'
+p14
+sS'system'
+p15
+S'WebServicesCluster'
+p16
+sS'meta'
+p17
+(dp18
+sS'password'
+p19
+g12
+sS'type'
+p20
+S'Service'
+p21
+sS'id'
+p22
+S'Service.EventProcessingService'
+p23
+sbsg17
+(dp24
+sg20
+I3
+sb.
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingConnection._on_connection_start of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2a701fc290>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 1}
+DEBUG:pika.connection:Attempting connection
+DEBUG:pika.adapters.base_connection:Connecting the adapter to the remote host
+DEBUG:pika.adapters.base_connection:Creating the socket
+INFO:pika.adapters.base_connection:Connecting fd 6 to 128.130.172.230:5672
+DEBUG:pika.adapters.blocking_connection:Setting socket connection timeout
+DEBUG:pika.connection:Frame: <ProtocolHeader(['frame_type=-1', 'major=0', 'minor=9', 'revision=1'])>
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 8
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=0', 'method=<Connection.Start(["server_properties={\'information\': \'Licensed under the MPL.  See http://www.rabbitmq.com/\', \'product\': \'RabbitMQ\', \'copyright\': \'Copyright (C) 2007-2015 Pivotal Software, Inc.\', \'capabilities\': {\'exchange_exchange_bindings\': True, \'connection.blocked\': True, \'authentication_failure_close\': True, \'basic.nack\': True, \'per_consumer_qos\': True, \'consumer_priorities\': True, \'consumer_cancel_notify\': True, \'publisher_confirms\': True}, \'cluster_name\': \'rabbit@queuevm.novalocal\', \'platform\': \'Erlang/OTP\', \'version\': \'3.6.0\'}", \'version_minor=9\', \'mechanisms=PLAIN AMQPLAIN\', \'locales=en_US\', \'version_major=0\'])>'])>
+DEBUG:pika.callback:Processing 0:Connection.Start
+DEBUG:pika.callback:Processing use of oneshot callback
+DEBUG:pika.callback:0 registered uses left
+DEBUG:pika.callback:Removing callback #0: {'callback': <bound method BlockingConnection._on_connection_start of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2a701fc290>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 0}
+DEBUG:pika.callback:Calling <bound method BlockingConnection._on_connection_start of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2a701fc290>> for "0:Connection.Start"
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingConnection._on_connection_tune of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2a701fc290>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 1}
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=0', 'method=<Connection.StartOk([\'locale=en_US\', \'mechanism=PLAIN\', "client_properties={\'platform\': \'Python 2.7.6\', \'product\': \'Pika Python Client Library\', \'version\': \'0.9.8\', \'capabilities\': {\'consumer_cancel_notify\': True, \'publisher_confirms\': True, \'basic.nack\': True}, \'information\': \'See http://pika.github.com\'}", \'response=\\x00daniel\\x00daniel\'])>'])>
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 249
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 0
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=0', "method=<Connection.Tune(['frame_max=131072', 'channel_max=0', 'heartbeat=60'])>"])>
+DEBUG:pika.callback:Processing 0:Connection.Tune
+DEBUG:pika.callback:Processing use of oneshot callback
+DEBUG:pika.callback:0 registered uses left
+DEBUG:pika.callback:Removing callback #0: {'callback': <bound method BlockingConnection._on_connection_tune of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2a701fc290>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 0}
+DEBUG:pika.callback:Calling <bound method BlockingConnection._on_connection_tune of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2a701fc290>> for "0:Connection.Tune"
+DEBUG:pika.connection:Creating a HeartbeatChecker: 60
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=0', "method=<Connection.TuneOk(['frame_max=131072', 'channel_max=0', 'heartbeat=60'])>"])>
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 20
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingConnection._on_connection_open of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2a701fc290>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 1}
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=0', "method=<Connection.Open(['insist=True', 'capabilities=', 'virtual_host=WebServicesCluster'])>"])>
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 33
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 0
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=0', "method=<Connection.OpenOk(['known_hosts='])>"])>
+DEBUG:pika.callback:Processing 0:Connection.OpenOk
+DEBUG:pika.callback:Processing use of oneshot callback
+DEBUG:pika.callback:0 registered uses left
+DEBUG:pika.callback:Removing callback #0: {'callback': <bound method BlockingConnection._on_connection_open of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2a701fc290>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 0}
+DEBUG:pika.callback:Calling <bound method BlockingConnection._on_connection_open of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2a701fc290>> for "0:Connection.OpenOk"
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingConnection._on_connection_closed of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2a701fc290>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 1}
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 0
+DEBUG:pika.adapters.blocking_connection:Setting socket timeout to 0.25
+INFO:pika.adapters.blocking_connection:Adapter connected
+DEBUG:pika.connection:Connected
+DEBUG:pika.adapters.blocking_connection:Opening channel 1
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingChannel._on_close of <pika.adapters.blocking_connection.BlockingChannel object at 0x7f2a77369590>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 1}
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingChannel._on_getempty of <pika.adapters.blocking_connection.BlockingChannel object at 0x7f2a77369590>>, 'only': None, 'one_shot': False, 'arguments': None}
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingChannel._on_cancel of <pika.adapters.blocking_connection.BlockingChannel object at 0x7f2a77369590>>, 'only': None, 'one_shot': False, 'arguments': None}
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingChannel._on_rpc_complete of <pika.adapters.blocking_connection.BlockingChannel object at 0x7f2a77369590>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 1}
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingChannel._on_rpc_complete of <pika.adapters.blocking_connection.BlockingChannel object at 0x7f2a77369590>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 1}
+DEBUG:pika.adapters.blocking_connection:Connection: <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2a701fc290>
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=1', "method=<Channel.Open(['out_of_band='])>"])>
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 13
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=1', "method=<Channel.OpenOk(['channel_id='])>"])>
+DEBUG:pika.callback:Processing 1:Channel.OpenOk
+DEBUG:pika.callback:Processing use of oneshot callback
+DEBUG:pika.callback:0 registered uses left
+DEBUG:pika.callback:Removing callback #0: {'callback': <bound method BlockingChannel._on_rpc_complete of <pika.adapters.blocking_connection.BlockingChannel object at 0x7f2a77369590>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 0}
+DEBUG:pika.callback:Calling <bound method BlockingChannel._on_rpc_complete of <pika.adapters.blocking_connection.BlockingChannel object at 0x7f2a77369590>> for "1:Channel.OpenOk"
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 0
+DEBUG:pika.adapters.blocking_connection:Handling timeout 1 with a threshold of 0
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 0
+DEBUG:pika.adapters.blocking_connection:Connection: <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2a701fc290>
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=1', "method=<Basic.Publish(['ticket=0', 'mandatory=False', 'routing_key=WebServicesCluster.lifecycle.alive', 'immediate=False', 'exchange=WebServicesCluster'])>"])>
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 69
+DEBUG:pika.connection:Frame: <Header(['frame_type=2', 'channel_number=1', 'properties=<BasicProperties>', 'body_size=437'])>
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 22
+DEBUG:pika.connection:Frame: <Body(['frame_type=3', 'channel_number=1', "fragment=ccopy_reg\n_reconstructor\np0\n(clib.Common\nMessage\np1\nc__builtin__\nobject\np2\nNtp3\nRp4\n(dp5\nS'content'\np6\ng0\n(clib.Common\nUnitInstanceInfo\np7\ng2\nNtp8\nRp9\n(dp10\nS'username'\np11\nS'daniel'\np12\nsS'uuid'\np13\nS'10.99.0.1-Tomcat-Service.EventProcessingService'\np14\nsS'system'\np15\nS'WebServicesCluster'\np16\nsS'meta'\np17\n(dp18\nsS'password'\np19\ng12\nsS'type'\np20\nS'Service'\np21\nsS'id'\np22\nS'Service.EventProcessingService'\np23\nsbsg17\n(dp24\nsg20\nI3\nsb."])>
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 445
+INFO:pika.connection:Closing connection (200): Normal shutdown
+DEBUG:pika.adapters.blocking_connection:Handling timeout 1 with a threshold of 3
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 0
+INFO:root:Started test executor for 10.99.0.2
+DEBUG:root:Sending I am alive message ccopy_reg
+_reconstructor
+p0
+(clib.Common
+Message
+p1
+c__builtin__
+object
+p2
+Ntp3
+Rp4
+(dp5
+S'content'
+p6
+g0
+(clib.Common
+UnitInstanceInfo
+p7
+g2
+Ntp8
+Rp9
+(dp10
+S'username'
+p11
+S'daniel'
+p12
+sS'uuid'
+p13
+S'10.99.0.2'
+p14
+sS'system'
+p15
+S'WebServicesCluster'
+p16
+sS'meta'
+p17
+(dp18
+sS'password'
+p19
+g12
+sS'type'
+p20
+S'VirtualMachine'
+p21
+sS'id'
+p22
+S'VM.WebService'
+p23
+sbsg17
+(dp24
+sg20
+I3
+sb.
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingConnection._on_connection_start of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2a701a8650>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 1}
+DEBUG:pika.connection:Attempting connection
+DEBUG:pika.adapters.base_connection:Connecting the adapter to the remote host
+DEBUG:pika.adapters.base_connection:Creating the socket
+INFO:pika.adapters.base_connection:Connecting fd 6 to 128.130.172.230:5672
+DEBUG:pika.adapters.blocking_connection:Setting socket connection timeout
+DEBUG:pika.connection:Frame: <ProtocolHeader(['frame_type=-1', 'major=0', 'minor=9', 'revision=1'])>
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 8
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=0', 'method=<Connection.Start(["server_properties={\'information\': \'Licensed under the MPL.  See http://www.rabbitmq.com/\', \'product\': \'RabbitMQ\', \'copyright\': \'Copyright (C) 2007-2015 Pivotal Software, Inc.\', \'capabilities\': {\'exchange_exchange_bindings\': True, \'connection.blocked\': True, \'authentication_failure_close\': True, \'basic.nack\': True, \'per_consumer_qos\': True, \'consumer_priorities\': True, \'consumer_cancel_notify\': True, \'publisher_confirms\': True}, \'cluster_name\': \'rabbit@queuevm.novalocal\', \'platform\': \'Erlang/OTP\', \'version\': \'3.6.0\'}", \'version_minor=9\', \'mechanisms=PLAIN AMQPLAIN\', \'locales=en_US\', \'version_major=0\'])>'])>
+DEBUG:pika.callback:Processing 0:Connection.Start
+DEBUG:pika.callback:Processing use of oneshot callback
+DEBUG:pika.callback:0 registered uses left
+DEBUG:pika.callback:Removing callback #0: {'callback': <bound method BlockingConnection._on_connection_start of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2a701a8650>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 0}
+DEBUG:pika.callback:Calling <bound method BlockingConnection._on_connection_start of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2a701a8650>> for "0:Connection.Start"
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingConnection._on_connection_tune of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2a701a8650>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 1}
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=0', 'method=<Connection.StartOk([\'locale=en_US\', \'mechanism=PLAIN\', "client_properties={\'platform\': \'Python 2.7.6\', \'product\': \'Pika Python Client Library\', \'version\': \'0.9.8\', \'capabilities\': {\'consumer_cancel_notify\': True, \'publisher_confirms\': True, \'basic.nack\': True}, \'information\': \'See http://pika.github.com\'}", \'response=\\x00daniel\\x00daniel\'])>'])>
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 249
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 0
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=0', "method=<Connection.Tune(['frame_max=131072', 'channel_max=0', 'heartbeat=60'])>"])>
+DEBUG:pika.callback:Processing 0:Connection.Tune
+DEBUG:pika.callback:Processing use of oneshot callback
+DEBUG:pika.callback:0 registered uses left
+DEBUG:pika.callback:Removing callback #0: {'callback': <bound method BlockingConnection._on_connection_tune of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2a701a8650>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 0}
+DEBUG:pika.callback:Calling <bound method BlockingConnection._on_connection_tune of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2a701a8650>> for "0:Connection.Tune"
+DEBUG:pika.connection:Creating a HeartbeatChecker: 60
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=0', "method=<Connection.TuneOk(['frame_max=131072', 'channel_max=0', 'heartbeat=60'])>"])>
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 20
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingConnection._on_connection_open of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2a701a8650>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 1}
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=0', "method=<Connection.Open(['insist=True', 'capabilities=', 'virtual_host=WebServicesCluster'])>"])>
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 33
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 0
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=0', "method=<Connection.OpenOk(['known_hosts='])>"])>
+DEBUG:pika.callback:Processing 0:Connection.OpenOk
+DEBUG:pika.callback:Processing use of oneshot callback
+DEBUG:pika.callback:0 registered uses left
+DEBUG:pika.callback:Removing callback #0: {'callback': <bound method BlockingConnection._on_connection_open of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2a701a8650>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 0}
+DEBUG:pika.callback:Calling <bound method BlockingConnection._on_connection_open of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2a701a8650>> for "0:Connection.OpenOk"
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingConnection._on_connection_closed of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2a701a8650>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 1}
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 0
+DEBUG:pika.adapters.blocking_connection:Setting socket timeout to 0.25
+INFO:pika.adapters.blocking_connection:Adapter connected
+DEBUG:pika.connection:Connected
+DEBUG:pika.adapters.blocking_connection:Opening channel 1
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingChannel._on_close of <pika.adapters.blocking_connection.BlockingChannel object at 0x7f2a701a8910>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 1}
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingChannel._on_getempty of <pika.adapters.blocking_connection.BlockingChannel object at 0x7f2a701a8910>>, 'only': None, 'one_shot': False, 'arguments': None}
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingChannel._on_cancel of <pika.adapters.blocking_connection.BlockingChannel object at 0x7f2a701a8910>>, 'only': None, 'one_shot': False, 'arguments': None}
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingChannel._on_rpc_complete of <pika.adapters.blocking_connection.BlockingChannel object at 0x7f2a701a8910>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 1}
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingChannel._on_rpc_complete of <pika.adapters.blocking_connection.BlockingChannel object at 0x7f2a701a8910>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 1}
+DEBUG:pika.adapters.blocking_connection:Connection: <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2a701a8650>
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=1', "method=<Channel.Open(['out_of_band='])>"])>
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 13
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=1', "method=<Channel.OpenOk(['channel_id='])>"])>
+DEBUG:pika.callback:Processing 1:Channel.OpenOk
+DEBUG:pika.callback:Processing use of oneshot callback
+DEBUG:pika.callback:0 registered uses left
+DEBUG:pika.callback:Removing callback #0: {'callback': <bound method BlockingChannel._on_rpc_complete of <pika.adapters.blocking_connection.BlockingChannel object at 0x7f2a701a8910>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 0}
+DEBUG:pika.callback:Calling <bound method BlockingChannel._on_rpc_complete of <pika.adapters.blocking_connection.BlockingChannel object at 0x7f2a701a8910>> for "1:Channel.OpenOk"
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 0
+DEBUG:pika.adapters.blocking_connection:Handling timeout 1 with a threshold of 0
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 0
+DEBUG:pika.adapters.blocking_connection:Connection: <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2a701a8650>
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=1', "method=<Basic.Publish(['ticket=0', 'mandatory=False', 'routing_key=WebServicesCluster.lifecycle.alive', 'immediate=False', 'exchange=WebServicesCluster'])>"])>
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 69
+DEBUG:pika.connection:Frame: <Header(['frame_type=2', 'channel_number=1', 'properties=<BasicProperties>', 'body_size=389'])>
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 22
+DEBUG:pika.connection:Frame: <Body(['frame_type=3', 'channel_number=1', "fragment=ccopy_reg\n_reconstructor\np0\n(clib.Common\nMessage\np1\nc__builtin__\nobject\np2\nNtp3\nRp4\n(dp5\nS'content'\np6\ng0\n(clib.Common\nUnitInstanceInfo\np7\ng2\nNtp8\nRp9\n(dp10\nS'username'\np11\nS'daniel'\np12\nsS'uuid'\np13\nS'10.99.0.2'\np14\nsS'system'\np15\nS'WebServicesCluster'\np16\nsS'meta'\np17\n(dp18\nsS'password'\np19\ng12\nsS'type'\np20\nS'VirtualMachine'\np21\nsS'id'\np22\nS'VM.WebService'\np23\nsbsg17\n(dp24\nsg20\nI3\nsb."])>
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 397
+INFO:pika.connection:Closing connection (200): Normal shutdown
+DEBUG:pika.adapters.blocking_connection:Handling timeout 1 with a threshold of 3
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 0
+INFO:root:Started test executor for 10.99.0.2-Tomcat
+DEBUG:root:Sending I am alive message ccopy_reg
+_reconstructor
+p0
+(clib.Common
+Message
+p1
+c__builtin__
+object
+p2
+Ntp3
+Rp4
+(dp5
+S'content'
+p6
+g0
+(clib.Common
+UnitInstanceInfo
+p7
+g2
+Ntp8
+Rp9
+(dp10
+S'username'
+p11
+S'daniel'
+p12
+sS'uuid'
+p13
+S'10.99.0.2-Tomcat'
+p14
+sS'system'
+p15
+S'WebServicesCluster'
+p16
+sS'meta'
+p17
+(dp18
+sS'password'
+p19
+g12
+sS'type'
+p20
+S'Process'
+p21
+sS'id'
+p22
+S'Process.Tomcat'
+p23
+sbsg17
+(dp24
+sg20
+I3
+sb.
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingConnection._on_connection_start of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2a701a8610>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 1}
+DEBUG:pika.connection:Attempting connection
+DEBUG:pika.adapters.base_connection:Connecting the adapter to the remote host
+DEBUG:pika.adapters.base_connection:Creating the socket
+INFO:pika.adapters.base_connection:Connecting fd 6 to 128.130.172.230:5672
+DEBUG:pika.adapters.blocking_connection:Setting socket connection timeout
+DEBUG:pika.connection:Frame: <ProtocolHeader(['frame_type=-1', 'major=0', 'minor=9', 'revision=1'])>
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 8
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=0', 'method=<Connection.Start(["server_properties={\'information\': \'Licensed under the MPL.  See http://www.rabbitmq.com/\', \'product\': \'RabbitMQ\', \'copyright\': \'Copyright (C) 2007-2015 Pivotal Software, Inc.\', \'capabilities\': {\'exchange_exchange_bindings\': True, \'connection.blocked\': True, \'authentication_failure_close\': True, \'basic.nack\': True, \'per_consumer_qos\': True, \'consumer_priorities\': True, \'consumer_cancel_notify\': True, \'publisher_confirms\': True}, \'cluster_name\': \'rabbit@queuevm.novalocal\', \'platform\': \'Erlang/OTP\', \'version\': \'3.6.0\'}", \'version_minor=9\', \'mechanisms=PLAIN AMQPLAIN\', \'locales=en_US\', \'version_major=0\'])>'])>
+DEBUG:pika.callback:Processing 0:Connection.Start
+DEBUG:pika.callback:Processing use of oneshot callback
+DEBUG:pika.callback:0 registered uses left
+DEBUG:pika.callback:Removing callback #0: {'callback': <bound method BlockingConnection._on_connection_start of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2a701a8610>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 0}
+DEBUG:pika.callback:Calling <bound method BlockingConnection._on_connection_start of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2a701a8610>> for "0:Connection.Start"
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingConnection._on_connection_tune of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2a701a8610>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 1}
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=0', 'method=<Connection.StartOk([\'locale=en_US\', \'mechanism=PLAIN\', "client_properties={\'platform\': \'Python 2.7.6\', \'product\': \'Pika Python Client Library\', \'version\': \'0.9.8\', \'capabilities\': {\'consumer_cancel_notify\': True, \'publisher_confirms\': True, \'basic.nack\': True}, \'information\': \'See http://pika.github.com\'}", \'response=\\x00daniel\\x00daniel\'])>'])>
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 249
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 0
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=0', "method=<Connection.Tune(['frame_max=131072', 'channel_max=0', 'heartbeat=60'])>"])>
+DEBUG:pika.callback:Processing 0:Connection.Tune
+DEBUG:pika.callback:Processing use of oneshot callback
+DEBUG:pika.callback:0 registered uses left
+DEBUG:pika.callback:Removing callback #0: {'callback': <bound method BlockingConnection._on_connection_tune of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2a701a8610>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 0}
+DEBUG:pika.callback:Calling <bound method BlockingConnection._on_connection_tune of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2a701a8610>> for "0:Connection.Tune"
+DEBUG:pika.connection:Creating a HeartbeatChecker: 60
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=0', "method=<Connection.TuneOk(['frame_max=131072', 'channel_max=0', 'heartbeat=60'])>"])>
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 20
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingConnection._on_connection_open of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2a701a8610>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 1}
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=0', "method=<Connection.Open(['insist=True', 'capabilities=', 'virtual_host=WebServicesCluster'])>"])>
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 33
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 0
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=0', "method=<Connection.OpenOk(['known_hosts='])>"])>
+DEBUG:pika.callback:Processing 0:Connection.OpenOk
+DEBUG:pika.callback:Processing use of oneshot callback
+DEBUG:pika.callback:0 registered uses left
+DEBUG:pika.callback:Removing callback #0: {'callback': <bound method BlockingConnection._on_connection_open of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2a701a8610>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 0}
+DEBUG:pika.callback:Calling <bound method BlockingConnection._on_connection_open of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2a701a8610>> for "0:Connection.OpenOk"
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingConnection._on_connection_closed of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2a701a8610>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 1}
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 0
+DEBUG:pika.adapters.blocking_connection:Setting socket timeout to 0.25
+INFO:pika.adapters.blocking_connection:Adapter connected
+DEBUG:pika.connection:Connected
+DEBUG:pika.adapters.blocking_connection:Opening channel 1
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingChannel._on_close of <pika.adapters.blocking_connection.BlockingChannel object at 0x7f2a701a8b50>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 1}
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingChannel._on_getempty of <pika.adapters.blocking_connection.BlockingChannel object at 0x7f2a701a8b50>>, 'only': None, 'one_shot': False, 'arguments': None}
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingChannel._on_cancel of <pika.adapters.blocking_connection.BlockingChannel object at 0x7f2a701a8b50>>, 'only': None, 'one_shot': False, 'arguments': None}
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingChannel._on_rpc_complete of <pika.adapters.blocking_connection.BlockingChannel object at 0x7f2a701a8b50>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 1}
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingChannel._on_rpc_complete of <pika.adapters.blocking_connection.BlockingChannel object at 0x7f2a701a8b50>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 1}
+DEBUG:pika.adapters.blocking_connection:Connection: <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2a701a8610>
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=1', "method=<Channel.Open(['out_of_band='])>"])>
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 13
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=1', "method=<Channel.OpenOk(['channel_id='])>"])>
+DEBUG:pika.callback:Processing 1:Channel.OpenOk
+DEBUG:pika.callback:Processing use of oneshot callback
+DEBUG:pika.callback:0 registered uses left
+DEBUG:pika.callback:Removing callback #0: {'callback': <bound method BlockingChannel._on_rpc_complete of <pika.adapters.blocking_connection.BlockingChannel object at 0x7f2a701a8b50>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 0}
+DEBUG:pika.callback:Calling <bound method BlockingChannel._on_rpc_complete of <pika.adapters.blocking_connection.BlockingChannel object at 0x7f2a701a8b50>> for "1:Channel.OpenOk"
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 0
+DEBUG:pika.adapters.blocking_connection:Handling timeout 1 with a threshold of 0
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 0
+DEBUG:pika.adapters.blocking_connection:Connection: <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2a701a8610>
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=1', "method=<Basic.Publish(['ticket=0', 'mandatory=False', 'routing_key=WebServicesCluster.lifecycle.alive', 'immediate=False', 'exchange=WebServicesCluster'])>"])>
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 69
+DEBUG:pika.connection:Frame: <Header(['frame_type=2', 'channel_number=1', 'properties=<BasicProperties>', 'body_size=390'])>
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 22
+DEBUG:pika.connection:Frame: <Body(['frame_type=3', 'channel_number=1', "fragment=ccopy_reg\n_reconstructor\np0\n(clib.Common\nMessage\np1\nc__builtin__\nobject\np2\nNtp3\nRp4\n(dp5\nS'content'\np6\ng0\n(clib.Common\nUnitInstanceInfo\np7\ng2\nNtp8\nRp9\n(dp10\nS'username'\np11\nS'daniel'\np12\nsS'uuid'\np13\nS'10.99.0.2-Tomcat'\np14\nsS'system'\np15\nS'WebServicesCluster'\np16\nsS'meta'\np17\n(dp18\nsS'password'\np19\ng12\nsS'type'\np20\nS'Process'\np21\nsS'id'\np22\nS'Process.Tomcat'\np23\nsbsg17\n(dp24\nsg20\nI3\nsb."])>
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 398
+INFO:pika.connection:Closing connection (200): Normal shutdown
+DEBUG:pika.adapters.blocking_connection:Handling timeout 1 with a threshold of 3
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 0
+INFO:root:Started test executor for 10.99.0.2-Tomcat-Service.EventProcessingService
+DEBUG:root:Sending I am alive message ccopy_reg
+_reconstructor
+p0
+(clib.Common
+Message
+p1
+c__builtin__
+object
+p2
+Ntp3
+Rp4
+(dp5
+S'content'
+p6
+g0
+(clib.Common
+UnitInstanceInfo
+p7
+g2
+Ntp8
+Rp9
+(dp10
+S'username'
+p11
+S'daniel'
+p12
+sS'uuid'
+p13
+S'10.99.0.2-Tomcat-Service.EventProcessingService'
+p14
+sS'system'
+p15
+S'WebServicesCluster'
+p16
+sS'meta'
+p17
+(dp18
+sS'password'
+p19
+g12
+sS'type'
+p20
+S'Service'
+p21
+sS'id'
+p22
+S'Service.EventProcessingService'
+p23
+sbsg17
+(dp24
+sg20
+I3
+sb.
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingConnection._on_connection_start of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2a701a8bd0>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 1}
+DEBUG:pika.connection:Attempting connection
+DEBUG:pika.adapters.base_connection:Connecting the adapter to the remote host
+DEBUG:pika.adapters.base_connection:Creating the socket
+INFO:pika.adapters.base_connection:Connecting fd 6 to 128.130.172.230:5672
+DEBUG:pika.adapters.blocking_connection:Setting socket connection timeout
+DEBUG:pika.connection:Frame: <ProtocolHeader(['frame_type=-1', 'major=0', 'minor=9', 'revision=1'])>
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 8
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=0', 'method=<Connection.Start(["server_properties={\'information\': \'Licensed under the MPL.  See http://www.rabbitmq.com/\', \'product\': \'RabbitMQ\', \'copyright\': \'Copyright (C) 2007-2015 Pivotal Software, Inc.\', \'capabilities\': {\'exchange_exchange_bindings\': True, \'connection.blocked\': True, \'authentication_failure_close\': True, \'basic.nack\': True, \'per_consumer_qos\': True, \'consumer_priorities\': True, \'consumer_cancel_notify\': True, \'publisher_confirms\': True}, \'cluster_name\': \'rabbit@queuevm.novalocal\', \'platform\': \'Erlang/OTP\', \'version\': \'3.6.0\'}", \'version_minor=9\', \'mechanisms=PLAIN AMQPLAIN\', \'locales=en_US\', \'version_major=0\'])>'])>
+DEBUG:pika.callback:Processing 0:Connection.Start
+DEBUG:pika.callback:Processing use of oneshot callback
+DEBUG:pika.callback:0 registered uses left
+DEBUG:pika.callback:Removing callback #0: {'callback': <bound method BlockingConnection._on_connection_start of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2a701a8bd0>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 0}
+DEBUG:pika.callback:Calling <bound method BlockingConnection._on_connection_start of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2a701a8bd0>> for "0:Connection.Start"
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingConnection._on_connection_tune of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2a701a8bd0>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 1}
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=0', 'method=<Connection.StartOk([\'locale=en_US\', \'mechanism=PLAIN\', "client_properties={\'platform\': \'Python 2.7.6\', \'product\': \'Pika Python Client Library\', \'version\': \'0.9.8\', \'capabilities\': {\'consumer_cancel_notify\': True, \'publisher_confirms\': True, \'basic.nack\': True}, \'information\': \'See http://pika.github.com\'}", \'response=\\x00daniel\\x00daniel\'])>'])>
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 249
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 0
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=0', "method=<Connection.Tune(['frame_max=131072', 'channel_max=0', 'heartbeat=60'])>"])>
+DEBUG:pika.callback:Processing 0:Connection.Tune
+DEBUG:pika.callback:Processing use of oneshot callback
+DEBUG:pika.callback:0 registered uses left
+DEBUG:pika.callback:Removing callback #0: {'callback': <bound method BlockingConnection._on_connection_tune of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2a701a8bd0>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 0}
+DEBUG:pika.callback:Calling <bound method BlockingConnection._on_connection_tune of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2a701a8bd0>> for "0:Connection.Tune"
+DEBUG:pika.connection:Creating a HeartbeatChecker: 60
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=0', "method=<Connection.TuneOk(['frame_max=131072', 'channel_max=0', 'heartbeat=60'])>"])>
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 20
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingConnection._on_connection_open of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2a701a8bd0>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 1}
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=0', "method=<Connection.Open(['insist=True', 'capabilities=', 'virtual_host=WebServicesCluster'])>"])>
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 33
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 0
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=0', "method=<Connection.OpenOk(['known_hosts='])>"])>
+DEBUG:pika.callback:Processing 0:Connection.OpenOk
+DEBUG:pika.callback:Processing use of oneshot callback
+DEBUG:pika.callback:0 registered uses left
+DEBUG:pika.callback:Removing callback #0: {'callback': <bound method BlockingConnection._on_connection_open of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2a701a8bd0>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 0}
+DEBUG:pika.callback:Calling <bound method BlockingConnection._on_connection_open of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2a701a8bd0>> for "0:Connection.OpenOk"
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingConnection._on_connection_closed of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2a701a8bd0>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 1}
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 0
+DEBUG:pika.adapters.blocking_connection:Setting socket timeout to 0.25
+INFO:pika.adapters.blocking_connection:Adapter connected
+DEBUG:pika.connection:Connected
+DEBUG:pika.adapters.blocking_connection:Opening channel 1
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingChannel._on_close of <pika.adapters.blocking_connection.BlockingChannel object at 0x7f2a77369590>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 1}
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingChannel._on_getempty of <pika.adapters.blocking_connection.BlockingChannel object at 0x7f2a77369590>>, 'only': None, 'one_shot': False, 'arguments': None}
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingChannel._on_cancel of <pika.adapters.blocking_connection.BlockingChannel object at 0x7f2a77369590>>, 'only': None, 'one_shot': False, 'arguments': None}
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingChannel._on_rpc_complete of <pika.adapters.blocking_connection.BlockingChannel object at 0x7f2a77369590>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 1}
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingChannel._on_rpc_complete of <pika.adapters.blocking_connection.BlockingChannel object at 0x7f2a77369590>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 1}
+DEBUG:pika.adapters.blocking_connection:Connection: <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2a701a8bd0>
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=1', "method=<Channel.Open(['out_of_band='])>"])>
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 13
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=1', "method=<Channel.OpenOk(['channel_id='])>"])>
+DEBUG:pika.callback:Processing 1:Channel.OpenOk
+DEBUG:pika.callback:Processing use of oneshot callback
+DEBUG:pika.callback:0 registered uses left
+DEBUG:pika.callback:Removing callback #0: {'callback': <bound method BlockingChannel._on_rpc_complete of <pika.adapters.blocking_connection.BlockingChannel object at 0x7f2a77369590>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 0}
+DEBUG:pika.callback:Calling <bound method BlockingChannel._on_rpc_complete of <pika.adapters.blocking_connection.BlockingChannel object at 0x7f2a77369590>> for "1:Channel.OpenOk"
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 0
+DEBUG:pika.adapters.blocking_connection:Handling timeout 1 with a threshold of 0
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 0
+DEBUG:pika.adapters.blocking_connection:Connection: <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2a701a8bd0>
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=1', "method=<Basic.Publish(['ticket=0', 'mandatory=False', 'routing_key=WebServicesCluster.lifecycle.alive', 'immediate=False', 'exchange=WebServicesCluster'])>"])>
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 69
+DEBUG:pika.connection:Frame: <Header(['frame_type=2', 'channel_number=1', 'properties=<BasicProperties>', 'body_size=437'])>
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 22
+DEBUG:pika.connection:Frame: <Body(['frame_type=3', 'channel_number=1', "fragment=ccopy_reg\n_reconstructor\np0\n(clib.Common\nMessage\np1\nc__builtin__\nobject\np2\nNtp3\nRp4\n(dp5\nS'content'\np6\ng0\n(clib.Common\nUnitInstanceInfo\np7\ng2\nNtp8\nRp9\n(dp10\nS'username'\np11\nS'daniel'\np12\nsS'uuid'\np13\nS'10.99.0.2-Tomcat-Service.EventProcessingService'\np14\nsS'system'\np15\nS'WebServicesCluster'\np16\nsS'meta'\np17\n(dp18\nsS'password'\np19\ng12\nsS'type'\np20\nS'Service'\np21\nsS'id'\np22\nS'Service.EventProcessingService'\np23\nsbsg17\n(dp24\nsg20\nI3\nsb."])>
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 445
+INFO:pika.connection:Closing connection (200): Normal shutdown
+DEBUG:pika.adapters.blocking_connection:Handling timeout 1 with a threshold of 3
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 0
+DEBUG:root:Shutting down...
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingConnection._on_connection_start of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2a701fc450>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 1}
+DEBUG:pika.connection:Attempting connection
+DEBUG:pika.adapters.base_connection:Connecting the adapter to the remote host
+DEBUG:pika.adapters.base_connection:Creating the socket
+INFO:pika.adapters.base_connection:Connecting fd 6 to 128.130.172.230:5672
+DEBUG:pika.adapters.blocking_connection:Setting socket connection timeout
+DEBUG:pika.connection:Frame: <ProtocolHeader(['frame_type=-1', 'major=0', 'minor=9', 'revision=1'])>
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 8
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=0', 'method=<Connection.Start(["server_properties={\'information\': \'Licensed under the MPL.  See http://www.rabbitmq.com/\', \'product\': \'RabbitMQ\', \'copyright\': \'Copyright (C) 2007-2015 Pivotal Software, Inc.\', \'capabilities\': {\'exchange_exchange_bindings\': True, \'connection.blocked\': True, \'authentication_failure_close\': True, \'basic.nack\': True, \'per_consumer_qos\': True, \'consumer_priorities\': True, \'consumer_cancel_notify\': True, \'publisher_confirms\': True}, \'cluster_name\': \'rabbit@queuevm.novalocal\', \'platform\': \'Erlang/OTP\', \'version\': \'3.6.0\'}", \'version_minor=9\', \'mechanisms=PLAIN AMQPLAIN\', \'locales=en_US\', \'version_major=0\'])>'])>
+DEBUG:pika.callback:Processing 0:Connection.Start
+DEBUG:pika.callback:Processing use of oneshot callback
+DEBUG:pika.callback:0 registered uses left
+DEBUG:pika.callback:Removing callback #0: {'callback': <bound method BlockingConnection._on_connection_start of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2a701fc450>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 0}
+DEBUG:pika.callback:Calling <bound method BlockingConnection._on_connection_start of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2a701fc450>> for "0:Connection.Start"
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingConnection._on_connection_tune of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2a701fc450>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 1}
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=0', 'method=<Connection.StartOk([\'locale=en_US\', \'mechanism=PLAIN\', "client_properties={\'platform\': \'Python 2.7.6\', \'product\': \'Pika Python Client Library\', \'version\': \'0.9.8\', \'capabilities\': {\'consumer_cancel_notify\': True, \'publisher_confirms\': True, \'basic.nack\': True}, \'information\': \'See http://pika.github.com\'}", \'response=\\x00daniel\\x00daniel\'])>'])>
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 249
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 0
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=0', "method=<Connection.Tune(['frame_max=131072', 'channel_max=0', 'heartbeat=60'])>"])>
+DEBUG:pika.callback:Processing 0:Connection.Tune
+DEBUG:pika.callback:Processing use of oneshot callback
+DEBUG:pika.callback:0 registered uses left
+DEBUG:pika.callback:Removing callback #0: {'callback': <bound method BlockingConnection._on_connection_tune of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2a701fc450>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 0}
+DEBUG:pika.callback:Calling <bound method BlockingConnection._on_connection_tune of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2a701fc450>> for "0:Connection.Tune"
+DEBUG:pika.connection:Creating a HeartbeatChecker: 60
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=0', "method=<Connection.TuneOk(['frame_max=131072', 'channel_max=0', 'heartbeat=60'])>"])>
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 20
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingConnection._on_connection_open of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2a701fc450>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 1}
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=0', "method=<Connection.Open(['insist=True', 'capabilities=', 'virtual_host=WebServicesCluster'])>"])>
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 33
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 0
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=0', "method=<Connection.OpenOk(['known_hosts='])>"])>
+DEBUG:pika.callback:Processing 0:Connection.OpenOk
+DEBUG:pika.callback:Processing use of oneshot callback
+DEBUG:pika.callback:0 registered uses left
+DEBUG:pika.callback:Removing callback #0: {'callback': <bound method BlockingConnection._on_connection_open of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2a701fc450>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 0}
+DEBUG:pika.callback:Calling <bound method BlockingConnection._on_connection_open of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2a701fc450>> for "0:Connection.OpenOk"
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingConnection._on_connection_closed of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2a701fc450>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 1}
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 0
+DEBUG:pika.adapters.blocking_connection:Setting socket timeout to 0.25
+INFO:pika.adapters.blocking_connection:Adapter connected
+DEBUG:pika.connection:Connected
+DEBUG:pika.adapters.blocking_connection:Opening channel 1
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingChannel._on_close of <pika.adapters.blocking_connection.BlockingChannel object at 0x7f2a701fc390>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 1}
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingChannel._on_getempty of <pika.adapters.blocking_connection.BlockingChannel object at 0x7f2a701fc390>>, 'only': None, 'one_shot': False, 'arguments': None}
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingChannel._on_cancel of <pika.adapters.blocking_connection.BlockingChannel object at 0x7f2a701fc390>>, 'only': None, 'one_shot': False, 'arguments': None}
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingChannel._on_rpc_complete of <pika.adapters.blocking_connection.BlockingChannel object at 0x7f2a701fc390>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 1}
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingChannel._on_rpc_complete of <pika.adapters.blocking_connection.BlockingChannel object at 0x7f2a701fc390>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 1}
+DEBUG:pika.adapters.blocking_connection:Connection: <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2a701fc450>
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=1', "method=<Channel.Open(['out_of_band='])>"])>
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 13
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=1', "method=<Channel.OpenOk(['channel_id='])>"])>
+DEBUG:pika.callback:Processing 1:Channel.OpenOk
+DEBUG:pika.callback:Processing use of oneshot callback
+DEBUG:pika.callback:0 registered uses left
+DEBUG:pika.callback:Removing callback #0: {'callback': <bound method BlockingChannel._on_rpc_complete of <pika.adapters.blocking_connection.BlockingChannel object at 0x7f2a701fc390>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 0}
+DEBUG:pika.callback:Calling <bound method BlockingChannel._on_rpc_complete of <pika.adapters.blocking_connection.BlockingChannel object at 0x7f2a701fc390>> for "1:Channel.OpenOk"
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 0
+DEBUG:pika.adapters.blocking_connection:Handling timeout 1 with a threshold of 0
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 0
+DEBUG:pika.adapters.blocking_connection:Connection: <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2a701fc450>
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=1', "method=<Basic.Publish(['ticket=0', 'mandatory=False', 'routing_key=WebServicesCluster.lifecycle.dead', 'immediate=False', 'exchange=WebServicesCluster'])>"])>
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 68
+DEBUG:pika.connection:Frame: <Header(['frame_type=2', 'channel_number=1', 'properties=<BasicProperties>', 'body_size=437'])>
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 22
+DEBUG:pika.connection:Frame: <Body(['frame_type=3', 'channel_number=1', "fragment=ccopy_reg\n_reconstructor\np0\n(clib.Common\nMessage\np1\nc__builtin__\nobject\np2\nNtp3\nRp4\n(dp5\nS'content'\np6\ng0\n(clib.Common\nUnitInstanceInfo\np7\ng2\nNtp8\nRp9\n(dp10\nS'username'\np11\nS'daniel'\np12\nsS'uuid'\np13\nS'10.99.0.1-Tomcat-Service.EventProcessingService'\np14\nsS'system'\np15\nS'WebServicesCluster'\np16\nsS'meta'\np17\n(dp18\nsS'password'\np19\ng12\nsS'type'\np20\nS'Service'\np21\nsS'id'\np22\nS'Service.EventProcessingService'\np23\nsbsg17\n(dp24\nsg20\nI3\nsb."])>
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 445
+INFO:pika.connection:Closing connection (200): Normal shutdown
+DEBUG:pika.adapters.blocking_connection:Handling timeout 1 with a threshold of 3
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 0
+DEBUG:root:Shutting down...
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingConnection._on_connection_start of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2a701fc250>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 1}
+DEBUG:pika.connection:Attempting connection
+DEBUG:pika.adapters.base_connection:Connecting the adapter to the remote host
+DEBUG:pika.adapters.base_connection:Creating the socket
+INFO:pika.adapters.base_connection:Connecting fd 6 to 128.130.172.230:5672
+DEBUG:pika.adapters.blocking_connection:Setting socket connection timeout
+DEBUG:pika.connection:Frame: <ProtocolHeader(['frame_type=-1', 'major=0', 'minor=9', 'revision=1'])>
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 8
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=0', 'method=<Connection.Start(["server_properties={\'information\': \'Licensed under the MPL.  See http://www.rabbitmq.com/\', \'product\': \'RabbitMQ\', \'copyright\': \'Copyright (C) 2007-2015 Pivotal Software, Inc.\', \'capabilities\': {\'exchange_exchange_bindings\': True, \'connection.blocked\': True, \'authentication_failure_close\': True, \'basic.nack\': True, \'per_consumer_qos\': True, \'consumer_priorities\': True, \'consumer_cancel_notify\': True, \'publisher_confirms\': True}, \'cluster_name\': \'rabbit@queuevm.novalocal\', \'platform\': \'Erlang/OTP\', \'version\': \'3.6.0\'}", \'version_minor=9\', \'mechanisms=PLAIN AMQPLAIN\', \'locales=en_US\', \'version_major=0\'])>'])>
+DEBUG:pika.callback:Processing 0:Connection.Start
+DEBUG:pika.callback:Processing use of oneshot callback
+DEBUG:pika.callback:0 registered uses left
+DEBUG:pika.callback:Removing callback #0: {'callback': <bound method BlockingConnection._on_connection_start of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2a701fc250>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 0}
+DEBUG:pika.callback:Calling <bound method BlockingConnection._on_connection_start of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2a701fc250>> for "0:Connection.Start"
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingConnection._on_connection_tune of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2a701fc250>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 1}
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=0', 'method=<Connection.StartOk([\'locale=en_US\', \'mechanism=PLAIN\', "client_properties={\'platform\': \'Python 2.7.6\', \'product\': \'Pika Python Client Library\', \'version\': \'0.9.8\', \'capabilities\': {\'consumer_cancel_notify\': True, \'publisher_confirms\': True, \'basic.nack\': True}, \'information\': \'See http://pika.github.com\'}", \'response=\\x00daniel\\x00daniel\'])>'])>
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 249
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 0
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=0', "method=<Connection.Tune(['frame_max=131072', 'channel_max=0', 'heartbeat=60'])>"])>
+DEBUG:pika.callback:Processing 0:Connection.Tune
+DEBUG:pika.callback:Processing use of oneshot callback
+DEBUG:pika.callback:0 registered uses left
+DEBUG:pika.callback:Removing callback #0: {'callback': <bound method BlockingConnection._on_connection_tune of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2a701fc250>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 0}
+DEBUG:pika.callback:Calling <bound method BlockingConnection._on_connection_tune of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2a701fc250>> for "0:Connection.Tune"
+DEBUG:pika.connection:Creating a HeartbeatChecker: 60
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=0', "method=<Connection.TuneOk(['frame_max=131072', 'channel_max=0', 'heartbeat=60'])>"])>
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 20
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingConnection._on_connection_open of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2a701fc250>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 1}
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=0', "method=<Connection.Open(['insist=True', 'capabilities=', 'virtual_host=WebServicesCluster'])>"])>
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 33
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 0
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=0', "method=<Connection.OpenOk(['known_hosts='])>"])>
+DEBUG:pika.callback:Processing 0:Connection.OpenOk
+DEBUG:pika.callback:Processing use of oneshot callback
+DEBUG:pika.callback:0 registered uses left
+DEBUG:pika.callback:Removing callback #0: {'callback': <bound method BlockingConnection._on_connection_open of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2a701fc250>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 0}
+DEBUG:pika.callback:Calling <bound method BlockingConnection._on_connection_open of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2a701fc250>> for "0:Connection.OpenOk"
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingConnection._on_connection_closed of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2a701fc250>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 1}
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 0
+DEBUG:pika.adapters.blocking_connection:Setting socket timeout to 0.25
+INFO:pika.adapters.blocking_connection:Adapter connected
+DEBUG:pika.connection:Connected
+DEBUG:pika.adapters.blocking_connection:Opening channel 1
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingChannel._on_close of <pika.adapters.blocking_connection.BlockingChannel object at 0x7f2a701a88d0>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 1}
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingChannel._on_getempty of <pika.adapters.blocking_connection.BlockingChannel object at 0x7f2a701a88d0>>, 'only': None, 'one_shot': False, 'arguments': None}
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingChannel._on_cancel of <pika.adapters.blocking_connection.BlockingChannel object at 0x7f2a701a88d0>>, 'only': None, 'one_shot': False, 'arguments': None}
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingChannel._on_rpc_complete of <pika.adapters.blocking_connection.BlockingChannel object at 0x7f2a701a88d0>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 1}
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingChannel._on_rpc_complete of <pika.adapters.blocking_connection.BlockingChannel object at 0x7f2a701a88d0>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 1}
+DEBUG:pika.adapters.blocking_connection:Connection: <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2a701fc250>
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=1', "method=<Channel.Open(['out_of_band='])>"])>
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 13
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=1', "method=<Channel.OpenOk(['channel_id='])>"])>
+DEBUG:pika.callback:Processing 1:Channel.OpenOk
+DEBUG:pika.callback:Processing use of oneshot callback
+DEBUG:pika.callback:0 registered uses left
+DEBUG:pika.callback:Removing callback #0: {'callback': <bound method BlockingChannel._on_rpc_complete of <pika.adapters.blocking_connection.BlockingChannel object at 0x7f2a701a88d0>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 0}
+DEBUG:pika.callback:Calling <bound method BlockingChannel._on_rpc_complete of <pika.adapters.blocking_connection.BlockingChannel object at 0x7f2a701a88d0>> for "1:Channel.OpenOk"
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 0
+DEBUG:pika.adapters.blocking_connection:Handling timeout 1 with a threshold of 0
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 0
+DEBUG:pika.adapters.blocking_connection:Connection: <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2a701fc250>
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=1', "method=<Basic.Publish(['ticket=0', 'mandatory=False', 'routing_key=WebServicesCluster.lifecycle.dead', 'immediate=False', 'exchange=WebServicesCluster'])>"])>
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 68
+DEBUG:pika.connection:Frame: <Header(['frame_type=2', 'channel_number=1', 'properties=<BasicProperties>', 'body_size=390'])>
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 22
+DEBUG:pika.connection:Frame: <Body(['frame_type=3', 'channel_number=1', "fragment=ccopy_reg\n_reconstructor\np0\n(clib.Common\nMessage\np1\nc__builtin__\nobject\np2\nNtp3\nRp4\n(dp5\nS'content'\np6\ng0\n(clib.Common\nUnitInstanceInfo\np7\ng2\nNtp8\nRp9\n(dp10\nS'username'\np11\nS'daniel'\np12\nsS'uuid'\np13\nS'10.99.0.1-Tomcat'\np14\nsS'system'\np15\nS'WebServicesCluster'\np16\nsS'meta'\np17\n(dp18\nsS'password'\np19\ng12\nsS'type'\np20\nS'Process'\np21\nsS'id'\np22\nS'Process.Tomcat'\np23\nsbsg17\n(dp24\nsg20\nI3\nsb."])>
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 398
+INFO:pika.connection:Closing connection (200): Normal shutdown
+DEBUG:pika.adapters.blocking_connection:Handling timeout 1 with a threshold of 3
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 0
+DEBUG:root:Shutting down...
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingConnection._on_connection_start of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2a701a8950>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 1}
+DEBUG:pika.connection:Attempting connection
+DEBUG:pika.adapters.base_connection:Connecting the adapter to the remote host
+DEBUG:pika.adapters.base_connection:Creating the socket
+INFO:pika.adapters.base_connection:Connecting fd 6 to 128.130.172.230:5672
+DEBUG:pika.adapters.blocking_connection:Setting socket connection timeout
+DEBUG:pika.connection:Frame: <ProtocolHeader(['frame_type=-1', 'major=0', 'minor=9', 'revision=1'])>
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 8
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=0', 'method=<Connection.Start(["server_properties={\'information\': \'Licensed under the MPL.  See http://www.rabbitmq.com/\', \'product\': \'RabbitMQ\', \'copyright\': \'Copyright (C) 2007-2015 Pivotal Software, Inc.\', \'capabilities\': {\'exchange_exchange_bindings\': True, \'connection.blocked\': True, \'authentication_failure_close\': True, \'basic.nack\': True, \'per_consumer_qos\': True, \'consumer_priorities\': True, \'consumer_cancel_notify\': True, \'publisher_confirms\': True}, \'cluster_name\': \'rabbit@queuevm.novalocal\', \'platform\': \'Erlang/OTP\', \'version\': \'3.6.0\'}", \'version_minor=9\', \'mechanisms=PLAIN AMQPLAIN\', \'locales=en_US\', \'version_major=0\'])>'])>
+DEBUG:pika.callback:Processing 0:Connection.Start
+DEBUG:pika.callback:Processing use of oneshot callback
+DEBUG:pika.callback:0 registered uses left
+DEBUG:pika.callback:Removing callback #0: {'callback': <bound method BlockingConnection._on_connection_start of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2a701a8950>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 0}
+DEBUG:pika.callback:Calling <bound method BlockingConnection._on_connection_start of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2a701a8950>> for "0:Connection.Start"
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingConnection._on_connection_tune of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2a701a8950>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 1}
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=0', 'method=<Connection.StartOk([\'locale=en_US\', \'mechanism=PLAIN\', "client_properties={\'platform\': \'Python 2.7.6\', \'product\': \'Pika Python Client Library\', \'version\': \'0.9.8\', \'capabilities\': {\'consumer_cancel_notify\': True, \'publisher_confirms\': True, \'basic.nack\': True}, \'information\': \'See http://pika.github.com\'}", \'response=\\x00daniel\\x00daniel\'])>'])>
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 249
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 0
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=0', "method=<Connection.Tune(['frame_max=131072', 'channel_max=0', 'heartbeat=60'])>"])>
+DEBUG:pika.callback:Processing 0:Connection.Tune
+DEBUG:pika.callback:Processing use of oneshot callback
+DEBUG:pika.callback:0 registered uses left
+DEBUG:pika.callback:Removing callback #0: {'callback': <bound method BlockingConnection._on_connection_tune of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2a701a8950>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 0}
+DEBUG:pika.callback:Calling <bound method BlockingConnection._on_connection_tune of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2a701a8950>> for "0:Connection.Tune"
+DEBUG:pika.connection:Creating a HeartbeatChecker: 60
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=0', "method=<Connection.TuneOk(['frame_max=131072', 'channel_max=0', 'heartbeat=60'])>"])>
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 20
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingConnection._on_connection_open of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2a701a8950>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 1}
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=0', "method=<Connection.Open(['insist=True', 'capabilities=', 'virtual_host=WebServicesCluster'])>"])>
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 33
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 0
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=0', "method=<Connection.OpenOk(['known_hosts='])>"])>
+DEBUG:pika.callback:Processing 0:Connection.OpenOk
+DEBUG:pika.callback:Processing use of oneshot callback
+DEBUG:pika.callback:0 registered uses left
+DEBUG:pika.callback:Removing callback #0: {'callback': <bound method BlockingConnection._on_connection_open of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2a701a8950>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 0}
+DEBUG:pika.callback:Calling <bound method BlockingConnection._on_connection_open of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2a701a8950>> for "0:Connection.OpenOk"
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingConnection._on_connection_closed of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2a701a8950>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 1}
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 0
+DEBUG:pika.adapters.blocking_connection:Setting socket timeout to 0.25
+INFO:pika.adapters.blocking_connection:Adapter connected
+DEBUG:pika.connection:Connected
+DEBUG:pika.adapters.blocking_connection:Opening channel 1
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingChannel._on_close of <pika.adapters.blocking_connection.BlockingChannel object at 0x7f2a701a8750>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 1}
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingChannel._on_getempty of <pika.adapters.blocking_connection.BlockingChannel object at 0x7f2a701a8750>>, 'only': None, 'one_shot': False, 'arguments': None}
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingChannel._on_cancel of <pika.adapters.blocking_connection.BlockingChannel object at 0x7f2a701a8750>>, 'only': None, 'one_shot': False, 'arguments': None}
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingChannel._on_rpc_complete of <pika.adapters.blocking_connection.BlockingChannel object at 0x7f2a701a8750>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 1}
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingChannel._on_rpc_complete of <pika.adapters.blocking_connection.BlockingChannel object at 0x7f2a701a8750>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 1}
+DEBUG:pika.adapters.blocking_connection:Connection: <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2a701a8950>
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=1', "method=<Channel.Open(['out_of_band='])>"])>
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 13
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=1', "method=<Channel.OpenOk(['channel_id='])>"])>
+DEBUG:pika.callback:Processing 1:Channel.OpenOk
+DEBUG:pika.callback:Processing use of oneshot callback
+DEBUG:pika.callback:0 registered uses left
+DEBUG:pika.callback:Removing callback #0: {'callback': <bound method BlockingChannel._on_rpc_complete of <pika.adapters.blocking_connection.BlockingChannel object at 0x7f2a701a8750>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 0}
+DEBUG:pika.callback:Calling <bound method BlockingChannel._on_rpc_complete of <pika.adapters.blocking_connection.BlockingChannel object at 0x7f2a701a8750>> for "1:Channel.OpenOk"
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 0
+DEBUG:pika.adapters.blocking_connection:Handling timeout 1 with a threshold of 0
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 0
+DEBUG:pika.adapters.blocking_connection:Connection: <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2a701a8950>
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=1', "method=<Basic.Publish(['ticket=0', 'mandatory=False', 'routing_key=WebServicesCluster.lifecycle.dead', 'immediate=False', 'exchange=WebServicesCluster'])>"])>
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 68
+DEBUG:pika.connection:Frame: <Header(['frame_type=2', 'channel_number=1', 'properties=<BasicProperties>', 'body_size=389'])>
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 22
+DEBUG:pika.connection:Frame: <Body(['frame_type=3', 'channel_number=1', "fragment=ccopy_reg\n_reconstructor\np0\n(clib.Common\nMessage\np1\nc__builtin__\nobject\np2\nNtp3\nRp4\n(dp5\nS'content'\np6\ng0\n(clib.Common\nUnitInstanceInfo\np7\ng2\nNtp8\nRp9\n(dp10\nS'username'\np11\nS'daniel'\np12\nsS'uuid'\np13\nS'10.99.0.1'\np14\nsS'system'\np15\nS'WebServicesCluster'\np16\nsS'meta'\np17\n(dp18\nsS'password'\np19\ng12\nsS'type'\np20\nS'VirtualMachine'\np21\nsS'id'\np22\nS'VM.WebService'\np23\nsbsg17\n(dp24\nsg20\nI3\nsb."])>
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 397
+INFO:pika.connection:Closing connection (200): Normal shutdown
+DEBUG:pika.adapters.blocking_connection:Handling timeout 1 with a threshold of 3
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 0
+DEBUG:root:Shutting down...
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingConnection._on_connection_start of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2a701a87d0>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 1}
+DEBUG:pika.connection:Attempting connection
+DEBUG:pika.adapters.base_connection:Connecting the adapter to the remote host
+DEBUG:pika.adapters.base_connection:Creating the socket
+INFO:pika.adapters.base_connection:Connecting fd 6 to 128.130.172.230:5672
+DEBUG:pika.adapters.blocking_connection:Setting socket connection timeout
+DEBUG:pika.connection:Frame: <ProtocolHeader(['frame_type=-1', 'major=0', 'minor=9', 'revision=1'])>
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 8
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=0', 'method=<Connection.Start(["server_properties={\'information\': \'Licensed under the MPL.  See http://www.rabbitmq.com/\', \'product\': \'RabbitMQ\', \'copyright\': \'Copyright (C) 2007-2015 Pivotal Software, Inc.\', \'capabilities\': {\'exchange_exchange_bindings\': True, \'connection.blocked\': True, \'authentication_failure_close\': True, \'basic.nack\': True, \'per_consumer_qos\': True, \'consumer_priorities\': True, \'consumer_cancel_notify\': True, \'publisher_confirms\': True}, \'cluster_name\': \'rabbit@queuevm.novalocal\', \'platform\': \'Erlang/OTP\', \'version\': \'3.6.0\'}", \'version_minor=9\', \'mechanisms=PLAIN AMQPLAIN\', \'locales=en_US\', \'version_major=0\'])>'])>
+DEBUG:pika.callback:Processing 0:Connection.Start
+DEBUG:pika.callback:Processing use of oneshot callback
+DEBUG:pika.callback:0 registered uses left
+DEBUG:pika.callback:Removing callback #0: {'callback': <bound method BlockingConnection._on_connection_start of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2a701a87d0>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 0}
+DEBUG:pika.callback:Calling <bound method BlockingConnection._on_connection_start of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2a701a87d0>> for "0:Connection.Start"
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingConnection._on_connection_tune of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2a701a87d0>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 1}
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=0', 'method=<Connection.StartOk([\'locale=en_US\', \'mechanism=PLAIN\', "client_properties={\'platform\': \'Python 2.7.6\', \'product\': \'Pika Python Client Library\', \'version\': \'0.9.8\', \'capabilities\': {\'consumer_cancel_notify\': True, \'publisher_confirms\': True, \'basic.nack\': True}, \'information\': \'See http://pika.github.com\'}", \'response=\\x00daniel\\x00daniel\'])>'])>
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 249
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 0
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=0', "method=<Connection.Tune(['frame_max=131072', 'channel_max=0', 'heartbeat=60'])>"])>
+DEBUG:pika.callback:Processing 0:Connection.Tune
+DEBUG:pika.callback:Processing use of oneshot callback
+DEBUG:pika.callback:0 registered uses left
+DEBUG:pika.callback:Removing callback #0: {'callback': <bound method BlockingConnection._on_connection_tune of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2a701a87d0>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 0}
+DEBUG:pika.callback:Calling <bound method BlockingConnection._on_connection_tune of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2a701a87d0>> for "0:Connection.Tune"
+DEBUG:pika.connection:Creating a HeartbeatChecker: 60
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=0', "method=<Connection.TuneOk(['frame_max=131072', 'channel_max=0', 'heartbeat=60'])>"])>
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 20
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingConnection._on_connection_open of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2a701a87d0>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 1}
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=0', "method=<Connection.Open(['insist=True', 'capabilities=', 'virtual_host=WebServicesCluster'])>"])>
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 33
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 0
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=0', "method=<Connection.OpenOk(['known_hosts='])>"])>
+DEBUG:pika.callback:Processing 0:Connection.OpenOk
+DEBUG:pika.callback:Processing use of oneshot callback
+DEBUG:pika.callback:0 registered uses left
+DEBUG:pika.callback:Removing callback #0: {'callback': <bound method BlockingConnection._on_connection_open of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2a701a87d0>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 0}
+DEBUG:pika.callback:Calling <bound method BlockingConnection._on_connection_open of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2a701a87d0>> for "0:Connection.OpenOk"
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingConnection._on_connection_closed of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2a701a87d0>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 1}
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 0
+DEBUG:pika.adapters.blocking_connection:Setting socket timeout to 0.25
+INFO:pika.adapters.blocking_connection:Adapter connected
+DEBUG:pika.connection:Connected
+DEBUG:pika.adapters.blocking_connection:Opening channel 1
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingChannel._on_close of <pika.adapters.blocking_connection.BlockingChannel object at 0x7f2a701a8ed0>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 1}
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingChannel._on_getempty of <pika.adapters.blocking_connection.BlockingChannel object at 0x7f2a701a8ed0>>, 'only': None, 'one_shot': False, 'arguments': None}
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingChannel._on_cancel of <pika.adapters.blocking_connection.BlockingChannel object at 0x7f2a701a8ed0>>, 'only': None, 'one_shot': False, 'arguments': None}
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingChannel._on_rpc_complete of <pika.adapters.blocking_connection.BlockingChannel object at 0x7f2a701a8ed0>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 1}
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingChannel._on_rpc_complete of <pika.adapters.blocking_connection.BlockingChannel object at 0x7f2a701a8ed0>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 1}
+DEBUG:pika.adapters.blocking_connection:Connection: <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2a701a87d0>
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=1', "method=<Channel.Open(['out_of_band='])>"])>
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 13
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=1', "method=<Channel.OpenOk(['channel_id='])>"])>
+DEBUG:pika.callback:Processing 1:Channel.OpenOk
+DEBUG:pika.callback:Processing use of oneshot callback
+DEBUG:pika.callback:0 registered uses left
+DEBUG:pika.callback:Removing callback #0: {'callback': <bound method BlockingChannel._on_rpc_complete of <pika.adapters.blocking_connection.BlockingChannel object at 0x7f2a701a8ed0>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 0}
+DEBUG:pika.callback:Calling <bound method BlockingChannel._on_rpc_complete of <pika.adapters.blocking_connection.BlockingChannel object at 0x7f2a701a8ed0>> for "1:Channel.OpenOk"
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 0
+DEBUG:pika.adapters.blocking_connection:Handling timeout 1 with a threshold of 0
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 0
+DEBUG:pika.adapters.blocking_connection:Connection: <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2a701a87d0>
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=1', "method=<Basic.Publish(['ticket=0', 'mandatory=False', 'routing_key=WebServicesCluster.lifecycle.dead', 'immediate=False', 'exchange=WebServicesCluster'])>"])>
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 68
+DEBUG:pika.connection:Frame: <Header(['frame_type=2', 'channel_number=1', 'properties=<BasicProperties>', 'body_size=437'])>
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 22
+DEBUG:pika.connection:Frame: <Body(['frame_type=3', 'channel_number=1', "fragment=ccopy_reg\n_reconstructor\np0\n(clib.Common\nMessage\np1\nc__builtin__\nobject\np2\nNtp3\nRp4\n(dp5\nS'content'\np6\ng0\n(clib.Common\nUnitInstanceInfo\np7\ng2\nNtp8\nRp9\n(dp10\nS'username'\np11\nS'daniel'\np12\nsS'uuid'\np13\nS'10.99.0.2-Tomcat-Service.EventProcessingService'\np14\nsS'system'\np15\nS'WebServicesCluster'\np16\nsS'meta'\np17\n(dp18\nsS'password'\np19\ng12\nsS'type'\np20\nS'Service'\np21\nsS'id'\np22\nS'Service.EventProcessingService'\np23\nsbsg17\n(dp24\nsg20\nI3\nsb."])>
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 445
+INFO:pika.connection:Closing connection (200): Normal shutdown
+DEBUG:pika.adapters.blocking_connection:Handling timeout 1 with a threshold of 3
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 0
+INFO:root:Started test executor for 10.99.0.1-Tomcat-Service.EventProcessingService
+DEBUG:root:Sending I am alive message ccopy_reg
+_reconstructor
+p0
+(clib.Common
+Message
+p1
+c__builtin__
+object
+p2
+Ntp3
+Rp4
+(dp5
+S'content'
+p6
+g0
+(clib.Common
+UnitInstanceInfo
+p7
+g2
+Ntp8
+Rp9
+(dp10
+S'username'
+p11
+S'daniel'
+p12
+sS'uuid'
+p13
+S'10.99.0.1-Tomcat-Service.EventProcessingService'
+p14
+sS'system'
+p15
+S'WebServicesCluster'
+p16
+sS'meta'
+p17
+(dp18
+sS'password'
+p19
+g12
+sS'type'
+p20
+S'Service'
+p21
+sS'id'
+p22
+S'Service.EventProcessingService'
+p23
+sbsg17
+(dp24
+sg20
+I3
+sb.
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingConnection._on_connection_start of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2c4e2c3290>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 1}
+DEBUG:pika.connection:Attempting connection
+DEBUG:pika.adapters.base_connection:Connecting the adapter to the remote host
+DEBUG:pika.adapters.base_connection:Creating the socket
+INFO:pika.adapters.base_connection:Connecting fd 6 to 128.130.172.230:5672
+DEBUG:pika.adapters.blocking_connection:Setting socket connection timeout
+DEBUG:pika.connection:Frame: <ProtocolHeader(['frame_type=-1', 'major=0', 'minor=9', 'revision=1'])>
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 8
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=0', 'method=<Connection.Start(["server_properties={\'information\': \'Licensed under the MPL.  See http://www.rabbitmq.com/\', \'product\': \'RabbitMQ\', \'copyright\': \'Copyright (C) 2007-2015 Pivotal Software, Inc.\', \'capabilities\': {\'exchange_exchange_bindings\': True, \'connection.blocked\': True, \'authentication_failure_close\': True, \'basic.nack\': True, \'per_consumer_qos\': True, \'consumer_priorities\': True, \'consumer_cancel_notify\': True, \'publisher_confirms\': True}, \'cluster_name\': \'rabbit@queuevm.novalocal\', \'platform\': \'Erlang/OTP\', \'version\': \'3.6.0\'}", \'version_minor=9\', \'mechanisms=PLAIN AMQPLAIN\', \'locales=en_US\', \'version_major=0\'])>'])>
+DEBUG:pika.callback:Processing 0:Connection.Start
+DEBUG:pika.callback:Processing use of oneshot callback
+DEBUG:pika.callback:0 registered uses left
+DEBUG:pika.callback:Removing callback #0: {'callback': <bound method BlockingConnection._on_connection_start of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2c4e2c3290>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 0}
+DEBUG:pika.callback:Calling <bound method BlockingConnection._on_connection_start of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2c4e2c3290>> for "0:Connection.Start"
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingConnection._on_connection_tune of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2c4e2c3290>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 1}
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=0', 'method=<Connection.StartOk([\'locale=en_US\', \'mechanism=PLAIN\', "client_properties={\'platform\': \'Python 2.7.6\', \'product\': \'Pika Python Client Library\', \'version\': \'0.9.8\', \'capabilities\': {\'consumer_cancel_notify\': True, \'publisher_confirms\': True, \'basic.nack\': True}, \'information\': \'See http://pika.github.com\'}", \'response=\\x00daniel\\x00daniel\'])>'])>
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 249
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 0
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=0', "method=<Connection.Tune(['frame_max=131072', 'channel_max=0', 'heartbeat=60'])>"])>
+DEBUG:pika.callback:Processing 0:Connection.Tune
+DEBUG:pika.callback:Processing use of oneshot callback
+DEBUG:pika.callback:0 registered uses left
+DEBUG:pika.callback:Removing callback #0: {'callback': <bound method BlockingConnection._on_connection_tune of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2c4e2c3290>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 0}
+DEBUG:pika.callback:Calling <bound method BlockingConnection._on_connection_tune of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2c4e2c3290>> for "0:Connection.Tune"
+DEBUG:pika.connection:Creating a HeartbeatChecker: 60
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=0', "method=<Connection.TuneOk(['frame_max=131072', 'channel_max=0', 'heartbeat=60'])>"])>
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 20
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingConnection._on_connection_open of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2c4e2c3290>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 1}
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=0', "method=<Connection.Open(['insist=True', 'capabilities=', 'virtual_host=WebServicesCluster'])>"])>
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 33
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 0
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=0', "method=<Connection.OpenOk(['known_hosts='])>"])>
+DEBUG:pika.callback:Processing 0:Connection.OpenOk
+DEBUG:pika.callback:Processing use of oneshot callback
+DEBUG:pika.callback:0 registered uses left
+DEBUG:pika.callback:Removing callback #0: {'callback': <bound method BlockingConnection._on_connection_open of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2c4e2c3290>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 0}
+DEBUG:pika.callback:Calling <bound method BlockingConnection._on_connection_open of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2c4e2c3290>> for "0:Connection.OpenOk"
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingConnection._on_connection_closed of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2c4e2c3290>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 1}
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 0
+DEBUG:pika.adapters.blocking_connection:Setting socket timeout to 0.25
+INFO:pika.adapters.blocking_connection:Adapter connected
+DEBUG:pika.connection:Connected
+DEBUG:pika.adapters.blocking_connection:Opening channel 1
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingChannel._on_close of <pika.adapters.blocking_connection.BlockingChannel object at 0x7f2c55c31590>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 1}
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingChannel._on_getempty of <pika.adapters.blocking_connection.BlockingChannel object at 0x7f2c55c31590>>, 'only': None, 'one_shot': False, 'arguments': None}
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingChannel._on_cancel of <pika.adapters.blocking_connection.BlockingChannel object at 0x7f2c55c31590>>, 'only': None, 'one_shot': False, 'arguments': None}
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingChannel._on_rpc_complete of <pika.adapters.blocking_connection.BlockingChannel object at 0x7f2c55c31590>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 1}
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingChannel._on_rpc_complete of <pika.adapters.blocking_connection.BlockingChannel object at 0x7f2c55c31590>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 1}
+DEBUG:pika.adapters.blocking_connection:Connection: <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2c4e2c3290>
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=1', "method=<Channel.Open(['out_of_band='])>"])>
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 13
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=1', "method=<Channel.OpenOk(['channel_id='])>"])>
+DEBUG:pika.callback:Processing 1:Channel.OpenOk
+DEBUG:pika.callback:Processing use of oneshot callback
+DEBUG:pika.callback:0 registered uses left
+DEBUG:pika.callback:Removing callback #0: {'callback': <bound method BlockingChannel._on_rpc_complete of <pika.adapters.blocking_connection.BlockingChannel object at 0x7f2c55c31590>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 0}
+DEBUG:pika.callback:Calling <bound method BlockingChannel._on_rpc_complete of <pika.adapters.blocking_connection.BlockingChannel object at 0x7f2c55c31590>> for "1:Channel.OpenOk"
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 0
+DEBUG:pika.adapters.blocking_connection:Handling timeout 1 with a threshold of 0
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 0
+DEBUG:pika.adapters.blocking_connection:Connection: <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2c4e2c3290>
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=1', "method=<Basic.Publish(['ticket=0', 'mandatory=False', 'routing_key=WebServicesCluster.lifecycle.alive', 'immediate=False', 'exchange=WebServicesCluster'])>"])>
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 69
+DEBUG:pika.connection:Frame: <Header(['frame_type=2', 'channel_number=1', 'properties=<BasicProperties>', 'body_size=437'])>
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 22
+DEBUG:pika.connection:Frame: <Body(['frame_type=3', 'channel_number=1', "fragment=ccopy_reg\n_reconstructor\np0\n(clib.Common\nMessage\np1\nc__builtin__\nobject\np2\nNtp3\nRp4\n(dp5\nS'content'\np6\ng0\n(clib.Common\nUnitInstanceInfo\np7\ng2\nNtp8\nRp9\n(dp10\nS'username'\np11\nS'daniel'\np12\nsS'uuid'\np13\nS'10.99.0.1-Tomcat-Service.EventProcessingService'\np14\nsS'system'\np15\nS'WebServicesCluster'\np16\nsS'meta'\np17\n(dp18\nsS'password'\np19\ng12\nsS'type'\np20\nS'Service'\np21\nsS'id'\np22\nS'Service.EventProcessingService'\np23\nsbsg17\n(dp24\nsg20\nI3\nsb."])>
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 445
+INFO:pika.connection:Closing connection (200): Normal shutdown
+DEBUG:pika.adapters.blocking_connection:Handling timeout 1 with a threshold of 3
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 0
+INFO:root:Started test executor for 10.99.0.2
+DEBUG:root:Sending I am alive message ccopy_reg
+_reconstructor
+p0
+(clib.Common
+Message
+p1
+c__builtin__
+object
+p2
+Ntp3
+Rp4
+(dp5
+S'content'
+p6
+g0
+(clib.Common
+UnitInstanceInfo
+p7
+g2
+Ntp8
+Rp9
+(dp10
+S'username'
+p11
+S'daniel'
+p12
+sS'uuid'
+p13
+S'10.99.0.2'
+p14
+sS'system'
+p15
+S'WebServicesCluster'
+p16
+sS'meta'
+p17
+(dp18
+sS'password'
+p19
+g12
+sS'type'
+p20
+S'VirtualMachine'
+p21
+sS'id'
+p22
+S'VM.WebService'
+p23
+sbsg17
+(dp24
+sg20
+I3
+sb.
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingConnection._on_connection_start of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2c4e2c3610>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 1}
+DEBUG:pika.connection:Attempting connection
+DEBUG:pika.adapters.base_connection:Connecting the adapter to the remote host
+DEBUG:pika.adapters.base_connection:Creating the socket
+INFO:pika.adapters.base_connection:Connecting fd 6 to 128.130.172.230:5672
+DEBUG:pika.adapters.blocking_connection:Setting socket connection timeout
+DEBUG:pika.connection:Frame: <ProtocolHeader(['frame_type=-1', 'major=0', 'minor=9', 'revision=1'])>
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 8
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=0', 'method=<Connection.Start(["server_properties={\'information\': \'Licensed under the MPL.  See http://www.rabbitmq.com/\', \'product\': \'RabbitMQ\', \'copyright\': \'Copyright (C) 2007-2015 Pivotal Software, Inc.\', \'capabilities\': {\'exchange_exchange_bindings\': True, \'connection.blocked\': True, \'authentication_failure_close\': True, \'basic.nack\': True, \'per_consumer_qos\': True, \'consumer_priorities\': True, \'consumer_cancel_notify\': True, \'publisher_confirms\': True}, \'cluster_name\': \'rabbit@queuevm.novalocal\', \'platform\': \'Erlang/OTP\', \'version\': \'3.6.0\'}", \'version_minor=9\', \'mechanisms=PLAIN AMQPLAIN\', \'locales=en_US\', \'version_major=0\'])>'])>
+DEBUG:pika.callback:Processing 0:Connection.Start
+DEBUG:pika.callback:Processing use of oneshot callback
+DEBUG:pika.callback:0 registered uses left
+DEBUG:pika.callback:Removing callback #0: {'callback': <bound method BlockingConnection._on_connection_start of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2c4e2c3610>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 0}
+DEBUG:pika.callback:Calling <bound method BlockingConnection._on_connection_start of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2c4e2c3610>> for "0:Connection.Start"
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingConnection._on_connection_tune of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2c4e2c3610>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 1}
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=0', 'method=<Connection.StartOk([\'locale=en_US\', \'mechanism=PLAIN\', "client_properties={\'platform\': \'Python 2.7.6\', \'product\': \'Pika Python Client Library\', \'version\': \'0.9.8\', \'capabilities\': {\'consumer_cancel_notify\': True, \'publisher_confirms\': True, \'basic.nack\': True}, \'information\': \'See http://pika.github.com\'}", \'response=\\x00daniel\\x00daniel\'])>'])>
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 249
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 0
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=0', "method=<Connection.Tune(['frame_max=131072', 'channel_max=0', 'heartbeat=60'])>"])>
+DEBUG:pika.callback:Processing 0:Connection.Tune
+DEBUG:pika.callback:Processing use of oneshot callback
+DEBUG:pika.callback:0 registered uses left
+DEBUG:pika.callback:Removing callback #0: {'callback': <bound method BlockingConnection._on_connection_tune of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2c4e2c3610>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 0}
+DEBUG:pika.callback:Calling <bound method BlockingConnection._on_connection_tune of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2c4e2c3610>> for "0:Connection.Tune"
+DEBUG:pika.connection:Creating a HeartbeatChecker: 60
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=0', "method=<Connection.TuneOk(['frame_max=131072', 'channel_max=0', 'heartbeat=60'])>"])>
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 20
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingConnection._on_connection_open of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2c4e2c3610>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 1}
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=0', "method=<Connection.Open(['insist=True', 'capabilities=', 'virtual_host=WebServicesCluster'])>"])>
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 33
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 0
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=0', "method=<Connection.OpenOk(['known_hosts='])>"])>
+DEBUG:pika.callback:Processing 0:Connection.OpenOk
+DEBUG:pika.callback:Processing use of oneshot callback
+DEBUG:pika.callback:0 registered uses left
+DEBUG:pika.callback:Removing callback #0: {'callback': <bound method BlockingConnection._on_connection_open of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2c4e2c3610>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 0}
+DEBUG:pika.callback:Calling <bound method BlockingConnection._on_connection_open of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2c4e2c3610>> for "0:Connection.OpenOk"
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingConnection._on_connection_closed of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2c4e2c3610>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 1}
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 0
+DEBUG:pika.adapters.blocking_connection:Setting socket timeout to 0.25
+INFO:pika.adapters.blocking_connection:Adapter connected
+DEBUG:pika.connection:Connected
+DEBUG:pika.adapters.blocking_connection:Opening channel 1
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingChannel._on_close of <pika.adapters.blocking_connection.BlockingChannel object at 0x7f2c4e2c3950>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 1}
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingChannel._on_getempty of <pika.adapters.blocking_connection.BlockingChannel object at 0x7f2c4e2c3950>>, 'only': None, 'one_shot': False, 'arguments': None}
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingChannel._on_cancel of <pika.adapters.blocking_connection.BlockingChannel object at 0x7f2c4e2c3950>>, 'only': None, 'one_shot': False, 'arguments': None}
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingChannel._on_rpc_complete of <pika.adapters.blocking_connection.BlockingChannel object at 0x7f2c4e2c3950>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 1}
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingChannel._on_rpc_complete of <pika.adapters.blocking_connection.BlockingChannel object at 0x7f2c4e2c3950>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 1}
+DEBUG:pika.adapters.blocking_connection:Connection: <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2c4e2c3610>
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=1', "method=<Channel.Open(['out_of_band='])>"])>
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 13
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=1', "method=<Channel.OpenOk(['channel_id='])>"])>
+DEBUG:pika.callback:Processing 1:Channel.OpenOk
+DEBUG:pika.callback:Processing use of oneshot callback
+DEBUG:pika.callback:0 registered uses left
+DEBUG:pika.callback:Removing callback #0: {'callback': <bound method BlockingChannel._on_rpc_complete of <pika.adapters.blocking_connection.BlockingChannel object at 0x7f2c4e2c3950>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 0}
+DEBUG:pika.callback:Calling <bound method BlockingChannel._on_rpc_complete of <pika.adapters.blocking_connection.BlockingChannel object at 0x7f2c4e2c3950>> for "1:Channel.OpenOk"
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 0
+DEBUG:pika.adapters.blocking_connection:Handling timeout 1 with a threshold of 0
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 0
+DEBUG:pika.adapters.blocking_connection:Connection: <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2c4e2c3610>
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=1', "method=<Basic.Publish(['ticket=0', 'mandatory=False', 'routing_key=WebServicesCluster.lifecycle.alive', 'immediate=False', 'exchange=WebServicesCluster'])>"])>
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 69
+DEBUG:pika.connection:Frame: <Header(['frame_type=2', 'channel_number=1', 'properties=<BasicProperties>', 'body_size=389'])>
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 22
+DEBUG:pika.connection:Frame: <Body(['frame_type=3', 'channel_number=1', "fragment=ccopy_reg\n_reconstructor\np0\n(clib.Common\nMessage\np1\nc__builtin__\nobject\np2\nNtp3\nRp4\n(dp5\nS'content'\np6\ng0\n(clib.Common\nUnitInstanceInfo\np7\ng2\nNtp8\nRp9\n(dp10\nS'username'\np11\nS'daniel'\np12\nsS'uuid'\np13\nS'10.99.0.2'\np14\nsS'system'\np15\nS'WebServicesCluster'\np16\nsS'meta'\np17\n(dp18\nsS'password'\np19\ng12\nsS'type'\np20\nS'VirtualMachine'\np21\nsS'id'\np22\nS'VM.WebService'\np23\nsbsg17\n(dp24\nsg20\nI3\nsb."])>
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 397
+INFO:pika.connection:Closing connection (200): Normal shutdown
+DEBUG:pika.adapters.blocking_connection:Handling timeout 1 with a threshold of 3
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 0
+INFO:root:Started test executor for 10.99.0.2-Tomcat
+DEBUG:root:Sending I am alive message ccopy_reg
+_reconstructor
+p0
+(clib.Common
+Message
+p1
+c__builtin__
+object
+p2
+Ntp3
+Rp4
+(dp5
+S'content'
+p6
+g0
+(clib.Common
+UnitInstanceInfo
+p7
+g2
+Ntp8
+Rp9
+(dp10
+S'username'
+p11
+S'daniel'
+p12
+sS'uuid'
+p13
+S'10.99.0.2-Tomcat'
+p14
+sS'system'
+p15
+S'WebServicesCluster'
+p16
+sS'meta'
+p17
+(dp18
+sS'password'
+p19
+g12
+sS'type'
+p20
+S'Process'
+p21
+sS'id'
+p22
+S'Process.Tomcat'
+p23
+sbsg17
+(dp24
+sg20
+I3
+sb.
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingConnection._on_connection_start of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2c4e2c3850>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 1}
+DEBUG:pika.connection:Attempting connection
+DEBUG:pika.adapters.base_connection:Connecting the adapter to the remote host
+DEBUG:pika.adapters.base_connection:Creating the socket
+INFO:pika.adapters.base_connection:Connecting fd 6 to 128.130.172.230:5672
+DEBUG:pika.adapters.blocking_connection:Setting socket connection timeout
+DEBUG:pika.connection:Frame: <ProtocolHeader(['frame_type=-1', 'major=0', 'minor=9', 'revision=1'])>
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 8
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=0', 'method=<Connection.Start(["server_properties={\'information\': \'Licensed under the MPL.  See http://www.rabbitmq.com/\', \'product\': \'RabbitMQ\', \'copyright\': \'Copyright (C) 2007-2015 Pivotal Software, Inc.\', \'capabilities\': {\'exchange_exchange_bindings\': True, \'connection.blocked\': True, \'authentication_failure_close\': True, \'basic.nack\': True, \'per_consumer_qos\': True, \'consumer_priorities\': True, \'consumer_cancel_notify\': True, \'publisher_confirms\': True}, \'cluster_name\': \'rabbit@queuevm.novalocal\', \'platform\': \'Erlang/OTP\', \'version\': \'3.6.0\'}", \'version_minor=9\', \'mechanisms=PLAIN AMQPLAIN\', \'locales=en_US\', \'version_major=0\'])>'])>
+DEBUG:pika.callback:Processing 0:Connection.Start
+DEBUG:pika.callback:Processing use of oneshot callback
+DEBUG:pika.callback:0 registered uses left
+DEBUG:pika.callback:Removing callback #0: {'callback': <bound method BlockingConnection._on_connection_start of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2c4e2c3850>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 0}
+DEBUG:pika.callback:Calling <bound method BlockingConnection._on_connection_start of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2c4e2c3850>> for "0:Connection.Start"
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingConnection._on_connection_tune of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2c4e2c3850>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 1}
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=0', 'method=<Connection.StartOk([\'locale=en_US\', \'mechanism=PLAIN\', "client_properties={\'platform\': \'Python 2.7.6\', \'product\': \'Pika Python Client Library\', \'version\': \'0.9.8\', \'capabilities\': {\'consumer_cancel_notify\': True, \'publisher_confirms\': True, \'basic.nack\': True}, \'information\': \'See http://pika.github.com\'}", \'response=\\x00daniel\\x00daniel\'])>'])>
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 249
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 0
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=0', "method=<Connection.Tune(['frame_max=131072', 'channel_max=0', 'heartbeat=60'])>"])>
+DEBUG:pika.callback:Processing 0:Connection.Tune
+DEBUG:pika.callback:Processing use of oneshot callback
+DEBUG:pika.callback:0 registered uses left
+DEBUG:pika.callback:Removing callback #0: {'callback': <bound method BlockingConnection._on_connection_tune of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2c4e2c3850>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 0}
+DEBUG:pika.callback:Calling <bound method BlockingConnection._on_connection_tune of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2c4e2c3850>> for "0:Connection.Tune"
+DEBUG:pika.connection:Creating a HeartbeatChecker: 60
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=0', "method=<Connection.TuneOk(['frame_max=131072', 'channel_max=0', 'heartbeat=60'])>"])>
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 20
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingConnection._on_connection_open of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2c4e2c3850>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 1}
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=0', "method=<Connection.Open(['insist=True', 'capabilities=', 'virtual_host=WebServicesCluster'])>"])>
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 33
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 0
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=0', "method=<Connection.OpenOk(['known_hosts='])>"])>
+DEBUG:pika.callback:Processing 0:Connection.OpenOk
+DEBUG:pika.callback:Processing use of oneshot callback
+DEBUG:pika.callback:0 registered uses left
+DEBUG:pika.callback:Removing callback #0: {'callback': <bound method BlockingConnection._on_connection_open of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2c4e2c3850>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 0}
+DEBUG:pika.callback:Calling <bound method BlockingConnection._on_connection_open of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2c4e2c3850>> for "0:Connection.OpenOk"
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingConnection._on_connection_closed of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2c4e2c3850>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 1}
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 0
+DEBUG:pika.adapters.blocking_connection:Setting socket timeout to 0.25
+INFO:pika.adapters.blocking_connection:Adapter connected
+DEBUG:pika.connection:Connected
+DEBUG:pika.adapters.blocking_connection:Opening channel 1
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingChannel._on_close of <pika.adapters.blocking_connection.BlockingChannel object at 0x7f2c4e2c3c50>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 1}
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingChannel._on_getempty of <pika.adapters.blocking_connection.BlockingChannel object at 0x7f2c4e2c3c50>>, 'only': None, 'one_shot': False, 'arguments': None}
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingChannel._on_cancel of <pika.adapters.blocking_connection.BlockingChannel object at 0x7f2c4e2c3c50>>, 'only': None, 'one_shot': False, 'arguments': None}
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingChannel._on_rpc_complete of <pika.adapters.blocking_connection.BlockingChannel object at 0x7f2c4e2c3c50>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 1}
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingChannel._on_rpc_complete of <pika.adapters.blocking_connection.BlockingChannel object at 0x7f2c4e2c3c50>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 1}
+DEBUG:pika.adapters.blocking_connection:Connection: <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2c4e2c3850>
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=1', "method=<Channel.Open(['out_of_band='])>"])>
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 13
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=1', "method=<Channel.OpenOk(['channel_id='])>"])>
+DEBUG:pika.callback:Processing 1:Channel.OpenOk
+DEBUG:pika.callback:Processing use of oneshot callback
+DEBUG:pika.callback:0 registered uses left
+DEBUG:pika.callback:Removing callback #0: {'callback': <bound method BlockingChannel._on_rpc_complete of <pika.adapters.blocking_connection.BlockingChannel object at 0x7f2c4e2c3c50>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 0}
+DEBUG:pika.callback:Calling <bound method BlockingChannel._on_rpc_complete of <pika.adapters.blocking_connection.BlockingChannel object at 0x7f2c4e2c3c50>> for "1:Channel.OpenOk"
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 0
+DEBUG:pika.adapters.blocking_connection:Handling timeout 1 with a threshold of 0
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 0
+DEBUG:pika.adapters.blocking_connection:Connection: <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2c4e2c3850>
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=1', "method=<Basic.Publish(['ticket=0', 'mandatory=False', 'routing_key=WebServicesCluster.lifecycle.alive', 'immediate=False', 'exchange=WebServicesCluster'])>"])>
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 69
+DEBUG:pika.connection:Frame: <Header(['frame_type=2', 'channel_number=1', 'properties=<BasicProperties>', 'body_size=390'])>
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 22
+DEBUG:pika.connection:Frame: <Body(['frame_type=3', 'channel_number=1', "fragment=ccopy_reg\n_reconstructor\np0\n(clib.Common\nMessage\np1\nc__builtin__\nobject\np2\nNtp3\nRp4\n(dp5\nS'content'\np6\ng0\n(clib.Common\nUnitInstanceInfo\np7\ng2\nNtp8\nRp9\n(dp10\nS'username'\np11\nS'daniel'\np12\nsS'uuid'\np13\nS'10.99.0.2-Tomcat'\np14\nsS'system'\np15\nS'WebServicesCluster'\np16\nsS'meta'\np17\n(dp18\nsS'password'\np19\ng12\nsS'type'\np20\nS'Process'\np21\nsS'id'\np22\nS'Process.Tomcat'\np23\nsbsg17\n(dp24\nsg20\nI3\nsb."])>
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 398
+INFO:pika.connection:Closing connection (200): Normal shutdown
+DEBUG:pika.adapters.blocking_connection:Handling timeout 1 with a threshold of 3
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 0
+INFO:root:Started test executor for 10.99.0.2-Tomcat-Service.EventProcessingService
+DEBUG:root:Sending I am alive message ccopy_reg
+_reconstructor
+p0
+(clib.Common
+Message
+p1
+c__builtin__
+object
+p2
+Ntp3
+Rp4
+(dp5
+S'content'
+p6
+g0
+(clib.Common
+UnitInstanceInfo
+p7
+g2
+Ntp8
+Rp9
+(dp10
+S'username'
+p11
+S'daniel'
+p12
+sS'uuid'
+p13
+S'10.99.0.2-Tomcat-Service.EventProcessingService'
+p14
+sS'system'
+p15
+S'WebServicesCluster'
+p16
+sS'meta'
+p17
+(dp18
+sS'password'
+p19
+g12
+sS'type'
+p20
+S'Service'
+p21
+sS'id'
+p22
+S'Service.EventProcessingService'
+p23
+sbsg17
+(dp24
+sg20
+I3
+sb.
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingConnection._on_connection_start of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2c4e2c3cd0>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 1}
+DEBUG:pika.connection:Attempting connection
+DEBUG:pika.adapters.base_connection:Connecting the adapter to the remote host
+DEBUG:pika.adapters.base_connection:Creating the socket
+INFO:pika.adapters.base_connection:Connecting fd 6 to 128.130.172.230:5672
+DEBUG:pika.adapters.blocking_connection:Setting socket connection timeout
+DEBUG:pika.connection:Frame: <ProtocolHeader(['frame_type=-1', 'major=0', 'minor=9', 'revision=1'])>
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 8
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=0', 'method=<Connection.Start(["server_properties={\'information\': \'Licensed under the MPL.  See http://www.rabbitmq.com/\', \'product\': \'RabbitMQ\', \'copyright\': \'Copyright (C) 2007-2015 Pivotal Software, Inc.\', \'capabilities\': {\'exchange_exchange_bindings\': True, \'connection.blocked\': True, \'authentication_failure_close\': True, \'basic.nack\': True, \'per_consumer_qos\': True, \'consumer_priorities\': True, \'consumer_cancel_notify\': True, \'publisher_confirms\': True}, \'cluster_name\': \'rabbit@queuevm.novalocal\', \'platform\': \'Erlang/OTP\', \'version\': \'3.6.0\'}", \'version_minor=9\', \'mechanisms=PLAIN AMQPLAIN\', \'locales=en_US\', \'version_major=0\'])>'])>
+DEBUG:pika.callback:Processing 0:Connection.Start
+DEBUG:pika.callback:Processing use of oneshot callback
+DEBUG:pika.callback:0 registered uses left
+DEBUG:pika.callback:Removing callback #0: {'callback': <bound method BlockingConnection._on_connection_start of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2c4e2c3cd0>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 0}
+DEBUG:pika.callback:Calling <bound method BlockingConnection._on_connection_start of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2c4e2c3cd0>> for "0:Connection.Start"
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingConnection._on_connection_tune of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2c4e2c3cd0>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 1}
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=0', 'method=<Connection.StartOk([\'locale=en_US\', \'mechanism=PLAIN\', "client_properties={\'platform\': \'Python 2.7.6\', \'product\': \'Pika Python Client Library\', \'version\': \'0.9.8\', \'capabilities\': {\'consumer_cancel_notify\': True, \'publisher_confirms\': True, \'basic.nack\': True}, \'information\': \'See http://pika.github.com\'}", \'response=\\x00daniel\\x00daniel\'])>'])>
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 249
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 0
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=0', "method=<Connection.Tune(['frame_max=131072', 'channel_max=0', 'heartbeat=60'])>"])>
+DEBUG:pika.callback:Processing 0:Connection.Tune
+DEBUG:pika.callback:Processing use of oneshot callback
+DEBUG:pika.callback:0 registered uses left
+DEBUG:pika.callback:Removing callback #0: {'callback': <bound method BlockingConnection._on_connection_tune of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2c4e2c3cd0>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 0}
+DEBUG:pika.callback:Calling <bound method BlockingConnection._on_connection_tune of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2c4e2c3cd0>> for "0:Connection.Tune"
+DEBUG:pika.connection:Creating a HeartbeatChecker: 60
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=0', "method=<Connection.TuneOk(['frame_max=131072', 'channel_max=0', 'heartbeat=60'])>"])>
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 20
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingConnection._on_connection_open of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2c4e2c3cd0>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 1}
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=0', "method=<Connection.Open(['insist=True', 'capabilities=', 'virtual_host=WebServicesCluster'])>"])>
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 33
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 0
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=0', "method=<Connection.OpenOk(['known_hosts='])>"])>
+DEBUG:pika.callback:Processing 0:Connection.OpenOk
+DEBUG:pika.callback:Processing use of oneshot callback
+DEBUG:pika.callback:0 registered uses left
+DEBUG:pika.callback:Removing callback #0: {'callback': <bound method BlockingConnection._on_connection_open of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2c4e2c3cd0>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 0}
+DEBUG:pika.callback:Calling <bound method BlockingConnection._on_connection_open of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2c4e2c3cd0>> for "0:Connection.OpenOk"
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingConnection._on_connection_closed of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2c4e2c3cd0>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 1}
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 0
+DEBUG:pika.adapters.blocking_connection:Setting socket timeout to 0.25
+INFO:pika.adapters.blocking_connection:Adapter connected
+DEBUG:pika.connection:Connected
+DEBUG:pika.adapters.blocking_connection:Opening channel 1
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingChannel._on_close of <pika.adapters.blocking_connection.BlockingChannel object at 0x7f2c4e2c3ed0>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 1}
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingChannel._on_getempty of <pika.adapters.blocking_connection.BlockingChannel object at 0x7f2c4e2c3ed0>>, 'only': None, 'one_shot': False, 'arguments': None}
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingChannel._on_cancel of <pika.adapters.blocking_connection.BlockingChannel object at 0x7f2c4e2c3ed0>>, 'only': None, 'one_shot': False, 'arguments': None}
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingChannel._on_rpc_complete of <pika.adapters.blocking_connection.BlockingChannel object at 0x7f2c4e2c3ed0>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 1}
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingChannel._on_rpc_complete of <pika.adapters.blocking_connection.BlockingChannel object at 0x7f2c4e2c3ed0>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 1}
+DEBUG:pika.adapters.blocking_connection:Connection: <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2c4e2c3cd0>
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=1', "method=<Channel.Open(['out_of_band='])>"])>
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 13
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=1', "method=<Channel.OpenOk(['channel_id='])>"])>
+DEBUG:pika.callback:Processing 1:Channel.OpenOk
+DEBUG:pika.callback:Processing use of oneshot callback
+DEBUG:pika.callback:0 registered uses left
+DEBUG:pika.callback:Removing callback #0: {'callback': <bound method BlockingChannel._on_rpc_complete of <pika.adapters.blocking_connection.BlockingChannel object at 0x7f2c4e2c3ed0>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 0}
+DEBUG:pika.callback:Calling <bound method BlockingChannel._on_rpc_complete of <pika.adapters.blocking_connection.BlockingChannel object at 0x7f2c4e2c3ed0>> for "1:Channel.OpenOk"
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 0
+DEBUG:pika.adapters.blocking_connection:Handling timeout 1 with a threshold of 0
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 0
+DEBUG:pika.adapters.blocking_connection:Connection: <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2c4e2c3cd0>
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=1', "method=<Basic.Publish(['ticket=0', 'mandatory=False', 'routing_key=WebServicesCluster.lifecycle.alive', 'immediate=False', 'exchange=WebServicesCluster'])>"])>
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 69
+DEBUG:pika.connection:Frame: <Header(['frame_type=2', 'channel_number=1', 'properties=<BasicProperties>', 'body_size=437'])>
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 22
+DEBUG:pika.connection:Frame: <Body(['frame_type=3', 'channel_number=1', "fragment=ccopy_reg\n_reconstructor\np0\n(clib.Common\nMessage\np1\nc__builtin__\nobject\np2\nNtp3\nRp4\n(dp5\nS'content'\np6\ng0\n(clib.Common\nUnitInstanceInfo\np7\ng2\nNtp8\nRp9\n(dp10\nS'username'\np11\nS'daniel'\np12\nsS'uuid'\np13\nS'10.99.0.2-Tomcat-Service.EventProcessingService'\np14\nsS'system'\np15\nS'WebServicesCluster'\np16\nsS'meta'\np17\n(dp18\nsS'password'\np19\ng12\nsS'type'\np20\nS'Service'\np21\nsS'id'\np22\nS'Service.EventProcessingService'\np23\nsbsg17\n(dp24\nsg20\nI3\nsb."])>
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 445
+INFO:pika.connection:Closing connection (200): Normal shutdown
+DEBUG:pika.adapters.blocking_connection:Handling timeout 1 with a threshold of 3
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 0
+DEBUG:root:Shutting down...
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingConnection._on_connection_start of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2c4e2c36d0>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 1}
+DEBUG:pika.connection:Attempting connection
+DEBUG:pika.adapters.base_connection:Connecting the adapter to the remote host
+DEBUG:pika.adapters.base_connection:Creating the socket
+INFO:pika.adapters.base_connection:Connecting fd 6 to 128.130.172.230:5672
+DEBUG:pika.adapters.blocking_connection:Setting socket connection timeout
+DEBUG:pika.connection:Frame: <ProtocolHeader(['frame_type=-1', 'major=0', 'minor=9', 'revision=1'])>
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 8
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=0', 'method=<Connection.Start(["server_properties={\'information\': \'Licensed under the MPL.  See http://www.rabbitmq.com/\', \'product\': \'RabbitMQ\', \'copyright\': \'Copyright (C) 2007-2015 Pivotal Software, Inc.\', \'capabilities\': {\'exchange_exchange_bindings\': True, \'connection.blocked\': True, \'authentication_failure_close\': True, \'basic.nack\': True, \'per_consumer_qos\': True, \'consumer_priorities\': True, \'consumer_cancel_notify\': True, \'publisher_confirms\': True}, \'cluster_name\': \'rabbit@queuevm.novalocal\', \'platform\': \'Erlang/OTP\', \'version\': \'3.6.0\'}", \'version_minor=9\', \'mechanisms=PLAIN AMQPLAIN\', \'locales=en_US\', \'version_major=0\'])>'])>
+DEBUG:pika.callback:Processing 0:Connection.Start
+DEBUG:pika.callback:Processing use of oneshot callback
+DEBUG:pika.callback:0 registered uses left
+DEBUG:pika.callback:Removing callback #0: {'callback': <bound method BlockingConnection._on_connection_start of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2c4e2c36d0>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 0}
+DEBUG:pika.callback:Calling <bound method BlockingConnection._on_connection_start of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2c4e2c36d0>> for "0:Connection.Start"
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingConnection._on_connection_tune of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2c4e2c36d0>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 1}
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=0', 'method=<Connection.StartOk([\'locale=en_US\', \'mechanism=PLAIN\', "client_properties={\'platform\': \'Python 2.7.6\', \'product\': \'Pika Python Client Library\', \'version\': \'0.9.8\', \'capabilities\': {\'consumer_cancel_notify\': True, \'publisher_confirms\': True, \'basic.nack\': True}, \'information\': \'See http://pika.github.com\'}", \'response=\\x00daniel\\x00daniel\'])>'])>
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 249
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 0
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=0', "method=<Connection.Tune(['frame_max=131072', 'channel_max=0', 'heartbeat=60'])>"])>
+DEBUG:pika.callback:Processing 0:Connection.Tune
+DEBUG:pika.callback:Processing use of oneshot callback
+DEBUG:pika.callback:0 registered uses left
+DEBUG:pika.callback:Removing callback #0: {'callback': <bound method BlockingConnection._on_connection_tune of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2c4e2c36d0>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 0}
+DEBUG:pika.callback:Calling <bound method BlockingConnection._on_connection_tune of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2c4e2c36d0>> for "0:Connection.Tune"
+DEBUG:pika.connection:Creating a HeartbeatChecker: 60
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=0', "method=<Connection.TuneOk(['frame_max=131072', 'channel_max=0', 'heartbeat=60'])>"])>
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 20
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingConnection._on_connection_open of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2c4e2c36d0>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 1}
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=0', "method=<Connection.Open(['insist=True', 'capabilities=', 'virtual_host=WebServicesCluster'])>"])>
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 33
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 0
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=0', "method=<Connection.OpenOk(['known_hosts='])>"])>
+DEBUG:pika.callback:Processing 0:Connection.OpenOk
+DEBUG:pika.callback:Processing use of oneshot callback
+DEBUG:pika.callback:0 registered uses left
+DEBUG:pika.callback:Removing callback #0: {'callback': <bound method BlockingConnection._on_connection_open of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2c4e2c36d0>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 0}
+DEBUG:pika.callback:Calling <bound method BlockingConnection._on_connection_open of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2c4e2c36d0>> for "0:Connection.OpenOk"
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingConnection._on_connection_closed of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2c4e2c36d0>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 1}
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 0
+DEBUG:pika.adapters.blocking_connection:Setting socket timeout to 0.25
+INFO:pika.adapters.blocking_connection:Adapter connected
+DEBUG:pika.connection:Connected
+DEBUG:pika.adapters.blocking_connection:Opening channel 1
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingChannel._on_close of <pika.adapters.blocking_connection.BlockingChannel object at 0x7f2c4e2c3b90>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 1}
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingChannel._on_getempty of <pika.adapters.blocking_connection.BlockingChannel object at 0x7f2c4e2c3b90>>, 'only': None, 'one_shot': False, 'arguments': None}
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingChannel._on_cancel of <pika.adapters.blocking_connection.BlockingChannel object at 0x7f2c4e2c3b90>>, 'only': None, 'one_shot': False, 'arguments': None}
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingChannel._on_rpc_complete of <pika.adapters.blocking_connection.BlockingChannel object at 0x7f2c4e2c3b90>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 1}
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingChannel._on_rpc_complete of <pika.adapters.blocking_connection.BlockingChannel object at 0x7f2c4e2c3b90>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 1}
+DEBUG:pika.adapters.blocking_connection:Connection: <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2c4e2c36d0>
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=1', "method=<Channel.Open(['out_of_band='])>"])>
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 13
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=1', "method=<Channel.OpenOk(['channel_id='])>"])>
+DEBUG:pika.callback:Processing 1:Channel.OpenOk
+DEBUG:pika.callback:Processing use of oneshot callback
+DEBUG:pika.callback:0 registered uses left
+DEBUG:pika.callback:Removing callback #0: {'callback': <bound method BlockingChannel._on_rpc_complete of <pika.adapters.blocking_connection.BlockingChannel object at 0x7f2c4e2c3b90>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 0}
+DEBUG:pika.callback:Calling <bound method BlockingChannel._on_rpc_complete of <pika.adapters.blocking_connection.BlockingChannel object at 0x7f2c4e2c3b90>> for "1:Channel.OpenOk"
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 0
+DEBUG:pika.adapters.blocking_connection:Handling timeout 1 with a threshold of 0
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 0
+DEBUG:pika.adapters.blocking_connection:Connection: <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2c4e2c36d0>
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=1', "method=<Basic.Publish(['ticket=0', 'mandatory=False', 'routing_key=WebServicesCluster.lifecycle.dead', 'immediate=False', 'exchange=WebServicesCluster'])>"])>
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 68
+DEBUG:pika.connection:Frame: <Header(['frame_type=2', 'channel_number=1', 'properties=<BasicProperties>', 'body_size=437'])>
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 22
+DEBUG:pika.connection:Frame: <Body(['frame_type=3', 'channel_number=1', "fragment=ccopy_reg\n_reconstructor\np0\n(clib.Common\nMessage\np1\nc__builtin__\nobject\np2\nNtp3\nRp4\n(dp5\nS'content'\np6\ng0\n(clib.Common\nUnitInstanceInfo\np7\ng2\nNtp8\nRp9\n(dp10\nS'username'\np11\nS'daniel'\np12\nsS'uuid'\np13\nS'10.99.0.1-Tomcat-Service.EventProcessingService'\np14\nsS'system'\np15\nS'WebServicesCluster'\np16\nsS'meta'\np17\n(dp18\nsS'password'\np19\ng12\nsS'type'\np20\nS'Service'\np21\nsS'id'\np22\nS'Service.EventProcessingService'\np23\nsbsg17\n(dp24\nsg20\nI3\nsb."])>
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 445
+INFO:pika.connection:Closing connection (200): Normal shutdown
+DEBUG:pika.adapters.blocking_connection:Handling timeout 1 with a threshold of 3
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 0
+DEBUG:root:Shutting down...
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingConnection._on_connection_start of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2c4e2c3990>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 1}
+DEBUG:pika.connection:Attempting connection
+DEBUG:pika.adapters.base_connection:Connecting the adapter to the remote host
+DEBUG:pika.adapters.base_connection:Creating the socket
+INFO:pika.adapters.base_connection:Connecting fd 6 to 128.130.172.230:5672
+DEBUG:pika.adapters.blocking_connection:Setting socket connection timeout
+DEBUG:pika.connection:Frame: <ProtocolHeader(['frame_type=-1', 'major=0', 'minor=9', 'revision=1'])>
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 8
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=0', 'method=<Connection.Start(["server_properties={\'information\': \'Licensed under the MPL.  See http://www.rabbitmq.com/\', \'product\': \'RabbitMQ\', \'copyright\': \'Copyright (C) 2007-2015 Pivotal Software, Inc.\', \'capabilities\': {\'exchange_exchange_bindings\': True, \'connection.blocked\': True, \'authentication_failure_close\': True, \'basic.nack\': True, \'per_consumer_qos\': True, \'consumer_priorities\': True, \'consumer_cancel_notify\': True, \'publisher_confirms\': True}, \'cluster_name\': \'rabbit@queuevm.novalocal\', \'platform\': \'Erlang/OTP\', \'version\': \'3.6.0\'}", \'version_minor=9\', \'mechanisms=PLAIN AMQPLAIN\', \'locales=en_US\', \'version_major=0\'])>'])>
+DEBUG:pika.callback:Processing 0:Connection.Start
+DEBUG:pika.callback:Processing use of oneshot callback
+DEBUG:pika.callback:0 registered uses left
+DEBUG:pika.callback:Removing callback #0: {'callback': <bound method BlockingConnection._on_connection_start of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2c4e2c3990>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 0}
+DEBUG:pika.callback:Calling <bound method BlockingConnection._on_connection_start of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2c4e2c3990>> for "0:Connection.Start"
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingConnection._on_connection_tune of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2c4e2c3990>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 1}
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=0', 'method=<Connection.StartOk([\'locale=en_US\', \'mechanism=PLAIN\', "client_properties={\'platform\': \'Python 2.7.6\', \'product\': \'Pika Python Client Library\', \'version\': \'0.9.8\', \'capabilities\': {\'consumer_cancel_notify\': True, \'publisher_confirms\': True, \'basic.nack\': True}, \'information\': \'See http://pika.github.com\'}", \'response=\\x00daniel\\x00daniel\'])>'])>
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 249
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 0
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=0', "method=<Connection.Tune(['frame_max=131072', 'channel_max=0', 'heartbeat=60'])>"])>
+DEBUG:pika.callback:Processing 0:Connection.Tune
+DEBUG:pika.callback:Processing use of oneshot callback
+DEBUG:pika.callback:0 registered uses left
+DEBUG:pika.callback:Removing callback #0: {'callback': <bound method BlockingConnection._on_connection_tune of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2c4e2c3990>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 0}
+DEBUG:pika.callback:Calling <bound method BlockingConnection._on_connection_tune of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2c4e2c3990>> for "0:Connection.Tune"
+DEBUG:pika.connection:Creating a HeartbeatChecker: 60
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=0', "method=<Connection.TuneOk(['frame_max=131072', 'channel_max=0', 'heartbeat=60'])>"])>
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 20
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingConnection._on_connection_open of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2c4e2c3990>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 1}
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=0', "method=<Connection.Open(['insist=True', 'capabilities=', 'virtual_host=WebServicesCluster'])>"])>
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 33
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 0
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=0', "method=<Connection.OpenOk(['known_hosts='])>"])>
+DEBUG:pika.callback:Processing 0:Connection.OpenOk
+DEBUG:pika.callback:Processing use of oneshot callback
+DEBUG:pika.callback:0 registered uses left
+DEBUG:pika.callback:Removing callback #0: {'callback': <bound method BlockingConnection._on_connection_open of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2c4e2c3990>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 0}
+DEBUG:pika.callback:Calling <bound method BlockingConnection._on_connection_open of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2c4e2c3990>> for "0:Connection.OpenOk"
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingConnection._on_connection_closed of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2c4e2c3990>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 1}
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 0
+DEBUG:pika.adapters.blocking_connection:Setting socket timeout to 0.25
+INFO:pika.adapters.blocking_connection:Adapter connected
+DEBUG:pika.connection:Connected
+DEBUG:pika.adapters.blocking_connection:Opening channel 1
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingChannel._on_close of <pika.adapters.blocking_connection.BlockingChannel object at 0x7f2c4e2c3810>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 1}
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingChannel._on_getempty of <pika.adapters.blocking_connection.BlockingChannel object at 0x7f2c4e2c3810>>, 'only': None, 'one_shot': False, 'arguments': None}
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingChannel._on_cancel of <pika.adapters.blocking_connection.BlockingChannel object at 0x7f2c4e2c3810>>, 'only': None, 'one_shot': False, 'arguments': None}
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingChannel._on_rpc_complete of <pika.adapters.blocking_connection.BlockingChannel object at 0x7f2c4e2c3810>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 1}
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingChannel._on_rpc_complete of <pika.adapters.blocking_connection.BlockingChannel object at 0x7f2c4e2c3810>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 1}
+DEBUG:pika.adapters.blocking_connection:Connection: <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2c4e2c3990>
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=1', "method=<Channel.Open(['out_of_band='])>"])>
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 13
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=1', "method=<Channel.OpenOk(['channel_id='])>"])>
+DEBUG:pika.callback:Processing 1:Channel.OpenOk
+DEBUG:pika.callback:Processing use of oneshot callback
+DEBUG:pika.callback:0 registered uses left
+DEBUG:pika.callback:Removing callback #0: {'callback': <bound method BlockingChannel._on_rpc_complete of <pika.adapters.blocking_connection.BlockingChannel object at 0x7f2c4e2c3810>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 0}
+DEBUG:pika.callback:Calling <bound method BlockingChannel._on_rpc_complete of <pika.adapters.blocking_connection.BlockingChannel object at 0x7f2c4e2c3810>> for "1:Channel.OpenOk"
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 0
+DEBUG:pika.adapters.blocking_connection:Handling timeout 1 with a threshold of 0
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 0
+DEBUG:pika.adapters.blocking_connection:Connection: <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2c4e2c3990>
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=1', "method=<Basic.Publish(['ticket=0', 'mandatory=False', 'routing_key=WebServicesCluster.lifecycle.dead', 'immediate=False', 'exchange=WebServicesCluster'])>"])>
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 68
+DEBUG:pika.connection:Frame: <Header(['frame_type=2', 'channel_number=1', 'properties=<BasicProperties>', 'body_size=390'])>
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 22
+DEBUG:pika.connection:Frame: <Body(['frame_type=3', 'channel_number=1', "fragment=ccopy_reg\n_reconstructor\np0\n(clib.Common\nMessage\np1\nc__builtin__\nobject\np2\nNtp3\nRp4\n(dp5\nS'content'\np6\ng0\n(clib.Common\nUnitInstanceInfo\np7\ng2\nNtp8\nRp9\n(dp10\nS'username'\np11\nS'daniel'\np12\nsS'uuid'\np13\nS'10.99.0.1-Tomcat'\np14\nsS'system'\np15\nS'WebServicesCluster'\np16\nsS'meta'\np17\n(dp18\nsS'password'\np19\ng12\nsS'type'\np20\nS'Process'\np21\nsS'id'\np22\nS'Process.Tomcat'\np23\nsbsg17\n(dp24\nsg20\nI3\nsb."])>
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 398
+INFO:pika.connection:Closing connection (200): Normal shutdown
+DEBUG:pika.adapters.blocking_connection:Handling timeout 1 with a threshold of 3
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 0
+DEBUG:root:Shutting down...
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingConnection._on_connection_start of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2c4e2c37d0>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 1}
+DEBUG:pika.connection:Attempting connection
+DEBUG:pika.adapters.base_connection:Connecting the adapter to the remote host
+DEBUG:pika.adapters.base_connection:Creating the socket
+INFO:pika.adapters.base_connection:Connecting fd 6 to 128.130.172.230:5672
+DEBUG:pika.adapters.blocking_connection:Setting socket connection timeout
+DEBUG:pika.connection:Frame: <ProtocolHeader(['frame_type=-1', 'major=0', 'minor=9', 'revision=1'])>
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 8
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=0', 'method=<Connection.Start(["server_properties={\'information\': \'Licensed under the MPL.  See http://www.rabbitmq.com/\', \'product\': \'RabbitMQ\', \'copyright\': \'Copyright (C) 2007-2015 Pivotal Software, Inc.\', \'capabilities\': {\'exchange_exchange_bindings\': True, \'connection.blocked\': True, \'authentication_failure_close\': True, \'basic.nack\': True, \'per_consumer_qos\': True, \'consumer_priorities\': True, \'consumer_cancel_notify\': True, \'publisher_confirms\': True}, \'cluster_name\': \'rabbit@queuevm.novalocal\', \'platform\': \'Erlang/OTP\', \'version\': \'3.6.0\'}", \'version_minor=9\', \'mechanisms=PLAIN AMQPLAIN\', \'locales=en_US\', \'version_major=0\'])>'])>
+DEBUG:pika.callback:Processing 0:Connection.Start
+DEBUG:pika.callback:Processing use of oneshot callback
+DEBUG:pika.callback:0 registered uses left
+DEBUG:pika.callback:Removing callback #0: {'callback': <bound method BlockingConnection._on_connection_start of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2c4e2c37d0>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 0}
+DEBUG:pika.callback:Calling <bound method BlockingConnection._on_connection_start of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2c4e2c37d0>> for "0:Connection.Start"
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingConnection._on_connection_tune of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2c4e2c37d0>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 1}
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=0', 'method=<Connection.StartOk([\'locale=en_US\', \'mechanism=PLAIN\', "client_properties={\'platform\': \'Python 2.7.6\', \'product\': \'Pika Python Client Library\', \'version\': \'0.9.8\', \'capabilities\': {\'consumer_cancel_notify\': True, \'publisher_confirms\': True, \'basic.nack\': True}, \'information\': \'See http://pika.github.com\'}", \'response=\\x00daniel\\x00daniel\'])>'])>
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 249
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 0
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=0', "method=<Connection.Tune(['frame_max=131072', 'channel_max=0', 'heartbeat=60'])>"])>
+DEBUG:pika.callback:Processing 0:Connection.Tune
+DEBUG:pika.callback:Processing use of oneshot callback
+DEBUG:pika.callback:0 registered uses left
+DEBUG:pika.callback:Removing callback #0: {'callback': <bound method BlockingConnection._on_connection_tune of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2c4e2c37d0>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 0}
+DEBUG:pika.callback:Calling <bound method BlockingConnection._on_connection_tune of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2c4e2c37d0>> for "0:Connection.Tune"
+DEBUG:pika.connection:Creating a HeartbeatChecker: 60
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=0', "method=<Connection.TuneOk(['frame_max=131072', 'channel_max=0', 'heartbeat=60'])>"])>
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 20
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingConnection._on_connection_open of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2c4e2c37d0>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 1}
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=0', "method=<Connection.Open(['insist=True', 'capabilities=', 'virtual_host=WebServicesCluster'])>"])>
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 33
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 0
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=0', "method=<Connection.OpenOk(['known_hosts='])>"])>
+DEBUG:pika.callback:Processing 0:Connection.OpenOk
+DEBUG:pika.callback:Processing use of oneshot callback
+DEBUG:pika.callback:0 registered uses left
+DEBUG:pika.callback:Removing callback #0: {'callback': <bound method BlockingConnection._on_connection_open of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2c4e2c37d0>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 0}
+DEBUG:pika.callback:Calling <bound method BlockingConnection._on_connection_open of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2c4e2c37d0>> for "0:Connection.OpenOk"
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingConnection._on_connection_closed of <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2c4e2c37d0>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 1}
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 0
+DEBUG:pika.adapters.blocking_connection:Setting socket timeout to 0.25
+INFO:pika.adapters.blocking_connection:Adapter connected
+DEBUG:pika.connection:Connected
+DEBUG:pika.adapters.blocking_connection:Opening channel 1
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingChannel._on_close of <pika.adapters.blocking_connection.BlockingChannel object at 0x7f2c4e2c3410>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 1}
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingChannel._on_getempty of <pika.adapters.blocking_connection.BlockingChannel object at 0x7f2c4e2c3410>>, 'only': None, 'one_shot': False, 'arguments': None}
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingChannel._on_cancel of <pika.adapters.blocking_connection.BlockingChannel object at 0x7f2c4e2c3410>>, 'only': None, 'one_shot': False, 'arguments': None}
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingChannel._on_rpc_complete of <pika.adapters.blocking_connection.BlockingChannel object at 0x7f2c4e2c3410>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 1}
+DEBUG:pika.callback:Added: {'callback': <bound method BlockingChannel._on_rpc_complete of <pika.adapters.blocking_connection.BlockingChannel object at 0x7f2c4e2c3410>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 1}
+DEBUG:pika.adapters.blocking_connection:Connection: <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2c4e2c37d0>
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=1', "method=<Channel.Open(['out_of_band='])>"])>
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 13
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=1', "method=<Channel.OpenOk(['channel_id='])>"])>
+DEBUG:pika.callback:Processing 1:Channel.OpenOk
+DEBUG:pika.callback:Processing use of oneshot callback
+DEBUG:pika.callback:0 registered uses left
+DEBUG:pika.callback:Removing callback #0: {'callback': <bound method BlockingChannel._on_rpc_complete of <pika.adapters.blocking_connection.BlockingChannel object at 0x7f2c4e2c3410>>, 'only': None, 'one_shot': True, 'arguments': None, 'calls': 0}
+DEBUG:pika.callback:Calling <bound method BlockingChannel._on_rpc_complete of <pika.adapters.blocking_connection.BlockingChannel object at 0x7f2c4e2c3410>> for "1:Channel.OpenOk"
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 0
+DEBUG:pika.adapters.blocking_connection:Handling timeout 1 with a threshold of 0
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 0
+DEBUG:pika.adapters.blocking_connection:Connection: <pika.adapters.blocking_connection.BlockingConnection object at 0x7f2c4e2c37d0>
+DEBUG:pika.connection:Frame: <METHOD(['frame_type=1', 'channel_number=1', "method=<Basic.Publish(['ticket=0', 'mandatory=False', 'routing_key=WebServicesCluster.lifecycle.dead', 'immediate=False', 'exchange=WebServicesCluster'])>"])>
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 68
+DEBUG:pika.connection:Frame: <Header(['frame_type=2', 'channel_number=1', 'properties=<BasicProperties>', 'body_size=389'])>
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 22
+DEBUG:pika.connection:Frame: <Body(['frame_type=3', 'channel_number=1', "fragment=ccopy_reg\n_reconstructor\np0\n(clib.Common\nMessage\np1\nc__builtin__\nobject\np2\nNtp3\nRp4\n(dp5\nS'content'\np6\ng0\n(clib.Common\nUnitInstanceInfo\np7\ng2\nNtp8\nRp9\n(dp10\nS'username'\np11\nS'daniel'\np12\nsS'uuid'\np13\nS'10.99.0.1'\np14\nsS'system'\np15\nS'WebServicesCluster'\np16\nsS'meta'\np17\n(dp18\nsS'password'\np19\ng12\nsS'type'\np20\nS'VirtualMachine'\np21\nsS'id'\np22\nS'VM.WebService'\np23\nsbsg17\n(dp24\nsg20\nI3\nsb."])>
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 397
+INFO:pika.connection:Closing connection (200): Normal shutdown
+DEBUG:pika.adapters.blocking_connection:Handling timeout 1 with a threshold of 3
+DEBUG:pika.adapters.blocking_connection:Outbound buffer size: 0

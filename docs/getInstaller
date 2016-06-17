@@ -1,0 +1,46 @@
+wget -q --user=$USERNAME --password=$PASSWORD --auth-no-challenge http://128.131.172.45:5001/artifacts/ubuntu12-14-python2/remote-executor/installer/<system_id>/<unit_type>/<unit_ID> -O ./install.sh
+
+
+wget -q --user=daniel --password=daniel --auth-no-challenge http://128.131.172.45:5001/artifacts/ubuntu12-14-python2/remote-executor/installer/TestSystem/OperatingSystem/VM.EventProcessing -O ./install.sh
+
+
+curl -u username:password -i -X DELETE http://128.131.172.45:5001/systems/<system_id>
+
+
+curl -u daniel:daniel -i -X DELETE http://128.131.172.45:5001/systems/TestSystem
+
+
+curl -u daniel:daniel -i -X GET http://128.131.172.45:5001/systems/TestSystem/structure
+
+curl -u daniel:daniel -i -X GET http://128.131.172.45:5001/systems/TestSystem/status
+
+curl -u daniel:daniel -i -X GET  http://128.131.172.45:5001/status/TestSystem/tests/session/last
+
+
+curl -u daniel:daniel -i -X POST http://128.131.172.45:5001/systems/TestSystem/tests/dispatch/all
+
+
+curl -u daniel:daniel -H  'Content-type': 'text/plain'  -i -X POST -d "REASON FOR REFRESHING. CURRENTLY IN PLAIN TEXT"  http://128.131.172.45:5001/systems/TestSystem/tests/dispatch/all
+
+wget -q --user=daniel --password=daniel --auth-no-challenge http://128.131.172.45:5001/artifacts/ubuntu12-14-python2/remote-executor/installer/TestSystem/Container/Docker.EventProcessing -O ./install.sh
+wget -q --user=daniel --password=daniel --auth-no-challenge http://128.131.172.45:5001/artifacts/ubuntu12-14-python2/remote-executor/installer/TestSystem/VirtualMachine/VM.EventProcessing -O ./install.sh
+wget -q --user=daniel --password=daniel --auth-no-challenge http://128.131.172.45:5001/artifacts/ubuntu12-14-python2/remote-executor/installer/HelloWorld/VirtualMachine/VM.CassandraNode -O ./install.sh
+
+
+ #for installing docker
+ sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 36A1D7869245C8950F966E92D8576A8BA88D21E9
+ sudo sh -c "echo deb https://get.docker.io/ubuntu docker main > /etc/apt/sources.list.d/docker.list"
+ sudo apt-get update
+ sudo apt-get install lxc-docker
+
+ docker run -i -t ubuntu /bin/bash
+
+
+
+ #for security enhance
+ http://mandarvaze.github.io/2015/01/token-auth-with-flask-security.html
+
+ https://pythonhosted.org/Flask-Security/
+
+
+wget -q --user= --password= --auth-no-challenge http://128.131.172.45:5001/artifacts/ubuntu12-14-python2/remote-executor/installer/WebServicesCluster/VirtualMachine/VM.WebService -O ./install.sh

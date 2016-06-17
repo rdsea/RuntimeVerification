@@ -1,0 +1,6 @@
+ return TestResult(successful=False, details="Test designed to fail, so it failed. Ha Ha!")
+ #return TestResult(successful=True, details="Changed to succeed")
+
+#current context variables:
+#targetID, executorID
+

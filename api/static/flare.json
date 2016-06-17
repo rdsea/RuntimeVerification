@@ -1,0 +1,41 @@
+{
+	"type": "Composite",
+	"name": "WebServicesCluster",
+	"children": [
+		{
+			"type": "Composite",
+			"name": "WebService",
+			"children": [
+				{
+					"type": "VirtualMachine",
+					"name": "VM.WebService",
+					"uuid": "128.131.172.114"
+				},
+				{
+					"type": "Process",
+					"name": "Process.WebService",
+					"uuid": "128.131.172.114-WSService"
+				}
+			],
+			"uuid": null
+		},
+		{
+			"type": "Composite",
+			"name": "WebService",
+			"children": [
+				{
+					"type": "VirtualMachine",
+					"name": "VM.WebService",
+					"uuid": "10.0.2.15"
+				},
+				{
+					"type": "Process",
+					"name": "Process.WebService",
+					"uuid": "10.0.2.15-WebService2"
+				}
+			],
+			"uuid": null
+		}
+	],
+	"uuid": null
+}

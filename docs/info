@@ -1,0 +1,218 @@
+Used ports
+
+5000 - internal used configuration port
+
+
+Submit JSON for system struct
+
+{
+  'name': 'HelloWorld',
+  'containedUnits': [
+    {
+      'name': 'LoadBalancer',
+      'type': 'Composite',
+      'containedUnits': [
+        {
+          'name': 'VM.LoadBalancer',
+          'type': 'VirtualMachine'
+        },
+        {
+          'name': 'HAProxy',
+          'type': 'Process',
+          'hostedOn': 'VM.LoadBalancer'
+        }
+      ]
+    },
+    {
+      'name': 'EventProcessing',
+      'type': 'Composite',
+      'containedUnits': [
+        {
+          'name': 'VM.EventProcessing',
+          'type': 'VirtualMachine'
+        },
+        {
+          'name': 'Docker.EventProcessing',
+          'type': 'VirtualContainer',
+          'hostedOn': 'VM.EventProcessing'
+        },
+        {
+          'name': 'EventProcessingService',
+          'type': 'Process',
+          'hostedOn': 'Docker.EventProcessing'
+        }
+      ]
+    }
+  ]
+}
+
+
+{
+
+'name': 'Example',
+'containedUnits': [
+     {
+      'name': 'WebServer',
+      'type': 'Composite',
+      'containedUnits': [
+         {
+          'name': 'VM.WebServer',
+          'type': 'VirtualMachine'
+         },
+         {
+          'name': 'Tomcat.WebServer',
+          'type': 'Process',
+          'hostedOn' : 'VM.WebServer' 
+         }
+        ]  
+     } 
+  ]
+}
+
+
+
+{
+  'name': 'HelloWorld',
+  'containedUnits': [
+    {
+      'name': 'CassandraSeed',
+      'type': 'Composite',
+      'containedUnits': [
+        {
+          'name': 'VM.CassandraSeed',
+          'type': 'VirtualMachine'
+        },
+        {
+          'name': 'Process.CassandraSeed',
+          'type': 'Process',
+          'hostedOn': 'VM.CassandraSeed'
+        }
+      ]
+    },
+    {
+      'name': 'CassandraNode',
+      'type': 'Composite',
+      'containedUnits': [
+        {
+          'name': 'VM.CassandraNode',
+          'type': 'VirtualMachine'
+        },
+        {
+          'name': 'Process.CassandraNode',
+          'type': 'Process',
+          'hostedOn': 'VM.CassandraNode'
+        }
+      ]
+    }
+  ]
+}
+
+
+{
+  'name': 'WebServicesCluster',
+  'containedUnits': [
+    {
+      'name': 'WebService',
+      'type': 'Composite',
+      'containedUnits': [
+        {
+          'name': 'VM.WebService',
+          'type': 'VirtualMachine'
+        },
+        {
+          'name': 'Process.WebService',
+          'type': 'Process',
+          'hostedOn': 'VM.WebService'
+        }
+      ]
+    }
+  ]
+}
+
+
+ try:
+    urllib2 = __import__('urllib2')
+    response = urllib2.urlopen("http://"+executorID+":5001/alive", timeout = 1)
+    content = response.read()
+    details = content
+    successful = True
+ except urllib2.URLError as e:
+    details = str(e)
+    successful=False
+
+ meta = {}
+ meta["type"]="Service alive test" + "http://"+executorID+":5001/alive"
+ return TestResult(successful=successful, details=details + "http://"+executorID+":5001/alive", meta=meta)
+
+
+Description
+name: "tstWSAccessible"
+description: "Test do determine if WS is running"
+timeout: 5
+
+
+Triggers
+every:  10 s
+
+Execution
+executor: UnitType.VirtualMachine for UnitType.Process
+
+
+Description
+name: "TestForFreeRAM"
+description: "human readable description"
+timeout: 20
+
+
+Triggers
+every:  30 s
+
+Execution
+executor: UnitType.VirtualMachine for UnitType.VirtualMachine
+
+wget -q --user=daniel --password=daniel --auth-no-challenge http://128.131.172.45:5001/artifacts/ubuntu12-14-python2/remote-executor/installer/WebServicesCluster/VirtualMachine/VM.WebService -O ./install.sh
+
+
+
+
+{
+  'name': 'WebServicesCluster',
+  'containedUnits': [
+    {
+      'name': 'LoadBalancer',
+      'type': 'Composite',
+      'containedUnits': [
+        {
+          'name': 'VM.LoadBalancer',
+          'type': 'VirtualMachine'
+        },
+        {
+          'name': 'Process.HAProxy',
+          'type': 'Process',
+          'hostedOn': 'VM.LoadBalancer'
+        }
+      ]
+    },
+    {
+      'name': 'WebService',
+      'type': 'Composite',
+      'containedUnits': [
+        {
+          'name': 'VM.WebService',
+          'type': 'VirtualMachine'
+        },
+        {
+          'name': 'Process.Tomcat',
+          'type': 'Process',
+          'hostedOn': 'VM.WebService'
+        }
+        ,
+        {
+          'name': 'Service.EventProcessingService',
+          'type': 'Service',
+          'hostedOn': 'Process.Tomcat'
+        }
+      ]
+    }
+  ]
+}

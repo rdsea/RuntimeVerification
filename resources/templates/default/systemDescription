@@ -1,0 +1,41 @@
+{
+  'name': 'TEMPLATE_ServiceDescription',
+  'containedUnits': [
+    {
+      'name': 'LoadBalancer',
+      'type': 'Composite',
+      'containedUnits': [
+        {
+          'name': 'VM.LoadBalancer',
+          'type': 'VirtualMachine'
+        },
+        {
+          'name': 'Process.HAProxy',
+          'type': 'Process',
+          'hostedOn': 'VM.LoadBalancer'
+        }
+      ]
+    },
+    {
+      'name': 'WebService',
+      'type': 'Composite',
+      'containedUnits': [
+        {
+          'name': 'VM.WebService',
+          'type': 'VirtualMachine'
+        },
+        {
+          'name': 'Process.Tomcat',
+          'type': 'Process',
+          'hostedOn': 'VM.WebService'
+        }
+        ,
+        {
+          'name': 'Service.ServiceNAME',
+          'type': 'Service',
+          'hostedOn': 'Process.Tomcat'
+        }
+      ]
+    }
+  ]
+}

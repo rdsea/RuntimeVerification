@@ -1,0 +1,12 @@
+ #this test can be used to determine if docker container is still running, as it is running if
+ #its IP still appears in the ifconfig listings
+ os = __import__('os')
+ #check if IP appears in ifconfig
+ response = os.system("ifconfig | grep -o " + targetID)
+ if response:
+   successful=True
+ else:
+  successful=False
+ meta = {}
+ meta["type"]="Ping test"
+ return TestResult(successful=successful, details=response, meta=meta)

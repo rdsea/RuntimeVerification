@@ -1,0 +1,48 @@
+{% extends "index.html" %}
+{% block body %}
+  <h2>Account Management</h2>
+  {% if error %}<p class=error><strong>Error:</strong> {{ error }}{% endif %}
+
+  <form action="{{ url_for('updateAccountSettings') }}" method=post>
+    <dl>
+      <dt>Username:
+      <dd><input type=text name="username" disabled="disabled" value="{{ session['username'] }}">
+      <!--<dt>Input current password:-->
+      <!--<dd><input type=password name="password">-->
+      <dt>&nbsp
+      <dt>Enable mail notifications: <input type=checkbox name="mailNotifications" checked="checked">
+      <dt>Mail address:
+      {%- if 'mailAddress' in userDetails %}
+            <dd><input type=text name="mailAddress" value="{{ userDetails['mailAddress'] }}">
+      {% else %}
+           <dd><input type=text name="mailAddress">
+      {%- endif %}
+
+      <dt>Mail server name:
+      {%- if 'smtpServerName' in userDetails %}
+            <dd><input type=text name="smtpServerName" value="{{ userDetails['smtpServerName'] }}">
+      {% else %}
+            <dd><input type=text name="smtpServerName" value="smtp.x.com">
+      {%- endif %}
+
+      <dt>Mail server port:
+      <dd>
+      {%- if 'smtpServerPort' in userDetails  %}
+            <dd><input type=text name="smtpServerPort" value="{{ userDetails['smtpServerPort'] }}">
+      {% else %}
+            <input type=text name="smtpServerPort" value="587">
+      {%- endif %}
+
+      <dt>Mail server username:
+      {%- if 'mailUsername' in userDetails %}
+            <dd><input type=text name="mailUsername" value="{{ userDetails['mailUsername'] }}">
+      {% else %}
+            <input type=text name="mailUsername">
+      {%- endif %}
+      <dt>Mail server password:
+      <dd><input type=password name="mailPassword">
+      <dd><input type=submit name="action" value=Save><input type=submit name="action"  value=Cancel>
+    </dl>
+  </form>
+
+{% endblock %}

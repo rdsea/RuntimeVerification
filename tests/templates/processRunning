@@ -1,0 +1,13 @@
+ os = __import__('os')
+ processname = PROCESS_NAME
+ tmp = os.popen("ps -Af").read()
+ proccount = tmp.count(processname)
+ result=TestResult()
+ result.meta["type"]="Process Running"
+ if proccount == 1:
+    result.successfull=True
+ else:
+    result.successfull=False
+    result.details=tmp
+ return result
+

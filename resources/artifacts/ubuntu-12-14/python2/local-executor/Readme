@@ -1,0 +1,2 @@
+This is made for systems where you need to deploy the remote executor on another machine, not beside the component
+So it does not do that much automation in deployment and ID configuration
