@@ -2,8 +2,8 @@
 
 echo "deb http://www.rabbitmq.com/debian/ testing main" | sudo -S tee -a /etc/apt/sources.list
 
-sudo -S wget https://www.rabbitmq.com/rabbitmq-signing-key-public.asc
-sudo -S apt-key add rabbitmq-signing-key-public.asc
+sudo -S wget https://www.rabbitmq.com/rabbitmq-release-signing-key.asc
+sudo -S apt-key add rabbitmq-release-signing-key.asc
 sudo -S apt-get update
 sudo -S apt-get install rabbitmq-server -y
 
