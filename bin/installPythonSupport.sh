@@ -40,4 +40,5 @@ sudo -S pip install SQLAlchemy
 sudo -S pip install grako
 
 #for performance metric (mem/cpu) from system
+sudo -S apt-get install python-dev #psutil requires the dev
 sudo -S pip install psutil
