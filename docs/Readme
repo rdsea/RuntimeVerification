@@ -22,7 +22,7 @@ Setup Properties in "./config/config.properties"
 ########################
 4. Run platform
 ########################
-   sudo service runtime-verification-service start
+   sudo bash ./runtime-verification-service start
    
 #Output will be something like
 #   [__init__.py:117 -             <module>() ] Health management platform started on http://YOUR_IP:5001
@@ -54,5 +54,5 @@ Setup Properties in "./config/config.properties"
 7. Stop platform
 ########################
 To make sure python process for runtimeverificationplatform has stopped, after Ctrl+C in terminal, from "runtimeverificationplatform" folder execute:
-   sudo service runtime-verification-service stop
+   sudo bash ./runtime-verification-service stop
 
